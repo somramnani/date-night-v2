@@ -23,4 +23,9 @@ module.exports = function(app) {
   app.get("/members", isAuthenticated, function(req, res) {
     res.sendFile(path.join(__dirname, "../public/members.html"));
   });
+
+  //IMAGE ROUTES
+  app.get("/backgroundimage", isAuthenticated, function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/images/rps.jpg"));
+  });
 };
