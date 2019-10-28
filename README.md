@@ -33,4 +33,4 @@ To assist the average person in searching multiple activity options that are ava
  
  ##
  
-  ![](public/images/homepage.png)
+  ![](public/images/homepage.PNG)
