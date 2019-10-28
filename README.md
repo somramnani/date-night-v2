@@ -19,6 +19,7 @@ To assist the average person in searching multiple activity options that are ava
   - EventBrite
 - JQuery
 - Passport
+- Sequelize
 
 ## Features
 - Shows result based on your: 
