@@ -18,7 +18,7 @@ To assist the average person in searching multiple activity options that are ava
   - Yelp
   - EventBrite
 - JQuery
-- Firebase
+- Passport
 
 ## Features
 - Shows result based on your: 
