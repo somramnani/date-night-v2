@@ -1,0 +1,25 @@
+.center {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+}
+
+.login-signup-body {
+  background-image: url("../images/fireworks.jpg");
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  opacity: 1;
+  color: white;
+}
+.navbartitle {
+  font-family: "Cinzel", serif;
+}
