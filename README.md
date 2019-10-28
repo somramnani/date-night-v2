@@ -30,3 +30,7 @@ To assist the average person in searching multiple activity options that are ava
   - Price
   - Rating
   - Image
+ 
+ ##
+ 
+  ![](public/images/homepage.PNG)
