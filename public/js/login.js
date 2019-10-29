@@ -27,13 +27,14 @@ $(document).ready(function() {
       password: password
     })
       .then(function(data) {
-        window.location.replace(data);
         // If there's an error, log the error
+        window.location.replace(data);
+
+        alert("Welcome back " + email);
       })
       .catch(function(err) {
         console.log(err);
+        alert("Not a valid account");
       });
-
-    alert("Welcome " + email);
   }
 });
