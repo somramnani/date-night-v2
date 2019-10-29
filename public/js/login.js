@@ -30,7 +30,7 @@ $(document).ready(function() {
         // If there's an error, log the error
         window.location.replace(data);
 
-        alert("Welcome back " + email);
+        alert("Welcome back " + email + "!");
       })
       .catch(function(err) {
         console.log(err);

@@ -30,7 +30,7 @@ $(document).ready(function() {
     })
       .then(function(data) {
         window.location.replace(data);
-        alert("Welcome " + email);
+        alert("Welcome " + email + "!");
       })
       .catch(handleLoginErr);
   }
