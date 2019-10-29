@@ -33,5 +33,7 @@ $(document).ready(function() {
       .catch(function(err) {
         console.log(err);
       });
+
+    alert("Welcome " + email);
   }
 });
