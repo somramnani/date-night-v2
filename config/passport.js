@@ -24,18 +24,16 @@ passport.use(
         }
         // If none of the above, return the user
         return done(null, dbUser);
-        
       });
     }
   )
 );
-//
-// In order to help keep authentication state across HTTP requests,
-// Sequelize needs to serialize and deserialize the user
+
+// In order to help keep authentication state across HTTP requests, Sequelize needs to serialize and deserialize the user
 passport.serializeUser(function(user, cb) {
   cb(null, user);
 });
-//
+
 passport.deserializeUser(function(obj, cb) {
   cb(null, obj);
 });

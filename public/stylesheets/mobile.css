@@ -1,120 +1,94 @@
 /* General Mobile Styles
 ========================================================================== */
-  @media only screen and (max-width : 768px) {
+@media only screen and (max-width: 768px) {
+}
 
-    }
-
-
-/* ========================================================================== */  
-
+/* ========================================================================== */
 
 /* Specific Phone Mobile Styles
 ========================================================================== */
 
-  /* Galaxy S5 */
-  @media (min-width:360px) and (max-width:360px) {
-    html{
-      width: 100%;
-    }
-    .background-image{
-      width: 480px;
-      height: 750px;
-    }
-
-    .parralax3{
-      width: 800em;
-    }
-
-
-    .background-image{
-      height: 100%;
-    }
-
-    .hero-section{
-      height: 120%;
-    }
-    
-    .container{
-      transform: translateY(12em);    
-    }
-    
+/* Galaxy S5 */
+@media (min-width: 360px) and (max-width: 360px) {
+  html {
+    width: 100%;
+  }
+  .background-image {
+    width: 480px;
+    height: 750px;
   }
 
-  /* Pixel 2 */
-  @media(min-width: 411px) and (max-width: 411px){
-    body{
-      width: 90%;
-    }
-    #main-header-text{
-      font-size: 5em;
-     
-    }
+  .parralax3 {
+    width: 800em;
   }
 
-  /* iPhone 5/SE */
-  @media (min-width:320px) and (max-width:320px) {
-    /* body{
+  .background-image {
+    height: 100%;
+  }
+
+  .hero-section {
+    height: 120%;
+  }
+
+  .container {
+    transform: translateY(12em);
+  }
+}
+
+/* Pixel 2 */
+@media (min-width: 411px) and (max-width: 411px) {
+  body {
+    width: 90%;
+  }
+  #main-header-text {
+    font-size: 5em;
+  }
+}
+
+/* iPhone 5/SE */
+@media (min-width: 320px) and (max-width: 320px) {
+  /* body{
       width: 100%;
       height: 120%;
     } */
 
-    .background-image{
-      width: 410px;
-      height: 725px;
-    }
-
-    #main-header-text{
-      font-size: 5em;
-     
-    }
-
-    .navbartitle{
-      font-size: 20px;
-    }
-
-    .hero-section{
-      transform: translateX(3em);
-    }
-    .parralax5{
-      width: 410px;
-    }
-  }  
-
-  /* iPhone 6/7/8 */
-  @media only screen and (min-width : 375px) and (max-width : 667px) { 
-    #main-header-text{
-      font-size: 4em;
-     
-    }
-
-    
-    
-  
+  .background-image {
+    width: 410px;
+    height: 725px;
   }
 
-  /* iPhone 6,7, & Plus */
-  @media only screen  and (min-width : 414px) and (max-width : 736px) {
-   #headerMainText{
-     transform: translateY(10em);
-   }
-  }
-  
-
-
-  /* iPad */
-  @media only screen and (min-width : 768px) and (max-width : 1024px)   {
-    
-
+  #main-header-text {
+    font-size: 5em;
   }
 
+  .navbartitle {
+    font-size: 20px;
+  }
 
+  .hero-section {
+    transform: translateX(3em);
+  }
+  .parralax5 {
+    width: 410px;
+  }
+}
 
+/* iPhone 6/7/8 */
+@media only screen and (min-width: 375px) and (max-width: 667px) {
+  #main-header-text {
+    font-size: 4em;
+  }
+}
 
-/* ========================================================================== */  
+/* iPhone 6,7, & Plus */
+@media only screen and (min-width: 414px) and (max-width: 736px) {
+  #headerMainText {
+    transform: translateY(10em);
+  }
+}
 
+/* iPad */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+}
 
-
-
-
-
-
+/* ========================================================================== */
