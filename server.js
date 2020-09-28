@@ -1,25 +1,19 @@
-var express = require("express");
-var bodyParser = require("body-parser");
-var session = require("express-session");
+require('dotenv').config();
+const express = require("express");
+const bodyParser = require("body-parser");
+const cors = require('cors');
+const apiRoutes = require('./routes/api-routes');
+const pageRoutes = require('./routes/html-routes');
+const PORT = process.env.PORT || 8080;
+const db = require("./models");
+const app = express();
 
-var passport = require("./config/passport");
-
-var PORT = process.env.PORT || 8080;
-var db = require("./models");
-
-
-var app = express();
+app.use(cors);
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.use(express.json());
 app.use(express.static("public"));
-
-app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
-app.use(passport.initialize());
-app.use(passport.session());
-
-require("./routes/api-routes")(app);
-require("./routes/html-routes")(app);
-
+app.use('/api/', apiRoutes);
+app.use('/pages/', pageRoutes);
 
 db.sequelize.sync().then(function() {
   app.listen(PORT, function() {

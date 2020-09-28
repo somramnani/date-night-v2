@@ -1,37 +1,3 @@
-//__________________________________________________________
-//GLOBAL VARIABLES
-//__________________________________________________________
-
-//FIREBASE
-var config = {
-  apiKey: "AIzaSyDfKpAiy7ngBuaxWEE57a-Fwddvw-kEEEU",
-  uthDomain: "date-night-e6b75.firebaseapp.com",
-  databaseURL: "https://date-night-e6b75.firebaseio.com",
-  projectId: "date-night-e6b75",
-  storageBucket: "date-night-e6b75.appspot.com",
-  messagingSenderId: "637265402446"
-};
-firebase.initializeApp(config);
-//________________________________________________________
-
-var database = firebase.database();
-var tUp = 0;
-var tDown = 0;
-$("#thumbsUp").on("click", function() {
-  tUp++;
-  console.log(tUp);
-  database.ref().push({
-    tUp: tUp
-  });
-  console.log("END");
-});
-$("#thumbsDown").on("click", function() {
-  tDown++;
-  database.ref().push({
-    tDown: tDown
-  });
-});
-
 //________________________________________________________
 //Price Button Variables
 //________________________________________________________
@@ -123,7 +89,7 @@ $("#submit").on("click", function() {
     //API VARIABLES
     //______________________________________________________
     var yelpAPIKey =
-      "t915wybDO3WP4B26tfMQd3AfvQQNFnODtP3EvVzYdhWW58RNwjSwA6OEt2mFI4zaWOwMFHgEr9Pzf3sXFiR_VooC8dfCEBqMR2MtifV8r-JEgaDpoOdQ9RcRE4sjXXYx";
+      "";
     var yelpURL =
       "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=" +
       addressInput +
@@ -133,9 +99,9 @@ $("#submit").on("click", function() {
     var eventSearchURL =
       "https://cors-anywhere.herokuapp.com/https://www.eventbriteapi.com/v3/events/search?location.address=" +
       addressInput +
-      "&expand=ticket_classes&expand=venue&token=QHHRQKYP5TZBK3NVPHD2";
+      "&expand=ticket_classes&expand=venue&token=";
 
-    let placesAPIKey = "AIzaSyBXO-BuPfu7ZFeL1Cebncm3ojSMaIbNFk0";
+    let placesAPIKey = "";
     let placesURL =
       "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/textsearch/json?query=theaters+in+" +
       addressInput +
