@@ -1,3 +1,10 @@
+/* 
+  TODO: We don't need to use media queries for mobile responsiveness...
+  If we are going to use Bootstrap we just use the responsive classes or 
+  we can just use flexbox if we are going to roll our own UI.
+*/
+
+
 /* General Mobile Styles
 ========================================================================== */
 @media only screen and (max-width: 768px) {
