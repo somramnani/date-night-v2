@@ -8,12 +8,15 @@ const PORT = process.env.PORT || 8080;
 const db = require("./models");
 const app = express();
 
-app.use(cors);
+// app.use(cors);
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.json());
-app.use(express.static("public"));
-app.use("/api/", apiRoutes);
-app.use("/pages/", pageRoutes);
+
+// Routes
+require("./routes/api-routes")(app);
+require("./routes/html-routes")(app);
+// app.use("/api/", apiRoutes);
+// app.use("/pages/", pageRoutes);
 
 db.sequelize.sync().then(function () {
   app.listen(PORT, function () {

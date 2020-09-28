@@ -1,33 +1,221 @@
-.center {
-  width: 300px;
-  height: 300px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+/* General Styles
+========================================================================== */
+
+#thumbsDown {
+  background: rgb(49, 47, 47);
+}
+
+#thumbsUp {
+  background: rgb(49, 47, 47);
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  background-color: black;
+  font-family: "Cinzel", serif;
+  height: 100%;
+}
+
+.form-group1 {
+  visibility: hidden;
+}
+
+.hero-section {
+  height: 100%;
+
+  background-size: cover;
+}
+
+.animated {
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  -ms-animation-duration: 2s;
+  -o-animation-duration: 2s;
+  animation-duration: 1s;
+}
+.displaynone {
+  display: none;
+}
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  background: lavender;
+  font-size: 24 px;
+  padding: 25px;
+  margin-bottom: 25px;
+  justify-content: center;
+  border-radius: 25px;
+  transform: translateY(8em);
+}
+
+/* ========================================================================== */
+/* Header Styles
+==========================================================================  */
+.activity-header,
+.header {
+  color: white;
+  font-weight: bold;
+}
+
+.activity-header {
+  padding-top: 2em;
+}
+#navbarNavDropdown {
+  font-size: 20px;
+}
+/*========================================================================== */
+
+/*========================================================================== */
+/* Text Styles
+========================================================================== */
+
+#headerText {
+  text-align: center;
+  font-size: 25px;
+  color: white;
+}
+.imageTitle {
+  text-align: center;
+  font-size: 75px;
+  color: white;
+}
+
+.homepageContent {
+  transform: translateY(10em);
+  text-transform: uppercase;
+  color: white;
+}
+#main-header-text {
+  font-size: 6em;
+  font-weight: bolder;
+  letter-spacing: 30px;
 }
 .navbar-dark .navbar-nav .nav-link {
   color: white;
 }
 
-.login-signup-body {
-  background-image: url("../images/fireworks.jpg");
+#headerText {
+  font-weight: bolder;
+  letter-spacing: 5px;
+}
+/* ========================================================================== */
+
+/*========================================================================== */
+/* Image Styles
+========================================================================== */
+/* .parallaxHeader{
+    background: url('../images/valentin-antonucci-799200-unsplash.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 800px;
+	} */
+
+.background-image {
+  background-image: url("/backgroundimage");
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
   height: 100vh;
   background-attachment: fixed;
   background-position: center;
   opacity: 1;
-  color: white;
-}
-.navbartitle {
-  font-family: "Cinzel", serif;
 }
 
-.panel {
-  background-color: rgba(0, 0, 0, 0.539);
-  width: 300px;
-  padding: 20px;
-  height: 360px;
-  border-radius: 10px;
+.parallax2 {
+  background: url("../images/filip-mroz-172351-unsplash.jpg") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 600px;
 }
+
+.parallax3 {
+  background: url("../images/matthieu-huang-549064-unsplash.jpg") no-repeat
+    center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 600px;
+}
+
+.parallax5 {
+  background: url("../images/theatre.jpg") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 600px;
+}
+
+img {
+  height: 1px;
+}
+
+.fa-thumbs-up {
+  font-size: 2em;
+  color: lavender;
+}
+
+.fa-thumbs-down {
+  font-size: 2em;
+  color: lavender;
+}
+.buttonspanthumbsup {
+  padding-right: 20px;
+}
+/* ========================================================================== */
+
+/*========================================================================== */
+/* Button Styles 
+/*========================================================================== */
+
+a.resultBtn {
+  background-color: green;
+  border-style: solid 0.5px grey;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  padding: 3px;
+}
+
+#submit {
+  display: block;
+  margin: 0 auto;
+}
+
+.submit-button {
+  padding-top: 20px;
+}
+#getstartedbutton {
+  display: block;
+  margin: 0 auto;
+  width: 10%;
+  box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
+}
+
+/* ========================================================================== */
+
+/*==========================================================================  
+Footer Styles
+========================================================================== */
+
+footer {
+  color: white;
+  text-align: center;
+}
+
+/* ========================================================================== */
+
+/* Media Queries
+========================================================================== */
+@media only screen and (max-width: 600px) {
+  #getstartedbutton {
+    width: 40%;
+  }
+}
+
+/* ========================================================================== */
