@@ -1,14 +1,14 @@
-var express = require("express");
-var bodyParser = require("body-parser");
-var session = require("express-session");
+const express = require("express");
+const bodyParser = require("body-parser");
+const session = require("express-session");
 
-var passport = require("./config/passport");
+const passport = require("./config/passport");
 
-var PORT = process.env.PORT || 8080;
-var db = require("./models");
+const PORT = process.env.PORT || 8080;
+const db = require("./models");
 
 
-var app = express();
+const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static("public"));
