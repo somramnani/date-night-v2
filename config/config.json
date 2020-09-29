@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "Dragonfly_23",
-    "database": "DateNight",
+    "password": "",
+    "database": "date_night",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
