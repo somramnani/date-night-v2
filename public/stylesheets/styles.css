@@ -1,22 +1,11 @@
 /* General Styles
 ========================================================================== */
-
-#thumbsDown {
-  background: rgb(49, 47, 47);
-}
-
-#thumbsUp {
-  background: rgb(49, 47, 47);
-}
-
 html {
   scroll-behavior: smooth;
   height: 100%;
 }
 
 body {
-  background-color: black;
-  font-family: "Cinzel", serif;
   height: 100%;
 }
 
@@ -45,7 +34,13 @@ body {
 .displaynone {
   display: none;
 }
-.container {
+
+.information-full-page {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+/* .container {
   max-width: 960px;
   margin: 0 auto;
   background: lavender;
@@ -55,6 +50,35 @@ body {
   justify-content: center;
   border-radius: 25px;
   transform: translateY(8em);
+} */
+
+.aboutinformation {
+  padding-top: 1em;
+}
+
+.form-control::placeholder {
+  font-size: 0.95rem;
+  color: #aaa;
+  font-style: italic;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+.form-control-underlined {
+  border-width: 0;
+  border-bottom-width: 1px;
+  border-radius: 0;
+  padding-left: 0;
+}
+
+.homepage-form {
+  padding-top: 2em;
+}
+
+.planyourdatenight {
+  padding-top: 10em;
 }
 
 /* ========================================================================== */
@@ -106,6 +130,45 @@ body {
 #headerText {
   font-weight: bolder;
   letter-spacing: 5px;
+}
+
+.search {
+  width: 50%;
+  position: absolute;
+  right: 0px;
+  height: 100%;
+}
+.information-fullpage {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.icon {
+  font-size: 4em;
+  padding: 20px;
+}
+.icon-text {
+  font-weight: bold;
+}
+#aboutinformation-header {
+  font-weight: bold;
+  padding-top: 2em;
+}
+
+#aboutinformation-text {
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
+#navbar-logo {
+  /* font-family: "Dancing Script", cursive; */
+  font-family: "Sansita Swashed", cursive;
+  font-size: 1.8em;
+}
+#homepage-header {
+  font-weight: bold;
+  font-size: 4em;
 }
 /* ========================================================================== */
 
@@ -167,6 +230,18 @@ img {
 .buttonspanthumbsup {
   padding-right: 20px;
 }
+
+.homepage-background-photo {
+  background-image: url("/fireworks");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  background-attachment: fixed;
+
+  opacity: 1;
+  width: 100%;
+}
+
 /* ========================================================================== */
 
 /*========================================================================== */
@@ -203,10 +278,10 @@ a.resultBtn {
 Footer Styles
 ========================================================================== */
 
-footer {
-  color: white;
+/* footer {
+  background-color: grey;
   text-align: center;
-}
+} */
 
 /* ========================================================================== */
 
