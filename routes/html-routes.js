@@ -1,7 +1,8 @@
 var path = require("path");
+const router = require("express").Router();
 
-//
 module.exports = function (app) {
+  // HTML ROUTES
   app.get("/", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/login.html"));
   });
@@ -17,7 +18,7 @@ module.exports = function (app) {
   });
 
   //IMAGE ROUTES
-  app.get("/backgroundimage", function (req, res) {
+  router.get("/backgroundimage", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/images/rps.jpg"));
   });
   app.get("/fireworks", function (req, res) {
@@ -28,3 +29,5 @@ module.exports = function (app) {
     res.sendFile(path.join(__dirname, "../public/images/rps.jpg"));
   });
 };
+
+module.exports = router;
