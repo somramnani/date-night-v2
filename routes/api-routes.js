@@ -1,8 +1,4 @@
 const db = require("../models");
-<<<<<<< HEAD
-=======
-
->>>>>>> 8d4afa4cfd6d80c602959914e484e576f2108b52
 const router = require('express').Router();
 const axios = require('axios');
 const yelpKey = process.env.YELP_TOKEN;
