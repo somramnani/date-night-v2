@@ -63,15 +63,41 @@
               <div class="input-group border rounded-pill p-1">
                 <input
                   type="search"
-                  placeholder="Enter street address or zip code"
+                  placeholder="Zip Code"
                   aria-describedby="button-addon3"
-                  class="form-control bg-none border-0"
+                  class="form-control bg-none border-0 divider-vertical"
                 />
-                <div class="input-group-append border-0">
+                <input
+                  type="search"
+                  placeholder="City"
+                  aria-describedby="button-addon3"
+                  class="form-control bg-none border-0 divider-vertical"
+                />
+
+                <div class="col-auto my-1">
+                  <select
+                    class="custom-select mr-sm-2"
+                    id="inlineFormCustomSelect"
+                  >
+                    <option selected>Type</option>
+                    <option value="exciting">Exciting</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+                <input
+                  type="date"
+                  id="start"
+                  name="trip-start"
+                  value="2020-09-29"
+                  min="2020-09-29"
+                  max="2021-09-29"
+                />
+                <div class="input-group-append">
                   <button
                     id="button-addon3"
                     type="button"
-                    class="btn btn-link text-success"
+                    class="btn btn-link searchbutton"
                   >
                     <i class="fa fa-search"></i>
                   </button>
