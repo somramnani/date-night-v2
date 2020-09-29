@@ -1,6 +1,11 @@
 const path = require("path");
 const router = require('express').Router();
 
+  //IMAGE ROUTES
+  router.get("/backgroundimage", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/images/rps.jpg"));
+  });
+
 router.get("/", (req, res) => {
   // If the user already has an account send them to the members page
   // if (req.user) {
