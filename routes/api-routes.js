@@ -32,7 +32,3 @@ router.post(`/get-date-data`, (req, res) => {
 });
 
 module.exports = router;
-<<<<<<< HEAD
-=======
-
->>>>>>> 8d4afa4cfd6d80c602959914e484e576f2108b52
