@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Date Night - Login</title>
+    <title>Date Night | Homepage</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
     <!------------------------------------------------------------------------------------------>
-    <!-- ************** Bootstrap Links ************** -->
+    <!--Bootstrap Links-->
     <!------------------------------------------------------------------------------------------>
     <link
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -17,66 +16,141 @@
     />
     <!------------------------------------------------------------------------------------------>
 
-    <!------------------------------------------------------------------------------------------>
-    <!-- ************** Google Fonts Links ************** -->
-    <!------------------------------------------------------------------------------------------>
     <link
-      href="https://fonts.googleapis.com/css?family=Cinzel"
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Sansita+Swashed:wght@500&display=swap"
       rel="stylesheet"
     />
     <!------------------------------------------------------------------------------------------>
+    <!-- FONT-AWESOME CDN-->
+    <!------------------------------------------------------------------------------------------>
+    <link
+      rel="stylesheet"
+      href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------>
+    <!-- Google Fonts Links -->
+    <!------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------>
 
     <!------------------------------------------------------------------------------------------>
-    <!-- ************** MY STYLESHEETS ************** -->
+    <!-- MY STYLESHEETS  -->
     <!------------------------------------------------------------------------------------------>
-    <link rel="stylesheet" href="stylesheets/styles.css" />
+    <link rel="stylesheet" href="/styles" />
     <!------------------------------------------------------------------------------------------>
   </head>
 
-  <body class="login-signup-body">
+  <body class>
     <!------------------------------------------------------------------------------------------>
-    <!-- ************** NAVBAR ************** -->
+    <!--NAVBAR -->
     <!------------------------------------------------------------------------------------------>
-    <nav class="navbar navbar-dark bg-dark ">
-      <a class="navbar-brand navbartitle" href="#top">DATE NIGHT</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" id="navbar-logo" href="">Date Night</a>
+      <!-- Navbar content -->
     </nav>
     <!------------------------------------------------------------------------------------------>
-
-    <!------------------------------------------------------------------------------------------>
-    <!-- LOGIN BOX -->
-    <!------------------------------------------------------------------------------------------>
-    <div class="container ">
-      <div class="row  ">
-        <div class=" center panel" id="login_div" method="post">
-          <h1>Login</h1>
-          <form class="login">
-            <div class="form-group input-field">
-              <label for="exampleInputEmail1">Email address</label>
-              <input
-                type="email"
-                class="form-control"
-                id="email-input"
-                placeholder="Email"
-              />
-            </div>
-            <div class="form-group">
-              <label for="exampleInputPassword1">Password</label>
-              <input
-                type="password"
-                class="form-control"
-                id="password-input"
-                placeholder="Password"
-              />
-            </div>
-            <button type="submit" class="btn btn-dark">Login</button>
-          </form>
-          <br />
-          <p>Or sign up <a href="/signup">here</a></p>
+    <section class>
+      <div class="row">
+        <div class="col">
+          <div class="homepage-background-photo"></div>
+        </div>
+        <div class="col planyourdatenight">
+          <div class="container">
+            <h3 class="text-center" id="homepage-header">
+              Plan your date night
+            </h3>
+            <form action="/results" class="homepage-form">
+              <div class="input-group border rounded-pill p-1">
+                <input
+                  type="search"
+                  placeholder="Enter street address or zip code"
+                  aria-describedby="button-addon3"
+                  class="form-control bg-none border-0"
+                />
+                <div class="input-group-append border-0">
+                  <button
+                    id="button-addon3"
+                    type="button"
+                    class="btn btn-link text-success"
+                  >
+                    <i class="fa fa-search"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-    <!------------------------------------------------------------------------------------------>
+    </section>
 
+    <section class="information-full-page">
+      <div class="container information-container">
+        <div class="row">
+          <div class="col-md-4 text-center">
+            <i class="fas fa-utensils icon"></i>
+            <h4 class="icon-text">Restaurant</h4>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book.
+            </p>
+          </div>
+
+          <div class="col-md-4 text-center">
+            <i class="fas fa-ticket-alt icon"></i>
+            <h4 class="icon-text">Movie</h4>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book.
+            </p>
+          </div>
+          <div class="col-md-4 text-center">
+            <i class="fas fa-calendar-check icon"></i>
+            <h4 class="icon-text">Events</h4>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <hr class="featurette-divider" />
+      </div>
+
+      <div class="container text-center aboutinformation">
+        <div class="row">
+          <div class="col aboutinformation-col1">
+            <h4 id="aboutinformation-header">
+              Plan the perfect night with your loved one
+            </h4>
+            <p id="aboutinformation-text">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book.
+            </p>
+          </div>
+          <div class="col">
+            <img src="/datenight" class="img-fluid img-thumbnail" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class=""></footer>
+
+    <!------------------------------------------------------------------------------------------>
+    <script
+      src="https://kit.fontawesome.com/3633bd59c9.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/login.js"></script>
   </body>
