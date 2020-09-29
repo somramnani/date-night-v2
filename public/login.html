@@ -59,7 +59,7 @@
             <h3 class="text-center" id="homepage-header">
               Plan your date night
             </h3>
-            <form action="/results" class="homepage-form">
+            <form class="homepage-form">
               <div class="input-group border rounded-pill p-1">
                 <input
                   type="search"
@@ -67,6 +67,7 @@
                   aria-describedby="button-addon3"
                   class="form-control bg-none border-0 divider-vertical"
                 />
+
                 <input
                   type="search"
                   placeholder="City"
@@ -76,31 +77,34 @@
 
                 <div class="col-auto my-1">
                   <select
-                    class="custom-select mr-sm-2"
+                    class="typeofdate custom-select mr-sm-2"
                     id="inlineFormCustomSelect"
                   >
                     <option selected>Type</option>
                     <option value="exciting">Exciting</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    <option value="relaxed">Relaxed</option>
+                    <option value="romantic">Romantic</option>
                   </select>
                 </div>
+
                 <input
                   type="date"
-                  id="start"
+                  id="calender"
                   name="trip-start"
                   value="2020-09-29"
                   min="2020-09-29"
                   max="2021-09-29"
                 />
                 <div class="input-group-append">
-                  <button
-                    id="button-addon3"
-                    type="button"
-                    class="btn btn-link searchbutton"
-                  >
-                    <i class="fa fa-search"></i>
-                  </button>
+                  <a href="/results">
+                    <button
+                      id="button-addon3"
+                      type="button"
+                      class="btn btn-link searchbutton"
+                    >
+                      <i class="fa fa-search"></i>
+                    </button>
+                  </a>
                 </div>
               </div>
             </form>
