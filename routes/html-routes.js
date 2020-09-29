@@ -1,42 +1,30 @@
 const path = require("path");
-const router = require('express').Router();
+const router = require("express").Router();
 
-  //IMAGE ROUTES
-  router.get("/backgroundimage", function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/images/rps.jpg"));
+//HTML Routes
+module.exports = function (app) {
+  app.get("/", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/login.html"));
+  });
+  app.get("/results", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/results.html"));
   });
 
-router.get("/", (req, res) => {
-  // If the user already has an account send them to the members page
-  // if (req.user) {
-  //   res.redirect("/members");
-  // }
-  res.sendFile(path.join(__dirname, "../public/login.html"));
-});
+  app.get("/styles", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/stylesheets/styles.css"));
+  });
 
-router.get("/login", (req, res) => {
-  // If the user already has an account send them to the members page
-  // if (req.user) {
-  //   res.redirect("/members");
-  // }
-  res.sendFile(path.join(__dirname, "../public/login.html"));
-});
+  //IMAGE ROUTES
+  app.get("/backgroundimage", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/images/rps.jpg"));
+  });
+  app.get("/fireworks", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/images/fireworks.jpg"));
+  });
 
-router.get("/signup", (req, res) => {
-  // If the user already has an account send them to the members page
-  // if (req.user) {
-  //   res.redirect("/members");
-  // }
-  res.sendFile(path.join(__dirname, "../public/signup.html"));
-});
-
-router.get("/members", (req, res) => {
-  res.sendFile(path.join(__dirname, "../public/members.html"));
-});
-
-//IMAGE ROUTES
-router.get("/backgroundimage", (req, res) => {
-  res.sendFile(path.join(__dirname, "../public/images/rps.jpg"));
-});
+  app.get("/datenight", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/images/rps.jpg"));
+  });
+};
 
 module.exports = router;
