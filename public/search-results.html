@@ -27,6 +27,10 @@
       href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Sansita+Swashed:wght@500&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
     <!------------------------------------------------------------------------------------------>
     <!-- CUSTOM STYLESHEETS  -->
     <link rel="stylesheet" href="/styles" />
@@ -43,14 +47,7 @@
         <div class="input-group border rounded-pill p-1">
           <input
             type="search"
-            placeholder="Zip Code"
-            aria-describedby="button-addon3"
-            class="form-control bg-none border-0 divider-vertical"
-          />
-
-          <input
-            type="search"
-            placeholder="City"
+            placeholder="Enter Zip Code or City"
             aria-describedby="button-addon3"
             class="form-control bg-none border-0 divider-vertical"
           />
@@ -90,8 +87,11 @@
       </form>
     </nav>
     <!------------------------------------------------------------------------------------------>
+
+    <!-- Whole Results Section -->
     <section class="results-page-column">
       <div class="row">
+        <!--Left Side-Filter Section-->
         <div class="col-3 filter-column mycontent-left border-right">
           <div class="container">
             <div class="row">
@@ -103,7 +103,6 @@
               </div>
             </div>
           </div>
-
           <div class="container filter-type-container">
             <div class="row filter-types">
               <div class="col"><a href="">Restaurants</a></div>
@@ -111,23 +110,54 @@
               <div class="col filter-types"><a href="">Events</a></div>
             </div>
           </div>
-
           <div class="container">
             <h5 class="price-header">Price</h5>
           </div>
         </div>
 
-        <div class="col results-section">
-          <h2>Restaurants</h2>
-          Thestral dirigible plums, Viktor Krum hexed memory charm Animagus
-          Invisibility Cloak three-headed Dog. Half-Blood Prince Invisibility
-          Cloak cauldron cakes, hiya Harry! Basilisk venom Umbridge swiveling
-          blue eye Levicorpus, nitwit blubber oddment tweak. Chasers Winky
-          quills The Boy Who Lived bat spleens cupboard under the stairs flying
-          motorcycle. Sirius Black Holyhead Harpies, you’ve got dirt on your
-          nose. Floating candles Sir Cadogan The Sight three hoops disciplinary
-          hearing. Grindlewald pig’s tail Sorcerer's Stone biting teacup.
-          Side-along dragon-scale suits Filch 20 points, Mr. Potter.
+        <!--Right Side - Results Section (Cards will be outputed here) -->
+        <div class="col">
+          <!-- Restaurant Results -->
+          <div class="results-sections-styling" id="restaurant-results-section">
+            <h3 class="results-header">Restaurants</h3>
+            Thestral dirigible plums, Viktor Krum hexed memory charm Animagus
+            Invisibility Cloak three-headed Dog. Half-Blood Prince Invisibility
+            Cloak cauldron cakes, hiya Harry! Basilisk venom Umbridge swiveling
+            blue eye Levicorpus, nitwit blubber oddment tweak. Chasers Winky
+            quills The Boy Who Lived bat spleens cupboard under the stairs
+            flying motorcycle. Sirius Black Holyhead Harpies, you’ve got dirt on
+            your nose. Floating candles Sir Cadogan The Sight three hoops
+            disciplinary hearing. Grindlewald pig’s tail Sorcerer's Stone biting
+            teacup. Side-along dragon-scale suits Filch 20 points, Mr. Potter.
+          </div>
+
+          <!-- Theater Results -->
+          <div class="results-sections-styling" id="theater-results-section">
+            <h3 class="results-header">Theaters</h3>
+            Thestral dirigible plums, Viktor Krum hexed memory charm Animagus
+            Invisibility Cloak three-headed Dog. Half-Blood Prince Invisibility
+            Cloak cauldron cakes, hiya Harry! Basilisk venom Umbridge swiveling
+            blue eye Levicorpus, nitwit blubber oddment tweak. Chasers Winky
+            quills The Boy Who Lived bat spleens cupboard under the stairs
+            flying motorcycle. Sirius Black Holyhead Harpies, you’ve got dirt on
+            your nose. Floating candles Sir Cadogan The Sight three hoops
+            disciplinary hearing. Grindlewald pig’s tail Sorcerer's Stone biting
+            teacup. Side-along dragon-scale suits Filch 20 points, Mr. Potter.
+          </div>
+
+          <!-- Events Results -->
+          <div class="results-sections-styling" id="event-results-section">
+            <h3 class="results-header">Events</h3>
+            Thestral dirigible plums, Viktor Krum hexed memory charm Animagus
+            Invisibility Cloak three-headed Dog. Half-Blood Prince Invisibility
+            Cloak cauldron cakes, hiya Harry! Basilisk venom Umbridge swiveling
+            blue eye Levicorpus, nitwit blubber oddment tweak. Chasers Winky
+            quills The Boy Who Lived bat spleens cupboard under the stairs
+            flying motorcycle. Sirius Black Holyhead Harpies, you’ve got dirt on
+            your nose. Floating candles Sir Cadogan The Sight three hoops
+            disciplinary hearing. Grindlewald pig’s tail Sorcerer's Stone biting
+            teacup. Side-along dragon-scale suits Filch 20 points, Mr. Potter.
+          </div>
         </div>
       </div>
     </section>
