@@ -44,16 +44,6 @@ router.post(`/get-date-data`, async (req, res) => {
       }
     }
 
-  //fetch the data concurrently and send to client
-  // Promise.resolve()
-  //   .then(results => { 
-  //     let restaurants = results[0].data.restaurants;
-  //     let events = results[1].data.events;
-            
-  //     console.log(results)
-      
-  //   })
-  //   .catch(error => console.log(error));
 });
 
 module.exports = router;

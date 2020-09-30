@@ -1,5 +1,5 @@
 const CardComponent = props => {
- 
+  
 }
 
 const fetchResults = e => {
@@ -8,8 +8,6 @@ const fetchResults = e => {
   const locationInput = document.getElementById('location');
   const dateTypeInput = document.getElementById('dateType');
   const dayOfDateInput = document.getElementById('calendar');
-
-  console.log(dayOfDateInput.value)
   
   const dateData = {
     location: locationInput.value,
@@ -24,8 +22,8 @@ const fetchResults = e => {
     method: 'post',
     body: JSON.stringify(dateData)
   })
-    .then(response => response.json())
-    .then(data => {
+  .then(response => response.json())
+  .then(data => {
       
       data.restaurants.businesses.map(el => {
         console.log(el)
