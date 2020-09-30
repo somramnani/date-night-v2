@@ -27,6 +27,7 @@ router.get("/styles", function (req, res) {
 router.get("/backgroundimage", function (req, res) {
   res.sendFile(path.join(__dirname, "../public/images/rps.jpg"));
 });
+
 router.get("/fireworks", function (req, res) {
   res.sendFile(path.join(__dirname, "../public/images/fireworks.jpg"));
 });
