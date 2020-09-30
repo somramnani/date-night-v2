@@ -22,8 +22,8 @@ const fetchResults = e => {
     method: 'post',
     body: JSON.stringify(dateData)
   })
-    .then(response => response.json())
-    .then(data => {
+  .then(response => response.json())
+  .then(data => {
       
       data.restaurants.businesses.map(el => {
         console.log(el)
