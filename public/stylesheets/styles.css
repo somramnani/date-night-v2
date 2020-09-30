@@ -19,6 +19,9 @@ body {
   background-size: cover;
 }
 
+.col1 {
+  border: 1px;
+}
 .animated {
   -webkit-animation-fill-mode: both;
   -moz-animation-fill-mode: both;
@@ -76,11 +79,34 @@ body {
 .homepage-form {
   padding-top: 2em;
 }
+.search-results-form {
+  padding-top: 0.5em;
+}
 
 .planyourdatenight {
   padding-top: 10em;
 }
 
+.filter-column {
+  background-color: #fbfbfc;
+  display: block;
+  height: 100%;
+  width: 100%;
+
+  border-right: black;
+}
+.mycontent-left {
+  height: 100%;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.results-page-column {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.results-section {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
 /* ========================================================================== */
 /* Header Styles
 ==========================================================================  */
@@ -166,10 +192,57 @@ body {
   font-family: "Sansita Swashed", cursive;
   font-size: 1.8em;
 }
+
 #homepage-header {
   font-weight: bold;
   font-size: 4em;
+  font-family: "Sansita Swashed", cursive;
 }
+
+.searchbutton {
+  color: black;
+}
+
+#calender {
+  border: 1px solid #dee2e6 !important;
+  border-radius: 0.25rem;
+  padding-left: 1em;
+}
+
+.typeofdate {
+  padding-left: 2em;
+}
+
+.filter-header {
+  font-weight: bold;
+}
+
+#filter-heading {
+  padding-left: 15px;
+  padding-top: 20px;
+}
+
+#clear-all-button {
+  padding-top: 25px;
+}
+#clear-all-button a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.navbar {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  background-color: white;
+}
+.filter-types a {
+  color: inherit;
+  font-weight: bold;
+}
+
+.filter-type-container {
+  padding-top: 1em;
+}
+
 /* ========================================================================== */
 
 /*========================================================================== */

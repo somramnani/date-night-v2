@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use("/api/", apiRoutes);
-app.use("/pages/", pageRoutes);
+app.use("/", pageRoutes);
 app.use(express.static("public"));
 
 db.sequelize.sync().then(function () {
