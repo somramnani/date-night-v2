@@ -99,6 +99,7 @@ body {
 .mycontent-left {
   height: 100%;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  padding-bottom: 1em;
 }
 .results-page-column {
   display: block;
@@ -109,27 +110,34 @@ body {
 .results-sections-styling {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
-.result-cards{
+.result-cards {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0);
   width: 250px;
   height: auto;
   font-size: 10px;
 }
-.results-div{
+.results-div {
   padding-bottom: 20px;
 }
-.results-page-column-row{
-  margin-right:0px;
+.results-page-column-row {
+  margin-right: 0px;
   margin-left: 5px;
-
 }
-.row2{
+.row2 {
   margin-right: 0px;
   margin-left: 0px;
 }
-.dollar-sign-button{
+.dollar-sign-button {
   padding: 0px;
+}
 
+#theater-results-section,
+#event-results-section {
+  margin-top: 1em;
+}
+
+#event-results-section {
+  margin-bottom: 1em;
 }
 
 /* ========================================================================== */
@@ -152,7 +160,7 @@ body {
   font-weight: bold;
 }
 
-.results-header{
+.results-header {
   font-weight: bold;
   padding-left: 10px;
   padding-top: 20px;
@@ -353,16 +361,13 @@ img {
   height: 50%;
 } */
 .embed-responsive .card-img-top {
-    object-fit: cover;
+  object-fit: cover;
 }
-
-
 
 .card-img-top {
-    height: 9rem;
-    object-fit: cover;
+  height: 9rem;
+  object-fit: cover;
 }
-
 
 /* ========================================================================== */
 
