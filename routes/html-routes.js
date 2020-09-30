@@ -19,7 +19,6 @@ router.get("/styles", function (req, res) {
 });
 
 // Image Routes
-
 router.get("/backgroundimage", function (req, res) {
   res.sendFile(path.join(__dirname, "../public/images/rps.jpg"));
 });
@@ -30,6 +29,10 @@ router.get("/fireworks", function (req, res) {
 
 router.get("/datenight", function (req, res) {
   res.sendFile(path.join(__dirname, "../public/images/rps.jpg"));
+});
+
+router.get("/concert", function (req, res) {
+  res.sendFile(path.join(__dirname, "../public/images/concert.jpg"));
 });
 
 module.exports = router;
