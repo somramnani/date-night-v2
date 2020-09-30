@@ -8,10 +8,10 @@ const PORT = process.env.PORT || 8080;
 const db = require("./models");
 const app = express();
 
-app.use(cors());
 app.use(express.json());
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use("/api/", apiRoutes);
+app.use("/api", apiRoutes);
 app.use("/", pageRoutes);
 app.use(express.static("public"));
 

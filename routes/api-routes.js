@@ -16,19 +16,17 @@ router.post(`/get-date-data`, async (req, res) => {
   });
 
   // const getRestaurants = () => instance.get(restaurantURL);
-
-
     switch(dateType) {
       case 'exciting': { 
-        const getRestaurants = () => instance.get(eventURL + '&categories=nightlife,active')
-        const getEvents = () => instance.get(restaurantURL + '&categories=bars')
+        const getRestaurants = () => instance.get(restaurantURL + '&limit=10&categories=nightlife,active')
+        const getEvents = () => instance.get(eventURL + '&categories=bars')
 
-        Promise.all([getRestaurants(), getEvents()])
+        return Promise.all([getRestaurants(), getEvents()])
           .then(results => {
-            let restaurants = results[0].data.restaurants;
-            let events = results[1].data.events;
-
-            console.log(results);
+            let restaurants = results[0].data;
+            let events = results[1].data;
+            
+            res.json({restaurants, events})
           })
       }
       break;
