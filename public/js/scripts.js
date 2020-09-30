@@ -1,5 +1,5 @@
 const CardComponent = props => {
- 
+  
 }
 
 const fetchResults = e => {
@@ -8,8 +8,6 @@ const fetchResults = e => {
   const locationInput = document.getElementById('location');
   const dateTypeInput = document.getElementById('dateType');
   const dayOfDateInput = document.getElementById('calendar');
-
-  console.log(dayOfDateInput.value)
   
   const dateData = {
     location: locationInput.value,
