@@ -1,12 +1,20 @@
+const CardComponent = props => {
+ 
+}
+
 const fetchResults = e => {
   e.preventDefault();
-
-  const locationInput = document.getElementById('')
   
-  const mockData = {
-    location: 'New York City',
-    budget: '3',
-    dateType: 'exciting'
+  const locationInput = document.getElementById('location');
+  const dateTypeInput = document.getElementById('dateType');
+  const dayOfDateInput = document.getElementById('calendar');
+
+  console.log(dayOfDateInput.value)
+  
+  const dateData = {
+    location: locationInput.value,
+    dateType: dateTypeInput.value,
+    startDate: dayOfDateInput.value
   }
 
   return fetch(`http://localhost:8080/api/get-date-data`, {
@@ -14,8 +22,13 @@ const fetchResults = e => {
       'Content-Type': 'application/json'
     },  
     method: 'post',
-    body: JSON.stringify(mockData)
+    body: JSON.stringify(dateData)
   })
     .then(response => response.json())
-    .then(data => data);
+    .then(data => {
+      
+      data.restaurants.businesses.map(el => {
+        console.log(el)
+      })
+    });
 }

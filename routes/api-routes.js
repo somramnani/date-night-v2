@@ -2,12 +2,15 @@ const db = require("../models");
 const router = require('express').Router();
 const axios = require('axios');
 const yelpKey = process.env.YELP_TOKEN;
+const moment = require('moment');
 
 router.post(`/get-date-data`, async (req, res) => {
   const { location, budget, startDate, dateType } = req.body;
+
+  const date = moment().unix(startDate)
   const baseURL = `https://api.yelp.com/v3`;
-  let restaurantURL = `/businesses/search?location=${location}&price=${budget}`;
-  let eventURL = `/events?location=${location}`;
+  let restaurantURL = `/businesses/search?location=${location}`;
+  let eventURL = `/events?location=${location}&start_date=${date}`;
 
   //axios instance for yelp requests
   const instance = axios.create({

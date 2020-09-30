@@ -46,6 +46,7 @@
       <form class="search-results-form">
         <div class="input-group border rounded-pill p-1">
           <input
+            id="location"
             type="search"
             placeholder="Enter Zip Code or City"
             aria-describedby="button-addon3"
@@ -55,7 +56,7 @@
           <div class="col-auto my-1">
             <select
               class="typeofdate custom-select mr-sm-2"
-              id="inlineFormCustomSelect"
+              id="dateType"
             >
               <option selected>Type</option>
               <option value="exciting">Exciting</option>
@@ -66,7 +67,7 @@
 
           <input
             type="date"
-            id="calender"
+            id="calendar"
             name="trip-start"
             value="2020-09-29"
             min="2020-09-29"
@@ -75,7 +76,8 @@
           <div class="input-group-append">
             <a href="/results">
               <button
-                id="button-addon3"
+                onclick="fetchResults(event)"
+                id="search"
                 type="button"
                 class="btn btn-link searchbutton"
               >
@@ -161,7 +163,7 @@
         </div>
       </div>
     </section>
-
+    <script src="js/scripts.js"></script>
     <script
       src="https://kit.fontawesome.com/3633bd59c9.js"
       crossorigin="anonymous"
