@@ -5,11 +5,10 @@ const yelpKey = process.env.YELP_TOKEN;
 const moment = require('moment');
 
 router.post(`/get-date-data`, async (req, res) => {
-  const { location, budget, startDate, dateType } = req.body;
-
-  const date = moment().unix(startDate)
+  const { location, startDate, dateType } = req.body;
+  const date = moment().unix(startDate);
   const baseURL = `https://api.yelp.com/v3`;
-  let restaurantURL = `/businesses/search?location=${location}`;
+  let restaurantURL = `/businesses/search?location=${location}&categories=restaurants&limit=50`;
   let eventURL = `/events?location=${location}&start_date=${date}`;
 
   //axios instance for yelp requests
@@ -18,31 +17,19 @@ router.post(`/get-date-data`, async (req, res) => {
     headers: { Authorization: `Bearer ${yelpKey}` }
   });
 
-  // const getRestaurants = () => instance.get(restaurantURL);
-    switch(dateType) {
-      case 'exciting': { 
-        const getRestaurants = () => instance.get(restaurantURL + '&limit=10&categories=nightlife,active')
-        const getEvents = () => instance.get(eventURL + '&categories=bars')
+  const getRestaurants = () => instance.get(restaurantURL);
+  const getEvents = () => instance.get(eventURL);
 
-        return Promise.all([getRestaurants(), getEvents()])
-          .then(results => {
-            let restaurants = results[0].data;
-            let events = results[1].data;
-            
-            res.json({restaurants, events})
-          })
-      }
-      break;
-      case 'romantic': {
-        instance.get(eventURL + '&categories=wine-tasting,food-and-drink');
-        instance.get(restaurantURL + '&categories=wine_bars,french,winetastingroom')
-      }
-      break;
-      case 'relaxing': {
-        instance.get(eventURL + '&categories=wine-tasting,food-and-drink');
-        instance.get(restaurantURL + '&categories=wine_bars,french,winetastingroom')
-      }
-    }
+  Promise.all([getRestaurants(), getEvents()])
+    .then(results => {
+      let restaurants = results[0].data.businesses.slice(0, 5);
+      let events = 
+        results[1].data.length === 0 ? 
+        'sorry, no events were found for this date/location!' : 
+        results[1].data;
+
+      res.json({ restaurants, events })
+    })
 
 });
 
