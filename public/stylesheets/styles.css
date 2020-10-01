@@ -41,8 +41,8 @@ body {
 
 .information-full-page {
   display: block;
-  height: 100%;
-  width: 100%;
+  padding-top: 4em;
+  padding-bottom: 2em;
 }
 /* .container {
   max-width: 960px;
@@ -99,37 +99,44 @@ body {
 .mycontent-left {
   height: 100%;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  padding-bottom: 1em;
 }
 .results-page-column {
   display: block;
-  height: 100%;
   width: 100%;
   padding-top: 10px;
 }
 .results-sections-styling {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
-.result-cards{
+.result-cards {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0);
   width: 250px;
   height: auto;
   font-size: 10px;
 }
-.results-div{
+.results-div {
   padding-bottom: 20px;
 }
-.results-page-column-row{
-  margin-right:0px;
+.results-page-column-row {
+  margin-right: 0px;
   margin-left: 5px;
-
 }
-.row2{
+.row2 {
   margin-right: 0px;
   margin-left: 0px;
 }
-.dollar-sign-button{
+.dollar-sign-button {
   padding: 0px;
+}
 
+#theater-results-section,
+#event-results-section {
+  margin-top: 1em;
+}
+
+#event-results-section {
+  margin-bottom: 1em;
 }
 
 /* ========================================================================== */
@@ -152,10 +159,13 @@ body {
   font-weight: bold;
 }
 
-.results-header{
+.results-header {
   font-weight: bold;
   padding-left: 10px;
   padding-top: 20px;
+}
+.welcomepageheader {
+  margin-right: 1em;
 }
 /*========================================================================== */
 
@@ -278,6 +288,12 @@ body {
   padding-top: 1em;
 }
 
+.social-icons {
+  font-size: 2em;
+  padding: 10px;
+  color: white;
+}
+
 /* ========================================================================== */
 
 /*========================================================================== */
@@ -353,16 +369,18 @@ img {
   height: 50%;
 } */
 .embed-responsive .card-img-top {
-    object-fit: cover;
+  object-fit: cover;
 }
-
-
 
 .card-img-top {
-    height: 9rem;
-    object-fit: cover;
+  height: 9rem;
+  object-fit: cover;
 }
 
+.date-night-img {
+  width: auto;
+  height: 250px;
+}
 
 /* ========================================================================== */
 
@@ -399,11 +417,24 @@ a.resultBtn {
 /*==========================================================================  
 Footer Styles
 ========================================================================== */
+.page-footer {
+  bottom: 0;
+  color: #fff;
+  background-color: #263238 !important;
+  font-size: 0.9rem;
+  padding-top: 1.5rem !important;
+}
 
-/* footer {
-  background-color: grey;
-  text-align: center;
-} */
+.mt-md-0 {
+  margin-top: 0 !important;
+}
+.footer-copyright {
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(0, 0, 0, 0.2);
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
 
 /* ========================================================================== */
 

@@ -4,6 +4,8 @@
     <title>Date Night | Homepage</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CDN -->
     <link
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
@@ -12,16 +14,19 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
 
+    <!-- AOS Link -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- FONT-AWESOME CDN-->
     <link
       href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Sansita+Swashed:wght@500&display=swap"
       rel="stylesheet"
     />
-    <!-- FONT-AWESOME CDN-->
     <link
       rel="stylesheet"
       href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <!------------------------------------------------------------------------------------------>
+
     <!-- Google Fonts Links -->
     <link
       href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Sansita+Swashed:wght@500&display=swap"
@@ -46,7 +51,7 @@
       <!-- Navbar content -->
     </nav>
     <!------------------------------------------------------------------------------------------>
-    <section>
+    <section class="welcomepageheader" data-aos="fade-in">
       <div class="row">
         <div class="col">
           <div class="homepage-background-photo"></div>
@@ -102,7 +107,7 @@
       </div>
     </section>
 
-    <section class="information-full-page">
+    <section data-aos="fade-in" class="information-full-page">
       <div class="container information-container">
         <div class="row">
           <div class="col-md-4 text-center">
@@ -157,14 +162,69 @@
             </p>
           </div>
           <div class="col">
-            <img src="/datenight" class="img-fluid img-thumbnail" />
+            <img
+              src="/datenight"
+              class="date-night-img img-fluid img-thumbnail"
+            />
           </div>
         </div>
       </div>
     </section>
+    <!-- Footer -->
+    <footer data-aos="fade-in" class="page-footer">
+      <div class="container-fluid text-center text-md-left">
+        <div class="row">
+          <div class="col-md-6 mt-3 .mt-md-0">
+            <h5 class="text-uppercase font-weight-bold">Som Ramnani</h5>
+            <p class="">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt,
+              aliquam fuga iusto odio necessitatibus iure aut fugit ipsam
+              asperiores modi?
+            </p>
+            <div class="social">
+              <a href="" target="_blank" class="social-icons"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a href="" target="_blank" class="social-icons"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="" target="_blank" class="social-icons"
+                ><i class="far fa-envelope"></i
+              ></a>
+            </div>
+          </div>
 
-    <footer class=""></footer>
+          <div class="col-md-6 mt-3 .mt-md-0">
+            <h5 class="text-uppercase font-weight-bold">Brent Abruzese</h5>
+            <p class="">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt,
+              aliquam fuga iusto odio necessitatibus iure aut fugit ipsam
+              asperiores modi?
+            </p>
+            <div class="social">
+              <a href="" target="_blank" class="social-icons"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a href="" target="_blank" class="social-icons"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="" target="_blank" class="social-icons"
+                ><i class="far fa-envelope"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright text-center">
+        Created by Som Ramnani & Brent Abruzese
+      </div>
+    </footer>
 
+    <!-- JavaScript Files -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script
       src="https://kit.fontawesome.com/3633bd59c9.js"
       crossorigin="anonymous"

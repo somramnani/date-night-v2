@@ -14,6 +14,8 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
     <!------------------------------------------------------------------------------------------>
+    <!-- AOS Link -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <!-- FONT-AWESOME CDN-->
     <link
@@ -21,7 +23,6 @@
       href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <!------------------------------------------------------------------------------------------>
-
     <!-- Google Fonts Links -->
     <link
       href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Sansita+Swashed:wght@500&display=swap"
@@ -54,10 +55,7 @@
           />
 
           <div class="col-auto my-1">
-            <select
-              class="typeofdate custom-select mr-sm-2"
-              id="dateType"
-            >
+            <select class="typeofdate custom-select mr-sm-2" id="dateType">
               <option selected>Type</option>
               <option value="exciting">Exciting</option>
               <option value="relaxed">Relaxed</option>
@@ -91,7 +89,7 @@
     <!------------------------------------------------------------------------------------------>
 
     <!-- Whole Results Section -->
-    <section class="results-page-column">
+    <section data-aos="fade-in" class="results-page-column">
       <div class="row results-page-column-row">
         <!--Left Side-Filter Section-->
         <div class="col-3 filter-column mycontent-left border-right">
@@ -113,22 +111,26 @@
             </div>
           </div>
           <div class="container">
-            <h5 class="price-header">Price</h5>
+            <h5 class="price-header text-center">Price</h5>
             <div class="row">
               <div class="col dollar-sign-button">
                 <button type="button" id="$" class="btn btn-dark">$</button>
               </div>
               <div class="col dollar-sign-button">
-                <button type="button" id="$" class="btn btn-dark">$$</button>
+                <button type="button" id="$$" class="btn btn-dark">$$</button>
               </div>
               <div class="col dollar-sign-button">
-                <button type="button" id="$" class="btn btn-dark">$$$</button>
+                <button type="button" id="$$$" class="btn btn-dark">$$$</button>
               </div>
               <div class="col dollar-sign-button">
-                <button type="button" id="$" class="btn btn-dark">$$$$</button>
+                <button type="button" id="$$$$" class="btn btn-dark">
+                  $$$$
+                </button>
               </div>
               <div class="col dollar-sign-button">
-                <button type="button" id="$" class="btn btn-dark">$$$$$</button>
+                <button type="button" id="$$$$$" class="btn btn-dark">
+                  $$$$$
+                </button>
               </div>
             </div>
           </div>
@@ -257,7 +259,11 @@
           </div>
 
           <!-- Events Results -->
-          <div class="results-sections-styling" id="event-results-section">
+          <div
+            data-aos="fade-in"
+            class="results-sections-styling"
+            id="event-results-section"
+          >
             <h3 class="results-header">Events</h3>
             <!-- Cards -->
             <div class="container">
@@ -269,11 +275,65 @@
         </div>
       </div>
     </section>
+    <!-- Footer -->
+    <footer data-aos="fade-in" class="page-footer">
+      <div class="container-fluid text-center text-md-left">
+        <div class="row">
+          <div class="col-md-6 mt-3 .mt-md-0">
+            <h5 class="text-uppercase font-weight-bold">Som Ramnani</h5>
+            <p class="">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt,
+              aliquam fuga iusto odio necessitatibus iure aut fugit ipsam
+              asperiores modi?
+            </p>
+            <div class="social">
+              <a href="" target="_blank" class="social-icons"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a href="" target="_blank" class="social-icons"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="" target="_blank" class="social-icons"
+                ><i class="far fa-envelope"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="col-md-6 mt-3 .mt-md-0">
+            <h5 class="text-uppercase font-weight-bold">Brent Abruzese</h5>
+            <p class="">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt,
+              aliquam fuga iusto odio necessitatibus iure aut fugit ipsam
+              asperiores modi?
+            </p>
+            <div class="social">
+              <a href="" target="_blank" class="social-icons"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a href="" target="_blank" class="social-icons"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="" target="_blank" class="social-icons"
+                ><i class="far fa-envelope"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright text-center">
+        Created by Som Ramnani & Brent Abruzese
+      </div>
+    </footer>
+    <!-- JavaScript Files -->
     <script src="js/scripts.js"></script>
     <script
       src="https://kit.fontawesome.com/3633bd59c9.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </body>
 </html>
