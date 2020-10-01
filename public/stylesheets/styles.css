@@ -41,6 +41,8 @@ body {
 
 .information-full-page {
   display: block;
+  padding-top: 4em;
+  padding-bottom: 2em;
 }
 /* .container {
   max-width: 960px;
@@ -373,6 +375,11 @@ img {
 .card-img-top {
   height: 9rem;
   object-fit: cover;
+}
+
+.date-night-img {
+  width: auto;
+  height: 250px;
 }
 
 /* ========================================================================== */
