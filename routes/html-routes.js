@@ -18,6 +18,10 @@ router.get("/styles", function (req, res) {
   res.sendFile(path.join(__dirname, "../public/stylesheets/styles.css"));
 });
 
+router.get("/scripts", function (req, res) {
+  res.sendFile(path.join(__dirname, "../public/js/scripts.js"));
+});
+
 // Image Routes
 router.get("/backgroundimage", function (req, res) {
   res.sendFile(path.join(__dirname, "../public/images/rps.jpg"));

@@ -44,47 +44,59 @@
     <nav class="navbar navbar-expand-lg navbar-light">
       <a class="navbar-brand" id="navbar-logo" href="/">Date Night</a>
       <!-- Navbar content -->
-      <form class="search-results-form">
-        <div class="input-group border rounded-pill p-1">
-          <input
-            id="location"
-            type="search"
-            placeholder="Enter Zip Code or City"
-            aria-describedby="button-addon3"
-            class="form-control bg-none border-0 divider-vertical"
-          />
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <form class="search-results-form">
+              <div class="input-group border rounded-pill p-1">
+                <input
+                  id="location"
+                  type="search"
+                  placeholder="Enter Zip Code or City"
+                  aria-describedby="button-addon3"
+                  class="form-control bg-none border-0 divider-vertical"
+                />
+      
+                <div class="col-auto my-1">
+                  <select class="typeofdate custom-select mr-sm-2" id="dateType">
+                    <option selected>Type</option>
+                    <option value="exciting">Exciting</option>
+                    <option value="relaxed">Relaxed</option>
+                    <option value="romantic">Romantic</option>
+                  </select>
+                </div>
+      
+                <input
+                  type="date"
+                  id="calendar"
+                  name="trip-start"
+                  value="2020-09-29"
+                  min="2020-09-29"
+                  max="2021-09-29"
+                />
+                <div class="input-group-append">
+                  <a href="/results">
+                    <button
+                      onclick="fetchResults(event)"
+                      id="search"
+                      type="button"
+                      class="btn btn-link searchbutton"
+                    >
+                      <i class="fa fa-search"></i>
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </form>
+          </li>
+          <li class="nav-item">
+           <p id ="username">Hi!</p>
+          </li>
+        </ul>
+      </div> 
 
-          <div class="col-auto my-1">
-            <select class="typeofdate custom-select mr-sm-2" id="dateType">
-              <option selected>Type</option>
-              <option value="exciting">Exciting</option>
-              <option value="relaxed">Relaxed</option>
-              <option value="romantic">Romantic</option>
-            </select>
-          </div>
-
-          <input
-            type="date"
-            id="calendar"
-            name="trip-start"
-            value="2020-09-29"
-            min="2020-09-29"
-            max="2021-09-29"
-          />
-          <div class="input-group-append">
-            <a href="/results">
-              <button
-                onclick="fetchResults(event)"
-                id="search"
-                type="button"
-                class="btn btn-link searchbutton"
-              >
-                <i class="fa fa-search"></i>
-              </button>
-            </a>
-          </div>
-        </div>
-      </form>
+      
+     
     </nav>
     <!------------------------------------------------------------------------------------------>
 
