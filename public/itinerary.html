@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Date Night | Itinerary</title>
+    <!-- Bootstrap CDN -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+
+    <!-- AOS Link -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- FONT-AWESOME CDN-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Sansita+Swashed:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- Google Fonts Links -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Sansita+Swashed:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <!------------------------------------------------------------------------------------------>
+    <!-- CUSTOM STYLESHEETS  -->
+    <link rel="stylesheet" href="/styles" />
+    <!------------------------------------------------------------------------------------------>
+  </head>
+  <!------------------------------------------------------------------------------------------>
+  <!--NAVBAR -->
+  <!------------------------------------------------------------------------------------------>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" id="navbar-logo" href="/">Date Night</a>
+    <!-- Navbar content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto"></ul>
+    </div>
+  </nav>
+  <!------------------------------------------------------------------------------------------>
+  <div class="jumbotron itinerarypage-jumbtron jumbotron-fluid" data-aos="fade-in"> 
+    <div class="container ">
+      <h1 class="text-center" id ="itinerary-header-text">
+        Plan your date night
+      </h1>
+      <form class="itinerary-form ">
+        <div class="input-group border rounded-pill p-1 itinerary-search-bar">
+          <input
+            type="search"
+            placeholder="Enter Zip Code or City"
+            aria-describedby="button-addon3"
+            class="form-control bg-none border-0 divider-vertical"
+          />
+          <!-- <div class="col-auto my-1">
+            <select
+              class="typeofdate custom-select mr-sm-2"
+              id="inlineFormCustomSelect"
+            >
+              <option selected>Type</option>
+              <option value="exciting">Exciting</option>
+              <option value="relaxed">Relaxed</option>
+              <option value="romantic">Romantic</option>
+            </select>
+          </div> -->
+          <input
+            type="date"
+            id="calender"
+            name="trip-start"
+            value="2020-09-29"
+            min="2020-09-29"
+            max="2021-09-29"
+          />
+          <div class="input-group-append">
+            <a href="/results">
+              <button
+                id="button-addon3"
+                type="button"
+                class="btn btn-link searchbutton"
+              >
+                <i class="fa fa-search"></i>
+              </button>
+            </a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <section class = "itinerary-section">
+    <div class="container">
+      <h3 id = "itinerary-section-header">Your Itinerary</h3>
+      <div class="row">
+        <div class="col-sm itinerary-div">
+          <div class="card result-cards">
+            <img
+              class="card-img-top itinerary-results-image"
+              src="https://wallpaperaccess.com/full/767277.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and
+                make up the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+      </div>
+
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer data-aos="fade-in" class="page-footer">
+    <div class="container-fluid text-center text-md-left">
+      <div class="row text-center">
+        <div class="col-md-6 mt-3 .mt-md-0">
+          <h5 class="text-uppercase font-weight-bold footer-names">Som Ramnani</h5>
+          <p class="">
+            <p class="">
+              <i class="fas fa-home mr-3"></i>
+              New York, New York
+            </p>
+            <p class="">
+              <i class="fas fa-envelope mr-3"></i>
+              som.ramnani@gmail.com
+            </p>
+            <p class="">
+              <i class="fas fa-phone mr-3"></i>
+              +1 408 960 9932
+            </p>
+          </p>
+          <div class="social">
+            <a
+              href="https://github.com/somramnani"
+              target="_blank"
+              class="social-icons"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/som-ramnani-b1990b14b"
+              target="_blank"
+              class="social-icons"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a
+              href="mailto:som.ramnani@gmail.com"
+              target="_blank"
+              class="social-icons"
+              ><i class="far fa-envelope"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="col-md-6 mt-3 .mt-md-0">
+          <h5 class="text-uppercase font-weight-bold">Brent Abruzese</h5>
+          <p class="">
+            <i class="fas fa-home mr-3"></i>
+            New York, New York
+          </p>
+          <p class="">
+            <i class="fas fa-envelope mr-3"></i>
+            brent.abruzese@gmail.com
+          </p>
+          <p class="">
+            <i class="fas fa-phone mr-3"></i>
+            +1 848 213 2522
+          </p>
+          <div class="social">
+            <a
+              href="https://github.com/coderbrent"
+              target="_blank"
+              class="social-icons"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/brent-abruzese/"
+              target="_blank"
+              class="social-icons"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a
+              href="mailto:brent.abruzese@gmail.com"
+              target="_blank"
+              class="social-icons"
+              ><i class="far fa-envelope"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright text-center">
+      Created by Som Ramnani & Brent Abruzese
+    </div>
+  </footer>
+  <!-- JavaScript Files -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script
+    src="https://kit.fontawesome.com/3633bd59c9.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="/scripts"></script>
+  <body></body>
+</html>
