@@ -47,19 +47,34 @@ const fetchResults = async (e) => {
     method: "post",
     body: JSON.stringify(dateData),
   })
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-      data.restaurants.map((el) => {
-        eventResults.appendChild(
+  .then(response => response.json())
+  .then(data => {
+    console.log(data)
+    data.events.length > 0 ?
+    data.events.map(el => {
+      eventResults
+        .appendChild(
           CardComponent({
             key: el.id,
             imageSrc: el.image_url,
             cardTitle: el.name,
-            cardText: el.location.address,
+            cardText: el.description
           })
-        );
-      });
+        )
+    }) : eventResults.append('Sorry! No events were found!');
+
+    data.restaurants.map(el => {
+      restaurantResults
+        .appendChild(
+          CardComponent({
+            key: el.id,
+            imageSrc: el.image_url,
+            cardTitle: el.name,
+            cardText: el.location.address
+          })
+        )
+      })
+
     });
 };
 

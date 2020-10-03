@@ -26,7 +26,7 @@ router.post(`/get-date-data`, async (req, res) => {
       let events = 
         results[1].data.length === 0 ? 
         'sorry, no events were found for this date/location!' : 
-        results[1].data;
+        results[1].data.events;
 
       res.json({ restaurants, events })
     })
