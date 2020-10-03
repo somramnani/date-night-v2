@@ -41,7 +41,7 @@ body {
 
 .information-full-page {
   display: block;
-  padding-top: 4em;
+  /* padding-top: 2em; */
   padding-bottom: 2em;
 }
 /* .container {
@@ -138,6 +138,25 @@ body {
 #event-results-section {
   margin-bottom: 1em;
 }
+.jumbotron {
+  background-color: white !important;
+}
+
+.itinerary-search-bar {
+  background-color: white;
+}
+
+.itinerary-form {
+  width: 28%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+.itinerary-section {
+  height: 50%;
+  display: block;
+}
 
 /* ========================================================================== */
 /* Header Styles
@@ -166,6 +185,19 @@ body {
 }
 .welcomepageheader {
   margin-right: 1em;
+}
+
+#itinerary-section-header {
+  font-weight: bold;
+  padding-bottom: 0.5em;
+}
+
+#itinerary-header-text {
+  font-weight: bold;
+  color: white;
+  font-family: "Sansita Swashed", cursive;
+  padding-bottom: 1em;
+  font-size: 3em;
 }
 /*========================================================================== */
 
@@ -316,43 +348,8 @@ body {
   opacity: 1;
 }
 
-.parallax2 {
-  background: url("../images/filip-mroz-172351-unsplash.jpg") no-repeat center;
-  background-size: cover;
-  background-attachment: fixed;
-  height: 600px;
-}
-
-.parallax3 {
-  background: url("../images/matthieu-huang-549064-unsplash.jpg") no-repeat
-    center;
-  background-size: cover;
-  background-attachment: fixed;
-  height: 600px;
-}
-
-.parallax5 {
-  background: url("../images/theatre.jpg") no-repeat center;
-  background-size: cover;
-  background-attachment: fixed;
-  height: 600px;
-}
-
 img {
   height: 1px;
-}
-
-.fa-thumbs-up {
-  font-size: 2em;
-  color: lavender;
-}
-
-.fa-thumbs-down {
-  font-size: 2em;
-  color: lavender;
-}
-.buttonspanthumbsup {
-  padding-right: 20px;
 }
 
 .homepage-background-photo {
@@ -380,6 +377,18 @@ img {
 .date-night-img {
   width: auto;
   height: 250px;
+}
+.itinerarypage-jumbtron {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/date1");
+  display: block;
+
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  opacity: 1;
+  height: 40%;
 }
 
 /* ========================================================================== */
