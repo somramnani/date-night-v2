@@ -147,7 +147,15 @@ body {
 }
 
 .itinerary-form {
-  margin-top: 3em;
+  width: 28%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+.itinerary-section {
+  height: 50%;
+  display: block;
 }
 
 /* ========================================================================== */
@@ -177,6 +185,19 @@ body {
 }
 .welcomepageheader {
   margin-right: 1em;
+}
+
+#itinerary-section-header {
+  font-weight: bold;
+  padding-bottom: 0.5em;
+}
+
+#itinerary-header-text {
+  font-weight: bold;
+  color: white;
+  font-family: "Sansita Swashed", cursive;
+  padding-bottom: 1em;
+  font-size: 3em;
 }
 /*========================================================================== */
 
@@ -358,7 +379,8 @@ img {
   height: 250px;
 }
 .itinerarypage-jumbtron {
-  background-image: url("/calender");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/date1");
   display: block;
 
   background-repeat: no-repeat; /* Do not repeat the image */

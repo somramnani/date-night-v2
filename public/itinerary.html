@@ -51,12 +51,12 @@
     </div>
   </nav>
   <!------------------------------------------------------------------------------------------>
-  <div
-    class="jumbotron itinerarypage-jumbtron jumbotron-fluid"
-    data-aos="fade-in"
-  >
-    <div class="container">
-      <form class="itinerary-form">
+  <div class="jumbotron itinerarypage-jumbtron jumbotron-fluid" data-aos="fade-in"> 
+    <div class="container ">
+      <h1 class="text-center" id ="itinerary-header-text">
+        Plan your date night
+      </h1>
+      <form class="itinerary-form ">
         <div class="input-group border rounded-pill p-1 itinerary-search-bar">
           <input
             type="search"
@@ -64,7 +64,6 @@
             aria-describedby="button-addon3"
             class="form-control bg-none border-0 divider-vertical"
           />
-
           <!-- <div class="col-auto my-1">
             <select
               class="typeofdate custom-select mr-sm-2"
@@ -76,7 +75,6 @@
               <option value="romantic">Romantic</option>
             </select>
           </div> -->
-
           <input
             type="date"
             id="calender"
@@ -100,6 +98,30 @@
       </form>
     </div>
   </div>
+
+  <section class = "itinerary-section">
+    <div class="container">
+      <h3 id = "itinerary-section-header">Your Itinerary</h3>
+      <div class="row">
+        <div class="col-sm itinerary-div">
+          <div class="card result-cards">
+            <img
+              class="card-img-top itinerary-results-image"
+              src="https://wallpaperaccess.com/full/767277.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and
+                make up the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+      </div>
+
+    </div>
+  </section>
   
   <!-- Footer -->
   <footer data-aos="fade-in" class="page-footer">
