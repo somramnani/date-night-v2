@@ -47,8 +47,17 @@
     <!--NAVBAR -->
     <!------------------------------------------------------------------------------------------>
     <nav class="navbar navbar-expand-lg navbar-light">
-      <a class="navbar-brand" id="navbar-logo" href="">Date Night</a>
+      <a class="navbar-brand" id="navbar-logo" href="/">Date Night</a>
       <!-- Navbar content -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/login"
+              >Log In <span class="sr-only">(current)</span></a
+            >
+          </li>
+        </ul>
+      </div>
     </nav>
     <!------------------------------------------------------------------------------------------>
     <section class="welcomepageheader" data-aos="fade-in">
@@ -69,7 +78,7 @@
                   aria-describedby="button-addon3"
                   class="form-control bg-none border-0 divider-vertical"
                 />
-                <div class="col-auto my-1">
+                <!-- <div class="col-auto my-1">
                   <select
                     class="typeofdate custom-select mr-sm-2"
                     id="inlineFormCustomSelect"
@@ -79,8 +88,7 @@
                     <option value="relaxed">Relaxed</option>
                     <option value="romantic">Romantic</option>
                   </select>
-                </div>
-
+                </div> -->
                 <input
                   type="date"
                   id="calender"
@@ -173,42 +181,79 @@
     <!-- Footer -->
     <footer data-aos="fade-in" class="page-footer">
       <div class="container-fluid text-center text-md-left">
-        <div class="row">
+        <div class="row text-center">
           <div class="col-md-6 mt-3 .mt-md-0">
-            <h5 class="text-uppercase font-weight-bold">Som Ramnani</h5>
+            <h5 class="text-uppercase font-weight-bold footer-names">
+              Som Ramnani
+            </h5>
             <p class="">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt,
-              aliquam fuga iusto odio necessitatibus iure aut fugit ipsam
-              asperiores modi?
+              <i class="fas fa-home mr-3"></i>
+              New York, New York
+            </p>
+            <p class="">
+              <i class="fas fa-envelope mr-3"></i>
+              som.ramnani@gmail.com
+            </p>
+            <p class="">
+              <i class="fas fa-phone mr-3"></i>
+              +1 408 960 9932
             </p>
             <div class="social">
-              <a href="" target="_blank" class="social-icons"
+              <a
+                href="https://github.com/somramnani"
+                target="_blank"
+                class="social-icons"
                 ><i class="fab fa-github"></i
               ></a>
-              <a href="" target="_blank" class="social-icons"
+              <a
+                href="https://www.linkedin.com/in/som-ramnani-b1990b14b"
+                target="_blank"
+                class="social-icons"
                 ><i class="fab fa-linkedin"></i
               ></a>
-              <a href="" target="_blank" class="social-icons"
+              <a
+                href="mailto:som.ramnani@gmail.com"
+                target="_blank"
+                class="social-icons"
                 ><i class="far fa-envelope"></i
               ></a>
             </div>
           </div>
 
           <div class="col-md-6 mt-3 .mt-md-0">
-            <h5 class="text-uppercase font-weight-bold">Brent Abruzese</h5>
+            <h5 class="text-uppercase font-weight-bold footer-names">
+              Brent Abruzese
+            </h5>
             <p class="">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt,
-              aliquam fuga iusto odio necessitatibus iure aut fugit ipsam
-              asperiores modi?
+              <i class="fas fa-home mr-3"></i>
+              New York, New York
             </p>
+            <p class="">
+              <i class="fas fa-envelope mr-3"></i>
+              brent.abruzese@gmail.com
+            </p>
+            <p class="">
+              <i class="fas fa-phone mr-3"></i>
+              +1 848 213 2522
+            </p>
+
             <div class="social">
-              <a href="" target="_blank" class="social-icons"
+              <a
+                href="https://github.com/coderbrent"
+                target="_blank"
+                class="social-icons"
                 ><i class="fab fa-github"></i
               ></a>
-              <a href="" target="_blank" class="social-icons"
+              <a
+                href="https://www.linkedin.com/in/brent-abruzese/"
+                target="_blank"
+                class="social-icons"
                 ><i class="fab fa-linkedin"></i
               ></a>
-              <a href="" target="_blank" class="social-icons"
+              <a
+                href="mailto:brent.abruzese@gmail.com"
+                target="_blank"
+                class="social-icons"
                 ><i class="far fa-envelope"></i
               ></a>
             </div>
@@ -230,6 +275,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/login.js"></script>
+    <script type="text/javascript" src="/scripts"></script>
   </body>
 </html>
