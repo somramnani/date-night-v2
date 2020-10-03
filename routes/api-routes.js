@@ -1,8 +1,8 @@
 const db = require("../models");
-const router = require('express').Router();
-const axios = require('axios');
+const router = require("express").Router();
+const axios = require("axios");
 const yelpKey = process.env.YELP_TOKEN;
-const moment = require('moment');
+const moment = require("moment");
 
 router.post(`/get-date-data`, async (req, res) => {
   const { location, startDate, dateType } = req.body;
@@ -14,23 +14,21 @@ router.post(`/get-date-data`, async (req, res) => {
   //axios instance for yelp requests
   const instance = axios.create({
     baseURL,
-    headers: { Authorization: `Bearer ${yelpKey}` }
+    headers: { Authorization: `Bearer ${yelpKey}` },
   });
 
   const getRestaurants = () => instance.get(restaurantURL);
   const getEvents = () => instance.get(eventURL);
 
-  Promise.all([getRestaurants(), getEvents()])
-    .then(results => {
-      let restaurants = results[0].data.businesses.slice(0, 5);
-      let events = 
-        results[1].data.length === 0 ? 
-        'sorry, no events were found for this date/location!' : 
-        results[1].data;
+  Promise.all([getRestaurants(), getEvents()]).then((results) => {
+    let restaurants = results[0].data.businesses.slice(0, 5);
+    let events =
+      results[1].data.length === 0
+        ? "sorry, no events were found for this date/location!"
+        : results[1].data;
 
-      res.json({ restaurants, events })
-    })
-
+    res.json({ restaurants, events });
+  });
 });
 
 module.exports = router;
