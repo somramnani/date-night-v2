@@ -2,6 +2,7 @@ const CardComponent = props => {
   const col = document.createElement('div');
   col.classList.add('col-sm', 'results-div');
   const card = document.createElement('div');
+  card.setAttribute('yelp-id', props.key);
   card.classList.add('card', 'result-cards');
   const image = document.createElement('img');
   image.classList.add('card-img-top', 'restaurant-results-image');
@@ -32,7 +33,7 @@ const fetchResults = async e => {
   const locationInput = document.getElementById('location');
   const dateTypeInput = document.getElementById('dateType');
   const dayOfDateInput = document.getElementById('calendar');
-  const restaurantResults = document.getElementById('restaurant-results');
+  const restaurantResults = document.getElementById('restaurant-results-section');
   const eventResults = document.getElementById('event-results');
   
   const dateData = {
@@ -50,17 +51,31 @@ const fetchResults = async e => {
   })
   .then(response => response.json())
   .then(data => {
+
     console.log(data)
-      data.restaurants.map(el => {
-        eventResults
-          .appendChild(
-            CardComponent({
-              key: el.id,
-              imageSrc: el.image_url,
-              cardTitle: el.name,
-              cardText: el.location.address
-            })
-          )
+    data.events.length > 0 ?
+    data.events.map(el => {
+      eventResults
+        .appendChild(
+          CardComponent({
+            key: el.id,
+            imageSrc: el.image_url,
+            cardTitle: el.name,
+            cardText: el.description
+          })
+        )
+    }) : eventResults.append('Sorry! No events were found!');
+
+    data.restaurants.map(el => {
+      restaurantResults
+        .appendChild(
+          CardComponent({
+            key: el.id,
+            imageSrc: el.image_url,
+            cardTitle: el.name,
+            cardText: el.location.address
+          })
+        )
       })
     });
 }
