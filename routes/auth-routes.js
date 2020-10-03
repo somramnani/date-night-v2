@@ -34,8 +34,7 @@ router.get("/callback", function (req, res, next) {
       }
       const returnTo = req.session.returnTo;
       delete req.session.returnTo;
-      res.redirect(returnTo || "/results");
-      
+      res.redirect(returnTo || "/itinerary");
     });
   })(req, res, next);
 });

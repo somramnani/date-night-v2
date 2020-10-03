@@ -9,9 +9,8 @@ router.get("/", (req, res) => {
 router.get("/results", (req, res) => {
   res.sendFile(path.join(__dirname, "../public/search-results.html"));
 });
-
-router.get("/signup", (req, res) => {
-  res.sendFile(path.join(__dirname, "../public/signup.html"));
+router.get("/itinerary", (req, res) => {
+  res.sendFile(path.join(__dirname, "../public/itinerary.html"));
 });
 
 router.get("/styles", function (req, res) {
@@ -37,6 +36,10 @@ router.get("/datenight", function (req, res) {
 
 router.get("/concert", function (req, res) {
   res.sendFile(path.join(__dirname, "../public/images/concert.jpg"));
+});
+
+router.get("/calender", function (req, res) {
+  res.sendFile(path.join(__dirname, "../public/images/calender.jpg"));
 });
 
 module.exports = router;

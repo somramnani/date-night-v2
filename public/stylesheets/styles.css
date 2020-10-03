@@ -138,6 +138,17 @@ body {
 #event-results-section {
   margin-bottom: 1em;
 }
+.jumbotron {
+  background-color: white !important;
+}
+
+.itinerary-search-bar {
+  background-color: white;
+}
+
+.itinerary-form {
+  margin-top: 3em;
+}
 
 /* ========================================================================== */
 /* Header Styles
@@ -316,43 +327,8 @@ body {
   opacity: 1;
 }
 
-.parallax2 {
-  background: url("../images/filip-mroz-172351-unsplash.jpg") no-repeat center;
-  background-size: cover;
-  background-attachment: fixed;
-  height: 600px;
-}
-
-.parallax3 {
-  background: url("../images/matthieu-huang-549064-unsplash.jpg") no-repeat
-    center;
-  background-size: cover;
-  background-attachment: fixed;
-  height: 600px;
-}
-
-.parallax5 {
-  background: url("../images/theatre.jpg") no-repeat center;
-  background-size: cover;
-  background-attachment: fixed;
-  height: 600px;
-}
-
 img {
   height: 1px;
-}
-
-.fa-thumbs-up {
-  font-size: 2em;
-  color: lavender;
-}
-
-.fa-thumbs-down {
-  font-size: 2em;
-  color: lavender;
-}
-.buttonspanthumbsup {
-  padding-right: 20px;
 }
 
 .homepage-background-photo {
@@ -380,6 +356,17 @@ img {
 .date-night-img {
   width: auto;
   height: 250px;
+}
+.itinerarypage-jumbtron {
+  background-image: url("/calender");
+  display: block;
+
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  opacity: 1;
+  height: 40%;
 }
 
 /* ========================================================================== */
