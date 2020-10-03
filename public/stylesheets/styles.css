@@ -1,5 +1,6 @@
+/*==========================================================================*/
 /* General Styles
-========================================================================== */
+/*==========================================================================*/
 html {
   scroll-behavior: smooth;
   height: 100%;
@@ -14,26 +15,8 @@ body {
   visibility: hidden;
 }
 
-.hero-section {
-  height: 100%;
-
-  background-size: cover;
-}
-
 .col1 {
   border: 1px;
-}
-.animated {
-  -webkit-animation-fill-mode: both;
-  -moz-animation-fill-mode: both;
-  -ms-animation-fill-mode: both;
-  -o-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-duration: 2s;
-  -moz-animation-duration: 2s;
-  -ms-animation-duration: 2s;
-  -o-animation-duration: 2s;
-  animation-duration: 1s;
 }
 .displaynone {
   display: none;
@@ -44,17 +27,6 @@ body {
   /* padding-top: 2em; */
   padding-bottom: 2em;
 }
-/* .container {
-  max-width: 960px;
-  margin: 0 auto;
-  background: lavender;
-  font-size: 24 px;
-  padding: 25px;
-  margin-bottom: 25px;
-  justify-content: center;
-  border-radius: 25px;
-  transform: translateY(8em);
-} */
 
 .aboutinformation {
   padding-top: 1em;
@@ -93,7 +65,6 @@ body {
   display: block;
   height: 100%;
   width: 100%;
-
   border-right: black;
 }
 .mycontent-left {
@@ -138,6 +109,7 @@ body {
 #event-results-section {
   margin-bottom: 1em;
 }
+
 .jumbotron {
   background-color: white !important;
 }
@@ -158,9 +130,9 @@ body {
   display: block;
 }
 
-/* ========================================================================== */
+/*==========================================================================*/
 /* Header Styles
-==========================================================================  */
+/*==========================================================================*/
 .activity-header,
 .header {
   color: white;
@@ -170,9 +142,7 @@ body {
 .activity-header {
   padding-top: 2em;
 }
-#navbarNavDropdown {
-  font-size: 20px;
-}
+
 .price-header {
   padding-top: 1em;
   font-weight: bold;
@@ -199,40 +169,14 @@ body {
   padding-bottom: 1em;
   font-size: 3em;
 }
-/*========================================================================== */
 
-/*========================================================================== */
+/*==========================================================================*/
 /* Text Styles
-========================================================================== */
-
-#headerText {
-  text-align: center;
-  font-size: 25px;
-  color: white;
-}
+/*==========================================================================*/
 .imageTitle {
   text-align: center;
   font-size: 75px;
   color: white;
-}
-
-.homepageContent {
-  transform: translateY(10em);
-  text-transform: uppercase;
-  color: white;
-}
-#main-header-text {
-  font-size: 6em;
-  font-weight: bolder;
-  letter-spacing: 30px;
-}
-.navbar-dark .navbar-nav .nav-link {
-  color: white;
-}
-
-#headerText {
-  font-weight: bolder;
-  letter-spacing: 5px;
 }
 
 .search {
@@ -265,7 +209,6 @@ body {
 }
 
 #navbar-logo {
-  /* font-family: "Dancing Script", cursive; */
   font-family: "Sansita Swashed", cursive;
   font-size: 1.8em;
 }
@@ -326,18 +269,9 @@ body {
   color: white;
 }
 
-/* ========================================================================== */
-
 /*========================================================================== */
 /* Image Styles
-========================================================================== */
-/* .parallaxHeader{
-    background: url('../images/valentin-antonucci-799200-unsplash.jpg') no-repeat center;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 800px;
-	} */
-
+/*========================================================================== */
 .background-image {
   background-image: url("/backgroundimage");
   background-repeat: no-repeat; /* Do not repeat the image */
@@ -365,6 +299,7 @@ img {
 /* .restaurant-results-image{
   height: 50%;
 } */
+
 .embed-responsive .card-img-top {
   object-fit: cover;
 }
@@ -382,7 +317,6 @@ img {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("/date1");
   display: block;
-
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
   background-attachment: fixed;
@@ -391,41 +325,13 @@ img {
   height: 40%;
 }
 
-/* ========================================================================== */
-
 /*========================================================================== */
 /* Button Styles 
 /*========================================================================== */
 
-a.resultBtn {
-  background-color: green;
-  border-style: solid 0.5px grey;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  text-decoration: none;
-  padding: 3px;
-}
-
-#submit {
-  display: block;
-  margin: 0 auto;
-}
-
-.submit-button {
-  padding-top: 20px;
-}
-#getstartedbutton {
-  display: block;
-  margin: 0 auto;
-  width: 10%;
-  box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
-}
-
-/* ========================================================================== */
-
 /*==========================================================================  
-Footer Styles
-========================================================================== */
+/*Footer Styles
+/*========================================================================== */
 .page-footer {
   bottom: 0;
   color: #fff;
@@ -445,14 +351,6 @@ Footer Styles
   padding-bottom: 1rem !important;
 }
 
-/* ========================================================================== */
-
+/*==========================================================================  
 /* Media Queries
-========================================================================== */
-@media only screen and (max-width: 600px) {
-  #getstartedbutton {
-    width: 40%;
-  }
-}
-
-/* ========================================================================== */
+/*========================================================================== */
