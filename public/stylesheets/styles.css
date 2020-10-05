@@ -28,10 +28,6 @@ body {
   padding-bottom: 2em;
 }
 
-.aboutinformation {
-  padding-top: 1em;
-}
-
 .form-control::placeholder {
   font-size: 0.95rem;
   color: #aaa;
@@ -311,8 +307,12 @@ img {
 
 .date-night-img {
   width: auto;
-  height: 250px;
+  height: 300px;
 }
+.dateimagecol {
+  padding-left: 30%;
+}
+
 .itinerarypage-jumbtron {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("/date1");
@@ -323,6 +323,10 @@ img {
   background-position: center;
   opacity: 1;
   height: 40%;
+}
+
+.user-image {
+  height: auto;
 }
 
 /*========================================================================== */
@@ -354,3 +358,14 @@ img {
 /*==========================================================================  
 /* Media Queries
 /*========================================================================== */
+@media (max-width: 480px) {
+  .homepage-background-photo {
+  }
+  .dateimagecol {
+    padding-left: 0%;
+  }
+
+  .planyourdatenight {
+    padding-top: 0em;
+  }
+}
