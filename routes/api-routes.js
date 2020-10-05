@@ -33,4 +33,22 @@ router.post(`/get-date-data`, async (req, res) => {
 
 });
 
+router.post(`/new-user`, (req, res) => {
+  const { username, email, password } = req.body;
+  const { user } = db.sequelize.models;
+  
+  user
+    .findOrCreate({ 
+      where: { 
+        username,
+        email,
+        password
+      }, 
+      defaults: null 
+    }
+  ).then(([user, created]) => {
+    res.json({ user, created });
+  }) 
+})
+
 module.exports = router;

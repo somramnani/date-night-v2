@@ -1,1 +1,1 @@
-CREATE DATABASE DateNight;
+CREATE DATABASE date_night;
