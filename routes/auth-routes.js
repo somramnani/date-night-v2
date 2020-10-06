@@ -1,27 +1,25 @@
-const express = require("express");
-const router = express.Router();
-const passport = require("passport");
-const dotenv = require("dotenv");
-const util = require("util");
-const url = require("url");
-const querystring = require("querystring");
+var express = require("express");
+var router = express.Router();
+var passport = require("passport");
+var dotenv = require("dotenv");
+var util = require("util");
+var url = require("url");
+var querystring = require("querystring");
 
 dotenv.config();
 
 // Perform the login, after login Auth0 will redirect to callback
-router.get(
-  "/login",
-  passport.authenticate("auth0", {
+router.get("/login", passport.authenticate("auth0", {
     scope: "openid email profile",
   }),
-  function (req, res) {
+  (req, res) => {
     res.redirect("/");
   }
 );
 
 // Perform the final stage of authentication and redirect to previously requested URL or '/user'
-router.get("/callback", function (req, res, next) {
-  passport.authenticate("auth0", function (err, user, info) {
+router.get("/callback", (req, res, next) => {
+  passport.authenticate("auth0", (err, user, info) => {
     if (err) {
       return next(err);
     }

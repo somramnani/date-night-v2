@@ -20,15 +20,37 @@ router.post(`/get-date-data`, async (req, res) => {
   const getRestaurants = () => instance.get(restaurantURL);
   const getEvents = () => instance.get(eventURL);
 
-  Promise.all([getRestaurants(), getEvents()]).then((results) => {
-    let restaurants = results[0].data.businesses.slice(0, 5);
-    let events =
-      results[1].data.length === 0
-        ? "sorry, no events were found for this date/location!"
-        : results[1].data;
+  Promise.all([getRestaurants(), getEvents()])
+    .then(results => {
+      let restaurants = results[0].data.businesses.slice(0, 5);
+      let events = 
+        results[1].data.length === 0 ? 
+        'sorry, no events were found for this date/location!' : 
+        results[1].data.events;
+
+      res.json({ restaurants, events })
+    })
 
     res.json({ restaurants, events });
   });
 });
+
+router.post(`/new-user`, (req, res) => {
+  const { username, email, password } = req.body;
+  const { user } = db.sequelize.models;
+  
+  user
+    .findOrCreate({ 
+      where: { 
+        username,
+        email,
+        password
+      }, 
+      defaults: null 
+    }
+  ).then(([user, created]) => {
+    res.json({ user, created });
+  }) 
+})
 
 module.exports = router;
