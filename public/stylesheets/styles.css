@@ -197,7 +197,6 @@ body {
 #aboutinformation-header {
   font-weight: bold;
   padding-top: 2em;
-  paddin
 }
 
 #aboutinformation-text {
@@ -433,6 +432,8 @@ img {
   .search-results-form {
     padding-top: 0.5em;
     padding-right: 0%;
+  }
+  .results-div {
   }
 
   /*==========================================================================  
