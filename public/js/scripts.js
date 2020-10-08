@@ -78,3 +78,9 @@ const fetchResults = async (e) => {
     });
 };
 
+
+
+const date = moment().format("YYYY-MM-DD");
+const calender = document.getElementById("calender");
+calender.setAttribute("value", date);
+calender.setAttribute("min", date);

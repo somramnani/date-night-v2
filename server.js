@@ -13,6 +13,7 @@ const userInViews = require("./lib/middleware/userInViews");
 const authRouter = require("./routes/auth-routes");
 // const indexRouter = require('./routes/index-route');
 const usersRouter = require("./routes/user-routes");
+const { requiresAuth } = require("express-openid-connect");
 
 const app = express();
 
@@ -105,10 +106,10 @@ app.use(function (req, res, next) {
 if (app.get("env") === "development") {
   app.use(function (err, req, res, next) {
     res.status(err.status || 500);
-    res.render("error", {
-      message: err.message,
-      error: err,
-    });
+    // res.render("error", {
+    //   message: err.message,
+    //   error: err,
+    // });
   });
 }
 
