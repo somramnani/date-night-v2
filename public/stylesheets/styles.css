@@ -50,6 +50,7 @@ body {
 }
 .search-results-form {
   padding-top: 0.5em;
+  padding-right: 40%;
 }
 
 .planyourdatenight {
@@ -404,5 +405,21 @@ img {
 
   .date-night-img {
     height: 200px;
+  }
+
+  /*==========================================================================  
+  /*Search Results Page (search-results.html)
+  /*========================================================================== */
+  .search-results-form {
+    padding-top: 0.5em;
+    padding-right: 0%;
+  }
+
+  /*==========================================================================  
+  /*Itinerary (itinerary.html)
+  /*========================================================================== */
+  .itinerary-form {
+    width: 100%;
+    font-size: 20px;
   }
 }
