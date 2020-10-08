@@ -122,7 +122,7 @@ body {
   position: absolute;
 }
 .itinerary-section {
-  height: 50%;
+  padding-bottom: 1em;
   display: block;
 }
 
@@ -359,10 +359,29 @@ img {
 /* Media Queries
 /*========================================================================== */
 @media (max-width: 480px) {
+  body {
+    left: 0;
+    right: 0;
+  }
   .homepage-background-photo {
+    height: 15rem;
+    width: 25rem;
+    background-position: center;
+    position: absolute;
+  }
+
+  #homepage-header {
+    padding-top: 5em;
+    font-size: 3em;
+  }
+  .planyourdatenight {
+    padding-bottom: 2em;
   }
   .dateimagecol {
     padding-left: 0%;
+  }
+  .date-night-img {
+    height: 200px;
   }
 
   .planyourdatenight {
