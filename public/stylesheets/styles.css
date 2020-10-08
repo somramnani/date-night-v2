@@ -259,6 +259,10 @@ body {
 .filter-type-container {
   padding-top: 1em;
 }
+.navbar-filter-type-container {
+  padding-top: 1em;
+  display: none;
+}
 
 .social-icons {
   font-size: 2em;
@@ -410,6 +414,22 @@ img {
   /*==========================================================================  
   /*Search Results Page (search-results.html)
   /*========================================================================== */
+  .navbar-search-results {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .navbar-filter-type-container {
+    display: block;
+  }
+  .results-page-column {
+    padding-top: 8em;
+  }
+  .mycontent-left {
+  }
+
   .search-results-form {
     padding-top: 0.5em;
     padding-right: 0%;
