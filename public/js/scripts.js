@@ -1,6 +1,6 @@
 const CardComponent = (props) => {
   const col = document.createElement("div");
-  col.classList.add("col-sm", "results-div");
+  col.classList.add("col-sm", "results-div", "mx-auto");
   const card = document.createElement("div");
   card.classList.add("card", "result-cards");
   const image = document.createElement("img");
@@ -80,5 +80,3 @@ const date = moment().format("YYYY-MM-DD");
 const calender = document.getElementById("calender");
 calender.setAttribute("value", date);
 calender.setAttribute("min", date);
-
-
