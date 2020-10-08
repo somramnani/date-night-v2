@@ -13,16 +13,13 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
-    <!------------------------------------------------------------------------------------------>
     <!-- AOS Link -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
     <!-- FONT-AWESOME CDN-->
     <link
       rel="stylesheet"
       href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <!------------------------------------------------------------------------------------------>
     <!-- Google Fonts Links -->
     <link
       href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Sansita+Swashed:wght@500&display=swap"
@@ -32,10 +29,8 @@
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
-    <!------------------------------------------------------------------------------------------>
     <!-- CUSTOM STYLESHEETS  -->
     <link rel="stylesheet" href="/styles" />
-    <!------------------------------------------------------------------------------------------>
   </head>
   <body>
     <!------------------------------------------------------------------------------------------>
@@ -43,54 +38,65 @@
     <!------------------------------------------------------------------------------------------>
     <nav class="navbar navbar-expand-lg navbar-light">
       <a class="navbar-brand" id="navbar-logo" href="/">Date Night</a>
+      <!-- Collapse button -->
+      <button
+        class="navbar-toggler toggler-example"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"><i class=""></i></span>
+    </button>
       <!-- Navbar content -->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <form class="search-results-form">
-              <div class="input-group border rounded-pill p-1">
-                <input
-                  id="location"
-                  type="search"
-                  value =""
-                  placeholder="Enter Zip Code or City"
-                  aria-describedby="button-addon3"
-                  class="form-control bg-none border-0 divider-vertical"
-                />
-<!--       
-                <div class="col-auto my-1">
-                  <select class="typeofdate custom-select mr-sm-2" id="dateType">
-                    <option selected>Type</option>
-                    <option value="exciting">Exciting</option>
-                    <option value="relaxed">Relaxed</option>
-                    <option value="romantic">Romantic</option>
-                  </select>
-                </div> -->
-      
-                <input
-                  id="calender"
-                  type="date"
-                  name="trip-start"
-                  value=""
-                  min=""
-                  max="2021-09-29"
-                />
-                <div class="input-group-append">
-                  <a href="/results">
-                    <button
-                      onclick="fetchResults(event)"
-                      id="search"
-                      type="button"
-                      class="btn btn-link searchbutton"
-                    >
-                      <i class="fa fa-search"></i>
-                    </button>
-                  </a>
-                </div>
-              </div>
-            </form>
+            <a class="nav-link" href="/login"
+              >Log In <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/itinerary"
+              >Itinerary <span class="sr-only">(current)</span></a
+            >
+          </li>
         </ul>
       </div> 
+      <form class="search-results-form">
+        <div class="input-group border rounded-pill p-1">
+          <input
+            id="location"
+            type="search"
+            value =""
+            placeholder="Enter Zip Code or City"
+            aria-describedby="button-addon3"
+            class="form-control bg-none border-0 divider-vertical"
+          />
+          <input
+            id="calender"
+            type="date"
+            name="trip-start"
+            value=""
+            min=""
+            max="2021-09-29"
+          />
+          <div class="input-group-append">
+            <a href="/results">
+              <button
+                onclick="fetchResults(event)"
+                id="search"
+                type="button"
+                class="btn btn-link searchbutton"
+              >
+                <i class="fa fa-search"></i>
+              </button>
+            </a>
+          </div>
+        </div>
+      </form>
     </nav>
     <!------------------------------------------------------------------------------------------>
 
