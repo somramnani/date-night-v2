@@ -290,6 +290,7 @@ img {
   background-attachment: fixed;
   opacity: 1;
   width: 100%;
+  background-position: center center;
 }
 
 /* .restaurant-results-image{
@@ -359,32 +360,39 @@ img {
 /* Media Queries
 /*========================================================================== */
 @media (max-width: 480px) {
-  body {
-    left: 0;
-    right: 0;
-  }
+  /* Homepage (login.html) */
   .homepage-background-photo {
-    height: 15rem;
-    width: 25rem;
-    background-position: center;
-    position: absolute;
+    background-image: url("/fireworks-mobile");
+    height: 20rem;
+  }
+
+  .homepage-image-div {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   #homepage-header {
-    padding-top: 5em;
-    font-size: 3em;
+    font-size: 30px;
+    padding-bottom: 20px;
   }
+
   .planyourdatenight {
-    padding-bottom: 2em;
+    padding-bottom: 5em;
   }
+
+  .homepage-form {
+    padding-top: 0em;
+  }
+
   .dateimagecol {
     padding-left: 0%;
   }
+
   .date-night-img {
     height: 200px;
   }
 
   .planyourdatenight {
-    padding-top: 0em;
+    padding-top: 1em;
   }
 }

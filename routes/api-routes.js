@@ -33,7 +33,7 @@ router.post(`/get-date-data`, async (req, res) => {
 
     res.json({ restaurants, events });
   });
-});
+
 
 router.post(`/new-user`, (req, res) => {
   const { username, email, password } = req.body;
