@@ -360,7 +360,9 @@ img {
 /* Media Queries
 /*========================================================================== */
 @media (max-width: 480px) {
-  /* Homepage (login.html) */
+  /*==========================================================================  
+  /*Homepage (login.html)
+  /*========================================================================== */
   .homepage-background-photo {
     background-image: url("/fireworks-mobile");
     height: 20rem;
@@ -392,15 +394,15 @@ img {
     padding-top: 0em;
   }
 
+  .planyourdatenight {
+    padding-top: 1em;
+  }
   .dateimagecol {
-    padding-left: 0%;
+    padding-left: 15%;
+    padding-right: 15%;
   }
 
   .date-night-img {
     height: 200px;
-  }
-
-  .planyourdatenight {
-    padding-top: 1em;
   }
 }
