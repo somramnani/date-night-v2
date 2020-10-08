@@ -379,6 +379,14 @@ img {
   .planyourdatenight {
     padding-bottom: 5em;
   }
+  #zipcode-input {
+    padding-right: 0px;
+  }
+  #calender {
+    width: 9em;
+    font-size: 15px;
+    padding-left: 0em;
+  }
 
   .homepage-form {
     padding-top: 0em;
