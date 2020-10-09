@@ -50,7 +50,7 @@ body {
 }
 .search-results-form {
   padding-top: 0.5em;
-  padding-right: 40%;
+  padding-right: 30%;
 }
 
 .planyourdatenight {
@@ -124,6 +124,18 @@ body {
 .itinerary-section {
   padding-bottom: 1em;
   display: block;
+}
+
+/*==========================================================================*/
+/* Navbar Styles
+/*==========================================================================*/
+
+.mobile-navbar-icons {
+  display: none;
+}
+.login-icon,
+.itinerary-icon {
+  padding-right: 5px;
 }
 
 /*==========================================================================*/
@@ -434,6 +446,12 @@ img {
     padding-right: 0%;
   }
   .results-div {
+  }
+  .web-page-navicons {
+    display: none;
+  }
+  .mobile-navbar-icons {
+    display: block;
   }
 
   /*==========================================================================  
