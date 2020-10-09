@@ -48,9 +48,13 @@ body {
 .homepage-form {
   padding-top: 2em;
 }
+
+.divder {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
 .search-results-form {
   padding-top: 0.5em;
-  padding-right: 40%;
+  padding-right: 30%;
 }
 
 .planyourdatenight {
@@ -126,6 +130,23 @@ body {
   display: block;
 }
 
+/*==========================================================================*/
+/* Navbar Styles
+/*==========================================================================*/
+
+.mobile-navbar-icons {
+  display: none;
+}
+.login-icon,
+.itinerary-icon {
+  padding-right: 5px;
+}
+.p-1 {
+  padding-left: 0.4em !important;
+}
+.navbar-nav {
+  padding-top: 8px;
+}
 /*==========================================================================*/
 /* Header Styles
 /*==========================================================================*/
@@ -337,6 +358,44 @@ img {
 /*========================================================================== */
 /* Button Styles 
 /*========================================================================== */
+.plus-button {
+  border: 2px solid lightgrey;
+  background-color: #fff;
+  font-size: 16px;
+  height: 2.5em;
+  width: 2.5em;
+  border-radius: 999px;
+  position: relative;
+}
+
+.plus-button:after,
+.plus-button:before {
+  content: "";
+  display: block;
+  background-color: grey;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.plus-button:after {
+  height: 0.2em;
+  width: 1em;
+}
+
+.plus-button:before {
+  height: 1em;
+  width: 0.2em;
+}
+
+.plus-button--small {
+  font-size: 12px;
+}
+.button {
+  padding-top: 0px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
 
 /*==========================================================================  
 /*Footer Styles
@@ -434,6 +493,12 @@ img {
     padding-right: 0%;
   }
   .results-div {
+  }
+  .web-page-navicons {
+    display: none;
+  }
+  .mobile-navbar-icons {
+    display: block;
   }
 
   /*==========================================================================  

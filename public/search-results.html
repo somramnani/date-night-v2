@@ -52,20 +52,24 @@
     </button>
       <!-- Navbar content -->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="/login"
-              >Log In <span class="sr-only">(current)</span></a
-            >
+        <ul class="nav navbar-nav mobile-navbar-icons ">
+          <li class="nav-item ">
+            <a class="nav-link " href="/login">
+              <i class="fas fa-sign-in-alt login-icon"></i>
+              Login 
+            </a >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/itinerary"
-              >Itinerary <span class="sr-only">(current)</span></a
-            >
+            <a class="nav-link" href="/itinerary">
+              <i class="far fa-calendar-plus itinerary-icon"></i>
+              Itinerary 
+            </a>
           </li>
         </ul>
       </div> 
+      
       <form class="search-results-form ">
+      
         <div class=" text-center input-group border rounded-pill p-1">
           <input
             id="location"
@@ -96,6 +100,8 @@
             </a>
           </div>
         </div>
+    
+      
         <div class="container navbar-filter-type-container text-center">
           <div class="row filter-types">
             <div class="col"><a href="#restaurant-results-section">Restaurants</a></div>
@@ -104,6 +110,20 @@
           </div>
         </div>
       </form>
+      <ul class="nav navbar-nav mr-auto web-page-navicons">
+        <li class="nav-item ">
+          <a class="nav-link " href="/login">
+            <i class="fas fa-sign-in-alt login-icon"></i>
+            Login 
+          </a >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/itinerary">
+            <i class="far fa-calendar-plus itinerary-icon"></i>
+            Itinerary 
+          </a>
+        </li>
+      </ul>
     </nav>
     <!------------------------------------------------------------------------------------------>
 
@@ -173,10 +193,21 @@
                     <div class="card-body">
                       <h5 class="card-title">Card title</h5>
                       <p class="card-text">
-                        Some quick example text to build on the card title and
-                        make up the bulk of the card's content.
+                      </p>
+                      <p class="card-text">
+                        Location:
+                      </p>
+                      <p class="card-text">
+                        User Rating
+                      </p>
+                      <p class="card-text">
+                        Price Range:
                       </p>
                     </div>
+                    <div class="button ml-auto">
+                      <button class=" plus-button plus-button--small">
+                    </button>
+                  </div>
                   </div>
                 </div>
 
@@ -190,10 +221,19 @@
                     <div class="card-body">
                       <h5 class="card-title">Card title</h5>
                       <p class="card-text">
-                        Some quick example text to build on the card title and
-                        make up the bulk of the card's content.
+                        Location:
+                      </p>
+                      <p class="card-text">
+                        User Rating
+                      </p>
+                      <p class="card-text">
+                        Price Range:
                       </p>
                     </div>
+                    <div class="button ml-auto">
+                      <button class=" plus-button plus-button--small">
+                    </button>
+                  </div>
                   </div>
                 </div>
 
@@ -207,16 +247,24 @@
                     <div class="card-body">
                       <h5 class="card-title">Card title</h5>
                       <p class="card-text">
-                        Some quick example text to build on the card title and
-                        make up the bulk of the card's content.
+                        Location:
                       </p>
+                      <p class="card-text">
+                        User Rating
+                      </p>
+                      <p class="card-text">
+                        Price Range:
+                      </p>  
                     </div>
+                    <div class="button ml-auto">
+                      <button class=" plus-button plus-button--small">
+                    </button>
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
+        </div>
           <!-- Events Results -->
           <div data-aos="fade-in" class="results-sections-styling" id="event-results-section">
             <h3 class="results-header">Events</h3>
