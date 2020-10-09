@@ -48,6 +48,10 @@ body {
 .homepage-form {
   padding-top: 2em;
 }
+
+.divder {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
 .search-results-form {
   padding-top: 0.5em;
   padding-right: 30%;
@@ -137,7 +141,12 @@ body {
 .itinerary-icon {
   padding-right: 5px;
 }
-
+.p-1 {
+  padding-left: 0.4em !important;
+}
+.navbar-nav {
+  padding-top: 8px;
+}
 /*==========================================================================*/
 /* Header Styles
 /*==========================================================================*/
