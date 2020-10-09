@@ -30,6 +30,10 @@ router.get("/fireworks", function (req, res) {
   res.sendFile(path.join(__dirname, "../public/images/fireworks.jpg"));
 });
 
+router.get("/fireworks-mobile", function (req, res) {
+  res.sendFile(path.join(__dirname, "../public/images/fireworks_mobile.jpg"));
+});
+
 router.get("/datenight", function (req, res) {
   res.sendFile(path.join(__dirname, "../public/images/rps.jpg"));
 });

@@ -50,6 +50,7 @@ body {
 }
 .search-results-form {
   padding-top: 0.5em;
+  padding-right: 40%;
 }
 
 .planyourdatenight {
@@ -97,7 +98,6 @@ body {
   padding: 0px;
 }
 
-#theater-results-section,
 #event-results-section {
   margin-top: 1em;
 }
@@ -258,6 +258,10 @@ body {
 .filter-type-container {
   padding-top: 1em;
 }
+.navbar-filter-type-container {
+  padding-top: 1em;
+  display: none;
+}
 
 .social-icons {
   font-size: 2em;
@@ -290,6 +294,7 @@ img {
   background-attachment: fixed;
   opacity: 1;
   width: 100%;
+  background-position: center center;
 }
 
 /* .restaurant-results-image{
@@ -359,32 +364,83 @@ img {
 /* Media Queries
 /*========================================================================== */
 @media (max-width: 480px) {
-  body {
-    left: 0;
-    right: 0;
-  }
+  /*==========================================================================  
+  /*Homepage (login.html)
+  /*========================================================================== */
   .homepage-background-photo {
-    height: 15rem;
-    width: 25rem;
-    background-position: center;
-    position: absolute;
+    background-image: url("/fireworks-mobile");
+    height: 20rem;
+  }
+
+  .homepage-image-div {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   #homepage-header {
-    padding-top: 5em;
-    font-size: 3em;
+    font-size: 30px;
+    padding-bottom: 20px;
   }
+
   .planyourdatenight {
-    padding-bottom: 2em;
+    padding-bottom: 5em;
+  }
+  #zipcode-input {
+    padding-right: 0px;
+  }
+  #calender {
+    width: 9em;
+    font-size: 15px;
+    padding-left: 0em;
+  }
+
+  .homepage-form {
+    padding-top: 0em;
+  }
+
+  .planyourdatenight {
+    padding-top: 1em;
   }
   .dateimagecol {
-    padding-left: 0%;
+    padding-left: 15%;
+    padding-right: 15%;
   }
+
   .date-night-img {
     height: 200px;
   }
 
-  .planyourdatenight {
-    padding-top: 0em;
+  /*==========================================================================  
+  /*Search Results Page (search-results.html)
+  /*========================================================================== */
+  .navbar-search-results {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .navbar-filter-type-container {
+    display: block;
+  }
+  .results-page-column {
+    padding-top: 8em;
+  }
+  .mycontent-left {
+  }
+
+  .search-results-form {
+    padding-top: 0.5em;
+    padding-right: 0%;
+  }
+  .results-div {
+  }
+
+  /*==========================================================================  
+  /*Itinerary (itinerary.html)
+  /*========================================================================== */
+  .itinerary-form {
+    width: 100%;
+    font-size: 20px;
   }
 }

@@ -13,16 +13,13 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
-    <!------------------------------------------------------------------------------------------>
     <!-- AOS Link -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
     <!-- FONT-AWESOME CDN-->
     <link
       rel="stylesheet"
       href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <!------------------------------------------------------------------------------------------>
     <!-- Google Fonts Links -->
     <link
       href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Sansita+Swashed:wght@500&display=swap"
@@ -32,73 +29,89 @@
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
-    <!------------------------------------------------------------------------------------------>
     <!-- CUSTOM STYLESHEETS  -->
     <link rel="stylesheet" href="/styles" />
-    <!------------------------------------------------------------------------------------------>
   </head>
   <body>
     <!------------------------------------------------------------------------------------------>
     <!--NAVBAR -->
     <!------------------------------------------------------------------------------------------>
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light navbar-search-results">
       <a class="navbar-brand" id="navbar-logo" href="/">Date Night</a>
+      <!-- Collapse button -->
+      <button
+        class="navbar-toggler toggler-example"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"><i class=""></i></span>
+    </button>
       <!-- Navbar content -->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <form class="search-results-form">
-              <div class="input-group border rounded-pill p-1">
-                <input
-                  id="location"
-                  type="search"
-                  value =""
-                  placeholder="Enter Zip Code or City"
-                  aria-describedby="button-addon3"
-                  class="form-control bg-none border-0 divider-vertical"
-                />
-<!--       
-                <div class="col-auto my-1">
-                  <select class="typeofdate custom-select mr-sm-2" id="dateType">
-                    <option selected>Type</option>
-                    <option value="exciting">Exciting</option>
-                    <option value="relaxed">Relaxed</option>
-                    <option value="romantic">Romantic</option>
-                  </select>
-                </div> -->
-      
-                <input
-                  id="calender"
-                  type="date"
-                  name="trip-start"
-                  value=""
-                  min=""
-                  max="2021-09-29"
-                />
-                <div class="input-group-append">
-                  <a href="/results">
-                    <button
-                      onclick="fetchResults(event)"
-                      id="search"
-                      type="button"
-                      class="btn btn-link searchbutton"
-                    >
-                      <i class="fa fa-search"></i>
-                    </button>
-                  </a>
-                </div>
-              </div>
-            </form>
+            <a class="nav-link" href="/login"
+              >Log In <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/itinerary"
+              >Itinerary <span class="sr-only">(current)</span></a
+            >
+          </li>
         </ul>
       </div> 
+      <form class="search-results-form ">
+        <div class=" text-center input-group border rounded-pill p-1">
+          <input
+            id="location"
+            type="search"
+            value =""
+            placeholder="Enter Zip Code or City"
+            aria-describedby="button-addon3"
+            class="form-control bg-none border-0 divider-vertical"
+          />
+          <input
+            id="calender"
+            type="date"
+            name="trip-start"
+            value=""
+            min=""
+            max="2021-09-29"
+          />
+          <div class="input-group-append">
+            <a href="/results">
+              <button
+                onclick="fetchResults(event)"
+                id="search"
+                type="button"
+                class="btn btn-link searchbutton"
+              >
+                <i class="fa fa-search"></i>
+              </button>
+            </a>
+          </div>
+        </div>
+        <div class="container navbar-filter-type-container text-center">
+          <div class="row filter-types">
+            <div class="col"><a href="#restaurant-results-section">Restaurants</a></div>
+        
+            <div class="col filter-types"><a href="#event-results-section">Events</a></div>
+          </div>
+        </div>
+      </form>
     </nav>
     <!------------------------------------------------------------------------------------------>
 
     <!-- Whole Results Section -->
-    <section data-aos="fade-in" class="results-page-column">
-      <div class="row results-page-column-row">
+    <section class="results-page-column">
+      <div data-aos="fade-in"  class="row results-page-column-row">
         <!--Left Side-Filter Section-->
-        <div class="col-3 filter-column mycontent-left border-right">
+        <div class="col-lg-3 col-sm-2  filter-column mycontent-left border-right">
           <div class="container">
             <div class="row">
               <div class="col">
@@ -143,15 +156,15 @@
         </div>
 
         <!--Right Side - Results Section (Cards will be outputed here) -->
-        <div class="col">
+        <div class="col-lg col-sm-2"  >
           <!-- Restaurant Results -->
-          <div class="results-sections-styling" id="restaurant-results-section">
+          <div class="results-sections-styling" data-aos="fade-in"   id="restaurant-results-section">
             <h3 class="results-header">Restaurants</h3>
             <!-- Cards -->
             <div class="container">
               <div class="row">
-                <div class="col-sm results-div">
-                  <div class="card result-cards">
+                <div class="col-sm  results-div">
+                  <div class="card mx-auto result-cards">
                     <img
                       class="card-img-top restaurant-results-image"
                       src="https://wallpaperaccess.com/full/767277.jpg"
@@ -168,7 +181,7 @@
                 </div>
 
                 <div class="col-sm results-div">
-                  <div class="card result-cards">
+                  <div class="card result-cards mx-auto">
                     <img
                       class="card-img-top restaurant-results-image"
                       src="https://i.ytimg.com/vi/FcEVbVrNIyg/maxresdefault.jpg"
@@ -185,7 +198,7 @@
                 </div>
 
                 <div class="col-sm results-div">
-                  <div class="card result-cards">
+                  <div class="card result-cards mx-auto">
                     <img
                       class="card-img-top restaurant-results-image"
                       src="https://i.ytimg.com/vi/FcEVbVrNIyg/maxresdefault.jpg"
@@ -200,87 +213,23 @@
                     </div>
                   </div>
                 </div>
+
               </div>
             </div>
           </div>
-
-          <!-- Theater Results -->
-          <div class="results-sections-styling" id="theater-results-section">
-            <h3 class="results-header">Theaters</h3>
-            <!-- Cards -->
+          <!-- Events Results -->
+          <div data-aos="fade-in" class="results-sections-styling" id="event-results-section">
+            <h3 class="results-header">Events</h3>
             <div class="container">
               <div class="row">
-                <div class="col-sm results-div">
-                  <div class="card result-cards">
-                    <img
-                      class="card-img-top restaurant-results-image"
-                      src="https://d1nslcd7m2225b.cloudfront.net/Pictures/2000x2000fit/9/2/9/1329929_amctheaters_546118.jpg"
-                      alt="Card image cap"
-                    />
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">
-                        Some quick example text to build on the card title and
-                        make up the bulk of the card's content.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-sm results-div">
-                  <div class="card result-cards">
-                    <img
-                      class="card-img-top restaurant-results-image"
-                      src="https://d1nslcd7m2225b.cloudfront.net/Pictures/2000x2000fit/9/2/9/1329929_amctheaters_546118.jpg"
-                      alt="Card image cap"
-                    />
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">
-                        Some quick example text to build on the card title and
-                        make up the bulk of the card's content.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-sm results-div">
-                  <div class="card result-cards">
-                    <img
-                      class="card-img-top restaurant-results-image"
-                      src="https://d1nslcd7m2225b.cloudfront.net/Pictures/2000x2000fit/9/2/9/1329929_amctheaters_546118.jpg"
-                      alt="Card image cap"
-                    />
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">
-                        Some quick example text to build on the card title and
-                        make up the bulk of the card's content.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Events Results -->
-          <div
-            data-aos="fade-in"
-            class="results-sections-styling"
-            id="event-results-section"
-          >
-            <h3 class="results-header">Events</h3>
-            <!-- Cards -->
-            <div class="container">
-              <div id="event-results" class="row">
-                <!--dynamic cards-->
-              </div>
+                
+              </div>    
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>  
+  </section>
     <!-- Footer -->
     <footer data-aos="fade-in" class="page-footer">
       <div class="container-fluid text-center text-md-left">

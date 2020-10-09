@@ -46,29 +46,26 @@
     <!------------------------------------------------------------------------------------------>
     <nav class="navbar navbar-expand-lg navbar-light">
       <a class="navbar-brand" id="navbar-logo" href="/">Date Night</a>
+      <!-- Collapse button -->
+      <button
+        class="navbar-toggler toggler-example"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"><i class=""></i></span>
+      </button>
       <!-- Navbar content -->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <img
-                    src = 'https://somramnani.com/assets/images/me.jpg'
-                    alt="Profile picture"
-                    class="nav-user-profile profile-image rounded-circle user-image"
-                    width="40"
-                      />
-                
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item disabled" href="/users">Profile</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="/logout">Sign Out</a>
-                </div>
-              </li>
-            </li>
-          </ul>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout"
+              >Log Out <span class="sr-only">(current)</span></a
+            >
+          </li>
         </ul>
       </div>
     </nav>
@@ -87,17 +84,6 @@
               aria-describedby="button-addon3"
               class="form-control bg-none border-0 divider-vertical"
             />
-            <!-- <div class="col-auto my-1">
-              <select
-                class="typeofdate custom-select mr-sm-2"
-                id="inlineFormCustomSelect"
-              >
-                <option selected>Type</option>
-                <option value="exciting">Exciting</option>
-                <option value="relaxed">Relaxed</option>
-                <option value="romantic">Romantic</option>
-              </select>
-            </div> -->
             <input
               id="calender"
               type="date"

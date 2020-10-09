@@ -1,6 +1,6 @@
 const CardComponent = (props) => {
   const col = document.createElement("div");
-  col.classList.add("col-sm", "results-div");
+  col.classList.add("col-sm", "results-div", "mx-auto");
   const card = document.createElement("div");
   card.classList.add("card", "result-cards");
   const image = document.createElement("img");
@@ -47,38 +47,34 @@ const fetchResults = async (e) => {
     method: "post",
     body: JSON.stringify(dateData),
   })
-  .then(response => response.json())
-  .then(data => {
-    console.log(data)
-    data.events.length > 0 ?
-    data.events.map(el => {
-      eventResults
-        .appendChild(
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      data.events.length > 0
+        ? data.events.map((el) => {
+            eventResults.appendChild(
+              CardComponent({
+                key: el.id,
+                imageSrc: el.image_url,
+                cardTitle: el.name,
+                cardText: el.description,
+              })
+            );
+          })
+        : eventResults.append("Sorry! No events were found!");
+
+      data.restaurants.map((el) => {
+        restaurantResults.appendChild(
           CardComponent({
             key: el.id,
             imageSrc: el.image_url,
             cardTitle: el.name,
-            cardText: el.description
+            cardText: el.location.address,
           })
-        )
-    }) : eventResults.append('Sorry! No events were found!');
-
-    data.restaurants.map(el => {
-      restaurantResults
-        .appendChild(
-          CardComponent({
-            key: el.id,
-            imageSrc: el.image_url,
-            cardTitle: el.name,
-            cardText: el.location.address
-          })
-        )
-      })
-
+        );
+      });
     });
 };
-
-
 
 const date = moment().format("YYYY-MM-DD");
 const calender = document.getElementById("calender");
