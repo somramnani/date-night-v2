@@ -2,15 +2,14 @@ require("dotenv").config();
 const userInViews = require("./lib/middleware/userInViews");
 const express = require("express");
 const handlebars = require("express-handlebars");
-const bodyParser = require("body-parser");
 const cors = require("cors");
-const bodyParser = require('body-parser');
-const cookieParser = require('cookie-parser');
-const morgan = require('morgan');
-const logger = require('logger');
+const bodyParser = require("body-parser");
+const cookieParser = require("cookie-parser");
+const morgan = require("morgan");
+const logger = require("logger");
 const apiRoutes = require("./routes/api-routes");
 const pageRoutes = require("./routes/html-routes");
-const flash = require('connect-flash');
+const flash = require("connect-flash");
 const PORT = process.env.PORT || 8080;
 const db = require("./models");
 const session = require("express-session");
@@ -57,22 +56,21 @@ var strategy = new Auth0Strategy(
       firstName: profile.name.givenName,
       lastName: profile.name.familyName,
       email: profile.emails[0].value,
-      image: profile.picture
-    }
+      image: profile.picture,
+    };
 
-    let foundUser = 
-      await user.findOne({ where: { firstName: profile.name.givenName }})
-      .then(user => user);
+    let foundUser = await user
+      .findOne({ where: { firstName: profile.name.givenName } })
+      .then((user) => user);
 
-    if(foundUser) {
-      console.log('this user already exists');
-        return done(null, profile);
+    if (foundUser) {
+      console.log("this user already exists");
+      return done(null, profile);
     } else {
-      user.create(newUser).then(user => { 
+      user.create(newUser).then((user) => {
         return done(null, profile);
-      })
+      });
     }
-    
   }
 );
 
@@ -85,8 +83,6 @@ passport.serializeUser(function (user, done) {
 passport.deserializeUser(function (user, done) {
   done(null, user);
 });
-
-const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.json());
