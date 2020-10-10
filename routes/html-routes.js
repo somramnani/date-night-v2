@@ -1,4 +1,5 @@
 const path = require("path");
+var secured = require("../lib/middleware/userInViews");
 const router = require("express").Router();
 
 //HTML Routes
@@ -10,8 +11,9 @@ router.get("/", (req, res) => {
 router.get("/results", (req, res) => {
   res.render("search-results", { layout: "index" });
 });
-router.get("/itinerary", (req, res) => {
-  res.render("itinerary", { layout: "index" });
+
+router.get("/profile", (req, res) => {
+  res.render("profile", { layout: "index" });
 });
 
 router.get("/styles", function (req, res) {
