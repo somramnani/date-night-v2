@@ -1,4 +1,4 @@
-const CardComponent = (props) => {
+const CardComponent = props => {
   const col = document.createElement("div");
   col.classList.add("col-sm", "results-div", "mx-auto");
   const card = document.createElement("div");
@@ -13,11 +13,33 @@ const CardComponent = (props) => {
   const cardText = document.createElement("p");
   cardText.className = "card-text";
 
+  const saveBtn = document.createElement('button');
+  saveBtn.classList.add('btn', 'btn-success');
+  saveBtn.innerText = "Save To Itinerary";
+  
+  saveBtn.onclick = e => {
+    const activityId = props.key;
+    e.preventDefault();
+
+    fetch('/save-activity', {
+      method: 'post',
+      mode: 'cors',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(activityId)
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.log(error));
+  }
+
   cardTitle.append(props.cardTitle);
   cardText.append(props.cardContent);
 
   cardBody.appendChild(cardTitle);
   cardBody.appendChild(cardText);
+  cardBody.appendChild(saveBtn);
   card.appendChild(image);
   card.appendChild(cardBody);
   col.appendChild(card);
@@ -25,22 +47,20 @@ const CardComponent = (props) => {
   return col;
 };
 
-const fetchResults = async (e) => {
+const fetchResults = e => {
   e.preventDefault();
 
   const locationInput = document.getElementById("location");
-  const dateTypeInput = document.getElementById("dateType");
   const dayOfDateInput = document.getElementById("calendar");
   const restaurantResults = document.getElementById("restaurant-results");
   const eventResults = document.getElementById("event-results");
 
   const dateData = {
     location: locationInput.value,
-    dateType: dateTypeInput.value,
     startDate: dayOfDateInput.value,
   };
 
-  await fetch(`http://localhost:8080/api/get-date-data`, {
+  fetch(`http://localhost:8080/api/get-date-data`, {
     headers: {
       "Content-Type": "application/json",
     },
@@ -63,8 +83,10 @@ const fetchResults = async (e) => {
           })
         : eventResults.append("Sorry! No events were found!");
 
-      data.restaurants.map((el) => {
-        restaurantResults.appendChild(
+    data.restaurants.length > 0 ?
+    data.restaurants.map(el => {
+      restaurantResults
+        .appendChild(
           CardComponent({
             key: el.id,
             imageSrc: el.image_url,
@@ -75,8 +97,3 @@ const fetchResults = async (e) => {
       });
     });
 };
-
-const date = moment().format("YYYY-MM-DD");
-const calender = document.getElementById("calender");
-calender.setAttribute("value", date);
-calender.setAttribute("min", date);
