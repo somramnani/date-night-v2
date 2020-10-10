@@ -4,7 +4,6 @@
     <title>Date Night | Homepage</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
     <!-- Bootstrap CDN -->
     <link
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -36,36 +35,35 @@
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
-    <!------------------------------------------------------------------------------------------>
+
     <!-- CUSTOM STYLESHEETS  -->
     <link rel="stylesheet" href="./stylesheets/styles.css" />
     <!------------------------------------------------------------------------------------------>
   </head>
-
   <body>
     <!------------------------------------------------------------------------------------------>
     <!--NAVBAR -->
     <!------------------------------------------------------------------------------------------>
     <nav class="navbar navbar-expand-lg navbar-light">
       <a class="navbar-brand" id="navbar-logo" href="/">Date Night</a>
+
       <!-- Navbar content -->
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="/login"
-              >Log In <span class="sr-only">(current)</span></a
-            >
-          </li>
-        </ul>
-      </div>
+      <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/login">
+            <i class="fas fa-sign-in-alt login-icon"></i>
+            Login
+          </a>
+        </li>
+      </ul>
     </nav>
     <!------------------------------------------------------------------------------------------>
     <section class="welcomepageheader" data-aos="fade-in">
       <div class="row">
-        <div class="col">
+        <div class="col-lg col-sm-6 homepage-image-div">
           <div class="homepage-background-photo"></div>
         </div>
-        <div class="col planyourdatenight">
+        <div class="col-lg col-sm-6 planyourdatenight">
           <div class="container">
             <h3 class="text-center" id="homepage-header">
               Plan your date night
@@ -76,6 +74,7 @@
                   type="search"
                   placeholder="Enter Zip Code or City"
                   aria-describedby="button-addon3"
+                  id="zipcode-input"
                   class="form-control bg-none border-0 divider-vertical"
                 />
                 <!-- <div class="col-auto my-1">
@@ -90,11 +89,11 @@
                   </select>
                 </div> -->
                 <input
-                  type="date"
                   id="calender"
+                  type="date"
                   name="trip-start"
-                  value="2020-09-29"
-                  min="2020-09-29"
+                  value=""
+                  min=""
                   max="2021-09-29"
                 />
                 <div class="input-group-append">
@@ -118,7 +117,7 @@
     <section data-aos="fade-in" class="information-full-page">
       <div class="container information-container">
         <div class="row">
-          <div class="col-md-4 text-center">
+          <div class="col-sm text-center">
             <i class="fas fa-utensils icon"></i>
             <h4 class="icon-text">Restaurant</h4>
             <p>
@@ -128,18 +127,7 @@
               type and scrambled it to make a type specimen book.
             </p>
           </div>
-
-          <div class="col-md-4 text-center">
-            <i class="fas fa-ticket-alt icon"></i>
-            <h4 class="icon-text">Movie</h4>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
-            </p>
-          </div>
-          <div class="col-md-4 text-center">
+          <div class="col-sm text-center">
             <i class="fas fa-calendar-check icon"></i>
             <h4 class="icon-text">Events</h4>
             <p>
@@ -158,21 +146,20 @@
 
       <div class="container text-center aboutinformation">
         <div class="row">
-          <div class="col aboutinformation-col1">
-            <h4 id="aboutinformation-header">
+          <div class=".col-xs-12 .col-sm-6 .col-lg-8 aboutinformation-col1">
+            <h4 id="aboutinformation-header" class="">
               Plan the perfect night with your loved one
             </h4>
             <p id="aboutinformation-text">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+              Search for your activties and save your favorite activities to
+              your own personal itinerery to plan your date night! With the Date
+              Night App, it's easy to find your activites and plan the evening.
             </p>
           </div>
-          <div class="col">
+          <div class=".col-xs-12 .col-sm-6 .col-lg-8 dateimagecol">
             <img
               src="/datenight"
-              class="date-night-img img-fluid img-thumbnail"
+              class="text-center date-night-img img-fluid img-thumbnail img-responsive"
             />
           </div>
         </div>
@@ -275,6 +262,10 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="./js/scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+    <script type="text/javascript" src="/scripts"></script>
   </body>
 </html>

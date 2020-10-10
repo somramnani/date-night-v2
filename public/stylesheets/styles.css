@@ -1,5 +1,6 @@
+/*==========================================================================*/
 /* General Styles
-========================================================================== */
+/*==========================================================================*/
 html {
   scroll-behavior: smooth;
   height: 100%;
@@ -14,26 +15,8 @@ body {
   visibility: hidden;
 }
 
-.hero-section {
-  height: 100%;
-
-  background-size: cover;
-}
-
 .col1 {
   border: 1px;
-}
-.animated {
-  -webkit-animation-fill-mode: both;
-  -moz-animation-fill-mode: both;
-  -ms-animation-fill-mode: both;
-  -o-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-duration: 2s;
-  -moz-animation-duration: 2s;
-  -ms-animation-duration: 2s;
-  -o-animation-duration: 2s;
-  animation-duration: 1s;
 }
 .displaynone {
   display: none;
@@ -43,21 +26,6 @@ body {
   display: block;
   /* padding-top: 2em; */
   padding-bottom: 2em;
-}
-/* .container {
-  max-width: 960px;
-  margin: 0 auto;
-  background: lavender;
-  font-size: 24 px;
-  padding: 25px;
-  margin-bottom: 25px;
-  justify-content: center;
-  border-radius: 25px;
-  transform: translateY(8em);
-} */
-
-.aboutinformation {
-  padding-top: 1em;
 }
 
 .form-control::placeholder {
@@ -80,8 +48,13 @@ body {
 .homepage-form {
   padding-top: 2em;
 }
+
+.divder {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
 .search-results-form {
   padding-top: 0.5em;
+  padding-right: 30%;
 }
 
 .planyourdatenight {
@@ -93,7 +66,6 @@ body {
   display: block;
   height: 100%;
   width: 100%;
-
   border-right: black;
 }
 .mycontent-left {
@@ -130,7 +102,6 @@ body {
   padding: 0px;
 }
 
-#theater-results-section,
 #event-results-section {
   margin-top: 1em;
 }
@@ -138,6 +109,7 @@ body {
 #event-results-section {
   margin-bottom: 1em;
 }
+
 .jumbotron {
   background-color: white !important;
 }
@@ -154,13 +126,30 @@ body {
   position: absolute;
 }
 .itinerary-section {
-  height: 50%;
+  padding-bottom: 1em;
   display: block;
 }
 
-/* ========================================================================== */
+/*==========================================================================*/
+/* Navbar Styles
+/*==========================================================================*/
+
+.mobile-navbar-icons {
+  display: none;
+}
+.login-icon,
+.itinerary-icon {
+  padding-right: 5px;
+}
+.p-1 {
+  padding-left: 0.4em !important;
+}
+.navbar-nav {
+  padding-top: 8px;
+}
+/*==========================================================================*/
 /* Header Styles
-==========================================================================  */
+/*==========================================================================*/
 .activity-header,
 .header {
   color: white;
@@ -170,9 +159,7 @@ body {
 .activity-header {
   padding-top: 2em;
 }
-#navbarNavDropdown {
-  font-size: 20px;
-}
+
 .price-header {
   padding-top: 1em;
   font-weight: bold;
@@ -199,40 +186,14 @@ body {
   padding-bottom: 1em;
   font-size: 3em;
 }
-/*========================================================================== */
 
-/*========================================================================== */
+/*==========================================================================*/
 /* Text Styles
-========================================================================== */
-
-#headerText {
-  text-align: center;
-  font-size: 25px;
-  color: white;
-}
+/*==========================================================================*/
 .imageTitle {
   text-align: center;
   font-size: 75px;
   color: white;
-}
-
-.homepageContent {
-  transform: translateY(10em);
-  text-transform: uppercase;
-  color: white;
-}
-#main-header-text {
-  font-size: 6em;
-  font-weight: bolder;
-  letter-spacing: 30px;
-}
-.navbar-dark .navbar-nav .nav-link {
-  color: white;
-}
-
-#headerText {
-  font-weight: bolder;
-  letter-spacing: 5px;
 }
 
 .search {
@@ -265,7 +226,6 @@ body {
 }
 
 #navbar-logo {
-  /* font-family: "Dancing Script", cursive; */
   font-family: "Sansita Swashed", cursive;
   font-size: 1.8em;
 }
@@ -319,6 +279,10 @@ body {
 .filter-type-container {
   padding-top: 1em;
 }
+.navbar-filter-type-container {
+  padding-top: 1em;
+  display: none;
+}
 
 .social-icons {
   font-size: 2em;
@@ -326,18 +290,9 @@ body {
   color: white;
 }
 
-/* ========================================================================== */
-
 /*========================================================================== */
 /* Image Styles
-========================================================================== */
-/* .parallaxHeader{
-    background: url('../images/valentin-antonucci-799200-unsplash.jpg') no-repeat center;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 800px;
-	} */
-
+/*========================================================================== */
 .background-image {
   background-image: url("/backgroundimage");
   background-repeat: no-repeat; /* Do not repeat the image */
@@ -360,11 +315,13 @@ img {
   background-attachment: fixed;
   opacity: 1;
   width: 100%;
+  background-position: center center;
 }
 
 /* .restaurant-results-image{
   height: 50%;
 } */
+
 .embed-responsive .card-img-top {
   object-fit: cover;
 }
@@ -376,13 +333,16 @@ img {
 
 .date-night-img {
   width: auto;
-  height: 250px;
+  height: 300px;
 }
+.dateimagecol {
+  padding-left: 30%;
+}
+
 .itinerarypage-jumbtron {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("/date1");
   display: block;
-
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
   background-attachment: fixed;
@@ -391,41 +351,55 @@ img {
   height: 40%;
 }
 
-/* ========================================================================== */
+.user-image {
+  height: auto;
+}
 
 /*========================================================================== */
 /* Button Styles 
 /*========================================================================== */
-
-a.resultBtn {
-  background-color: green;
-  border-style: solid 0.5px grey;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  text-decoration: none;
-  padding: 3px;
+.plus-button {
+  border: 2px solid lightgrey;
+  background-color: #fff;
+  font-size: 16px;
+  height: 2.5em;
+  width: 2.5em;
+  border-radius: 999px;
+  position: relative;
 }
 
-#submit {
+.plus-button:after,
+.plus-button:before {
+  content: "";
   display: block;
-  margin: 0 auto;
+  background-color: grey;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.plus-button:after {
+  height: 0.2em;
+  width: 1em;
 }
 
-.submit-button {
-  padding-top: 20px;
-}
-#getstartedbutton {
-  display: block;
-  margin: 0 auto;
-  width: 10%;
-  box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
+.plus-button:before {
+  height: 1em;
+  width: 0.2em;
 }
 
-/* ========================================================================== */
+.plus-button--small {
+  font-size: 12px;
+}
+.button {
+  padding-top: 0px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
 
 /*==========================================================================  
-Footer Styles
-========================================================================== */
+/*Footer Styles
+/*========================================================================== */
 .page-footer {
   bottom: 0;
   color: #fff;
@@ -445,14 +419,93 @@ Footer Styles
   padding-bottom: 1rem !important;
 }
 
-/* ========================================================================== */
-
+/*==========================================================================  
 /* Media Queries
-========================================================================== */
-@media only screen and (max-width: 600px) {
-  #getstartedbutton {
-    width: 40%;
+/*========================================================================== */
+@media (max-width: 480px) {
+  /*==========================================================================  
+  /*Homepage (login.html)
+  /*========================================================================== */
+  .homepage-background-photo {
+    background-image: url("/fireworks-mobile");
+    height: 20rem;
+  }
+
+  .homepage-image-div {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  #homepage-header {
+    font-size: 30px;
+    padding-bottom: 20px;
+  }
+
+  .planyourdatenight {
+    padding-bottom: 5em;
+  }
+  #zipcode-input {
+    padding-right: 0px;
+  }
+  #calender {
+    width: 9em;
+    font-size: 15px;
+    padding-left: 0em;
+  }
+
+  .homepage-form {
+    padding-top: 0em;
+  }
+
+  .planyourdatenight {
+    padding-top: 1em;
+  }
+  .dateimagecol {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+
+  .date-night-img {
+    height: 200px;
+  }
+
+  /*==========================================================================  
+  /*Search Results Page (search-results.html)
+  /*========================================================================== */
+  .navbar-search-results {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .navbar-filter-type-container {
+    display: block;
+  }
+  .results-page-column {
+    padding-top: 8em;
+  }
+  .mycontent-left {
+  }
+
+  .search-results-form {
+    padding-top: 0.5em;
+    padding-right: 0%;
+  }
+  .results-div {
+  }
+  .web-page-navicons {
+    display: none;
+  }
+  .mobile-navbar-icons {
+    display: block;
+  }
+
+  /*==========================================================================  
+  /*Itinerary (itinerary.html)
+  /*========================================================================== */
+  .itinerary-form {
+    width: 100%;
+    font-size: 20px;
   }
 }
-
-/* ========================================================================== */

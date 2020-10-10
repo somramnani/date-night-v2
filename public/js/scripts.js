@@ -1,6 +1,6 @@
 const CardComponent = props => {
   const col = document.createElement("div");
-  col.classList.add("col-sm", "results-div");
+  col.classList.add("col-sm", "results-div", "mx-auto");
   const card = document.createElement("div");
   card.classList.add("card", "result-cards");
   const image = document.createElement("img");
@@ -67,21 +67,21 @@ const fetchResults = e => {
     method: "post",
     body: JSON.stringify(dateData),
   })
-  .then(response => response.json())
-  .then(data => {
-    console.log(data)
-    data.events.length > 0 ?
-    data.events.map(el => {
-      eventResults
-        .appendChild(
-          CardComponent({
-            key: el.id,
-            imageSrc: el.image_url,
-            cardTitle: el.name,
-            cardText: el.description
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      data.events.length > 0
+        ? data.events.map((el) => {
+            eventResults.appendChild(
+              CardComponent({
+                key: el.id,
+                imageSrc: el.image_url,
+                cardTitle: el.name,
+                cardText: el.description,
+              })
+            );
           })
-        )
-    }) : eventResults.append('Sorry! No events were found!');
+        : eventResults.append("Sorry! No events were found!");
 
     data.restaurants.length > 0 ?
     data.restaurants.map(el => {
@@ -91,75 +91,9 @@ const fetchResults = e => {
             key: el.id,
             imageSrc: el.image_url,
             cardTitle: el.name,
-            cardText: el.location.address
+            cardText: el.location.address,
           })
-        )
-      }) : restaurantResults.append('Sorry! No restaurants were found!');
-
+        );
+      });
     });
 };
-
-const NavBar = props => {
-  const navWrapper = document.createElement('nav');
-  navWrapper.classList.add('navbar', 'navbar-expand-lg', 'navbar-light');
-  const navLogo = document.createElement('a');
-  navLogo.innerText = "Date Night";
-  navLogo.className = 'navbar-brand';
-  navLogo.setAttribute('id', 'navbar-logo');
-  navLogo.setAttribute('href', '/');
-
-  const navCollapse = document.createElement('div');
-  navCollapse.classList.add('collapse', 'navbar-collapse');
-  navCollapse.setAttribute('id', 'navbarSupportedContent');
-  
-  const navListOuter = document.createElement('ul');
-  navListOuter.classList.add('navbar-nav', 'mr-auto');
-
-  const navListInner = document.createElement('ul');
-  navListInner.classList.add('navbar-nav', 'mr-auto');
-
-  const navListItemWrapper = document.createElement('li');
-  navListItemWrapper.className = 'nav-item';
-
-  const navListDropdown = document.createElement('li');
-  navListDropdown.classList.add('nav-item', 'dropdown');
-
-  const navLinkToggle = document.createElement('a');
-  navLinkToggle.classList.add('nav-link', 'dropdown-toggle');
-  navLinkToggle.setAttribute('href', "#");
-  navLinkToggle.setAttribute('id', 'navbarDropDown');
-  navLinkToggle.setAttribute('role', 'button');
-  navLinkToggle.setAttribute('data-toggle', 'dropdown');
-  navLinkToggle.setAttribute('aria-haspopup', 'true');
-  navLinkToggle.setAttribute('aria-expanded', 'false');
-
-  const userImg = document.createElement('img');
-  userImg.classList.add('nav-user-profile', 'profile-image', 'rounded-circle', 'user-image');
-  userImg.setAttribute('src', props.userImage)
-  userImg.setAttribute('width', 40);
-
-  navWrapper.appendChild(navLogo);
-  navLinkToggle.appendChild(userImg);
-  navListDropdown.appendChild(navLinkToggle);
-  navListItemWrapper.appendChild(navListDropdown);
-  navListInner.appendChild(navListItemWrapper);
-  navListOuter.appendChild(navListInner);
-  navCollapse.appendChild(navListOuter);
-  navWrapper.appendChild(navCollapse);
-  
-  return navWrapper;
-}
-
-const getUserInfo = async () => {
-  const navcontainer = document.getElementById('nav-container')
-    
-  fetch('/get-user')
-    .then(resp => resp.json())
-    .then(data => {
-      navcontainer.appendChild(NavBar({ userImg: data.picture }))
-    })
-    .catch(error => console.log(error));
-  
-}
-
-getUserInfo();

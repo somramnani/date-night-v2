@@ -8,7 +8,9 @@ const querystring = require("querystring");
 dotenv.config();
 
 // Perform the login, after login Auth0 will redirect to callback
-router.get("/login", passport.authenticate("auth0", {
+router.get(
+  "/login",
+  passport.authenticate("auth0", {
     scope: "openid email profile",
   }),
   (req, res) => {

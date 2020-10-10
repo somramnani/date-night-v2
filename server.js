@@ -1,5 +1,8 @@
 require("dotenv").config();
+const userInViews = require("./lib/middleware/userInViews");
 const express = require("express");
+const handlebars = require("express-handlebars");
+const bodyParser = require("body-parser");
 const cors = require("cors");
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
@@ -13,9 +16,29 @@ const db = require("./models");
 const session = require("express-session");
 const passport = require("passport");
 const Auth0Strategy = require("passport-auth0");
-const userInViews = require("./lib/middleware/userInViews");
 const authRouter = require("./routes/auth-routes");
 const usersRouter = require("./routes/user-routes");
+const { requiresAuth } = require("express-openid-connect");
+
+const app = express();
+
+app.set("view engine", "hbs");
+app.engine(
+  "hbs",
+  handlebars({
+    layoutsDir: `${__dirname}/views/layouts`,
+    extname: "hbs",
+    defaultLayout: "index",
+    partialsDir: `${__dirname}/views/partials`,
+  })
+);
+app.use(express.json());
+app.use(cors());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use("/api", apiRoutes);
+app.use("/", pageRoutes);
+
+app.use(express.static("/public"));
 
 var strategy = new Auth0Strategy(
   {
@@ -118,7 +141,10 @@ app.use(function (req, res, next) {
 if (app.get("env") === "development") {
   app.use(function (err, req, res, next) {
     res.status(err.status || 500);
-    console.error(err.message)
+    res.render("error", {
+      message: err.message,
+      error: err,
+    });
   });
 }
 

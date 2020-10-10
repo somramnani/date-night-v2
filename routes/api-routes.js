@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const axios = require('axios');
 const yelpKey = process.env.YELP_TOKEN;
-const moment = require('moment');
+const moment = require("moment");
 
 router.post(`/get-date-data`, async (req, res) => {
   const { location, startDate, dateType } = req.body;
@@ -13,7 +13,7 @@ router.post(`/get-date-data`, async (req, res) => {
   //axios instance for yelp requests
   const instance = axios.create({
     baseURL,
-    headers: { Authorization: `Bearer ${yelpKey}` }
+    headers: { Authorization: `Bearer ${yelpKey}` },
   });
 
   const getRestaurants = () => instance.get(restaurantURL);
@@ -34,6 +34,8 @@ router.post(`/get-date-data`, async (req, res) => {
         res.json({ restaurants, events })
     })
 
-});
+    res.json({ restaurants, events });
+  });
+
 
 module.exports = router;
