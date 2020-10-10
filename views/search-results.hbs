@@ -1,0 +1,205 @@
+<!--NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light navbar-search-results">
+  <a class="navbar-brand" id="navbar-logo" href="/">Date Night</a>
+  <!-- Collapse button -->
+  <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse"
+    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+    aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"><i class=""></i></span>
+  </button>
+  <!-- Navbar content -->
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="nav navbar-nav mobile-navbar-icons ">
+      <li class="nav-item ">
+        <a class="nav-link " href="/login">
+          <i class="fas fa-sign-in-alt login-icon"></i>
+          Login
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/itinerary">
+          <i class="far fa-calendar-plus itinerary-icon"></i>
+          Itinerary
+        </a>
+      </li>
+    </ul>
+  </div>
+  <form class="search-results-form ">
+    <div class=" text-center input-group border rounded-pill p-1">
+      <input id="location" type="search" value="" placeholder="Enter Zip Code or City" aria-describedby="button-addon3"
+        class="form-control bg-none border-0 divider-vertical" />
+      <input id="calender" type="date" name="trip-start" value="" min="" max="2021-09-29" />
+      <div class="input-group-append">
+        <a href="/results">
+          <button onclick="fetchResults(event)" id="search" type="button" class="btn btn-link searchbutton">
+            <i class="fa fa-search"></i>
+          </button>
+        </a>
+      </div>
+    </div>
+    <div class="container navbar-filter-type-container text-center">
+      <div class="row filter-types">
+        <div class="col"><a href="#restaurant-results-section">Restaurants</a></div>
+
+        <div class="col filter-types"><a href="#event-results-section">Events</a></div>
+      </div>
+    </div>
+  </form>
+  <ul class="nav navbar-nav mr-auto web-page-navicons">
+    <li class="nav-item ">
+      <a class="nav-link " href="/login">
+        <i class="fas fa-sign-in-alt login-icon"></i>
+        Login
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/itinerary">
+        <i class="far fa-calendar-plus itinerary-icon"></i>
+        Itinerary
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<!-- Whole Results Section -->
+<section class="results-page-column">
+  <div data-aos="fade-in" class="row results-page-column-row">
+    <!--Left Side-Filter Section-->
+    <div class="col-lg-3 col-sm-2  filter-column mycontent-left border-right">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h4 class="filter-header" id="filter-heading">Filters</h4>
+          </div>
+          <div id="clear-all-button" class="col">
+            <a href="">Clear All</a>
+          </div>
+        </div>
+      </div>
+      <div class="container filter-type-container">
+        <div class="row filter-types">
+          <div class="col"><a href="">Restaurants</a></div>
+          <div class="col filter-types"><a href="">Movies</a></div>
+          <div class="col filter-types"><a href="">Events</a></div>
+        </div>
+      </div>
+      <div class="container">
+        <h5 class="price-header text-center">Price</h5>
+        <div class="row">
+          <div class="col dollar-sign-button">
+            <button type="button" id="$" class="btn btn-dark">$</button>
+          </div>
+          <div class="col dollar-sign-button">
+            <button type="button" id="$$" class="btn btn-dark">$$</button>
+          </div>
+          <div class="col dollar-sign-button">
+            <button type="button" id="$$$" class="btn btn-dark">$$$</button>
+          </div>
+          <div class="col dollar-sign-button">
+            <button type="button" id="$$$$" class="btn btn-dark">
+              $$$$
+            </button>
+          </div>
+          <div class="col dollar-sign-button">
+            <button type="button" id="$$$$$" class="btn btn-dark">
+              $$$$$
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Right Side - Results Section (Cards will be outputed here) -->
+    <div class="col-lg col-sm-2">
+      <!-- Restaurant Results -->
+      <div class="results-sections-styling" data-aos="fade-in" id="restaurant-results-section">
+        <h3 class="results-header">Restaurants</h3>
+        <!-- Cards -->
+        <div class="container">
+          <div class="row">
+            <div class="col-sm  results-div">
+              <div class="card mx-auto result-cards">
+                <img class="card-img-top restaurant-results-image" src="https://wallpaperaccess.com/full/767277.jpg"
+                  alt="Card image cap" />
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">
+                  </p>
+                  <p class="card-text">
+                    Location:
+                  </p>
+                  <p class="card-text">
+                    User Rating
+                  </p>
+                  <p class="card-text">
+                    Price Range:
+                  </p>
+                </div>
+                <div class="button ml-auto">
+                  <button class=" plus-button plus-button--small">
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm results-div">
+              <div class="card result-cards mx-auto">
+                <img class="card-img-top restaurant-results-image"
+                  src="https://i.ytimg.com/vi/FcEVbVrNIyg/maxresdefault.jpg" alt="Card image cap" />
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">
+                    Location:
+                  </p>
+                  <p class="card-text">
+                    User Rating
+                  </p>
+                  <p class="card-text">
+                    Price Range:
+                  </p>
+                </div>
+                <div class="button ml-auto">
+                  <button class=" plus-button plus-button--small">
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm results-div">
+              <div class="card result-cards mx-auto">
+                <img class="card-img-top restaurant-results-image"
+                  src="https://i.ytimg.com/vi/FcEVbVrNIyg/maxresdefault.jpg" alt="Card image cap" />
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">
+                    Location:
+                  </p>
+                  <p class="card-text">
+                    User Rating
+                  </p>
+                  <p class="card-text">
+                    Price Range:
+                  </p>
+                </div>
+                <div class="button ml-auto">
+                  <button class=" plus-button plus-button--small">
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Events Results -->
+      <div data-aos="fade-in" class="results-sections-styling" id="event-results-section">
+        <h3 class="results-header">Events</h3>
+        <div class="container">
+          <div class="row">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
