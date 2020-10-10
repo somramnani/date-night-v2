@@ -6,22 +6,14 @@ const router = express.Router();
 /* GET user profile. */
 router.get("/itinerary", secured(), function (req, res, next) {
   const { _raw, _json, ...userProfile } = req.user;
-  res.render("itinerary", {
-    userProfile: JSON.stringify(userProfile, null, 2),
-    title: 'Profile page'
-  });
-});
-
-router.get("/itinerary", secured(), (req, res, next) => {
-  const { _raw, _json, ...userProfile } = req.user;
+  res.render("itinerary");
 });
 
 router.post("/save-activity", (req, res, next) => {
   const { activityId } = req.body;
   // const { _raw, _json, ...userProfile } = req.user;
 
-  res.json(activityId)
-
+  res.json(activityId);
 });
 
 module.exports = router;
