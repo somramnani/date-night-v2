@@ -1,5 +1,6 @@
 const path = require("path");
 const router = require("express").Router();
+const secured = require("../lib/middleware/secured");
 
 //HTML Routes
 router.get("/", (req, res) => {
@@ -9,6 +10,7 @@ router.get("/", (req, res) => {
 router.get("/results", (req, res) => {
   res.sendFile(path.join(__dirname, "../public/search-results.html"));
 });
+
 router.get("/itinerary", (req, res) => {
   res.sendFile(path.join(__dirname, "../public/itinerary.html"));
 });
@@ -41,9 +43,11 @@ router.get("/concert", function (req, res) {
 router.get("/calender", function (req, res) {
   res.sendFile(path.join(__dirname, "../public/images/calender.jpg"));
 });
+
 router.get("/date1", function (req, res) {
   res.sendFile(path.join(__dirname, "../public/images/date.jpg"));
 });
+
 router.get("/date2", function (req, res) {
   res.sendFile(path.join(__dirname, "../public/images/datenight.jpg"));
 });
