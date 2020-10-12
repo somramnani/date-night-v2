@@ -34,7 +34,11 @@ router.post(`/get-date-data`, async (req, res) => {
         res.json({ restaurants, events })
     })
 
-    res.json({ restaurants, events });
+    res.render('search-results', {
+      restaurants,
+      events
+    })
+    // res.json({ restaurants, events });
   });
 
 

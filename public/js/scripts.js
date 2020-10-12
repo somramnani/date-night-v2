@@ -98,7 +98,18 @@ const CardComponent = (props) => {
 //     });
 // };
 
-//Moment (for current date)  DO NOT DELETE
-var date = moment().format("MM/DD/YYYY");
+    data.restaurants.length > 0 ?
+    data.restaurants.map(el => {
+      restaurantResults
+        .appendChild(
+          CardComponent({
+            key: el.id,
+            imageSrc: el.image_url,
+            cardTitle: el.name,
+            cardText: el.location.address,
+          })
+        )
+    }) : restaurantResults.append("Sorry! No restaurants were found!");
+  });
+};
 
-console.log(date);
