@@ -6,7 +6,7 @@ const router = express.Router();
 /* GET user profile. */
 router.get("/itinerary", secured(), function (req, res, next) {
   const { _raw, _json, ...userProfile } = req.user;
-  res.render("itinerary", { layout: "index" });
+  res.render("itinerary", { layout: "index", title: "Date Night | Itinerary" });
 });
 
 router.post("/save-activity", (req, res, next) => {
