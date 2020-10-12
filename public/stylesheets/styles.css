@@ -210,6 +210,18 @@ body {
   height: 100%;
   width: 100%;
 }
+.about-section {
+  background-color: #efefef;
+}
+#aboutDateNightHeader {
+  font-weight: bold;
+  padding-top: 70px;
+  padding-bottom: 60px;
+}
+#aboutDateNighttext {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
 
 .icon {
   font-size: 4em;
@@ -470,6 +482,17 @@ img {
 
   .date-night-img {
     height: 200px;
+  }
+
+  #aboutDateNightHeader {
+    font-weight: bold;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    text-align: center !important;
+  }
+  #aboutDateNighttext {
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 
   /*==========================================================================  
