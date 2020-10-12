@@ -3,10 +3,15 @@
   <!-- Navbar content -->
   <ul class="nav navbar-nav ml-auto">
     <li class="nav-item">
+      {{#if locals.user}}
+      <p class="">Logged in</p>
+      {{/if}}
+      {{!-- {{else}}
       <a class="nav-link" href="/login">
         <i class="fas fa-sign-in-alt login-icon"></i>
         Login
-      </a>
+      </a> --}}
+
     </li>
   </ul>
 </nav>

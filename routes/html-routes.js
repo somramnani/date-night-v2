@@ -3,13 +3,16 @@ const router = require("express").Router();
 const secured = require("../lib/middleware/secured");
 
 //HTML Routes
-
 router.get("/", (req, res) => {
+  res.locals.user = req.user;
   res.render("main", { layout: "index" });
 });
 
 router.get("/results", (req, res) => {
   res.render("search-results", { layout: "index" });
+});
+router.get("/error", (req, res) => {
+  res.render("error", { layout: "index" });
 });
 
 router.get("/profile", (req, res) => {
