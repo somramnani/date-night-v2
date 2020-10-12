@@ -1,4 +1,4 @@
-const CardComponent = props => {
+const CardComponent = (props) => {
   const col = document.createElement("div");
   col.classList.add("col-sm", "results-div", "mx-auto");
   const card = document.createElement("div");
@@ -12,25 +12,25 @@ const CardComponent = props => {
   cardTitle.className = "card-title";
   const cardText = document.createElement("p");
   cardText.className = "card-text";
-  const saveBtn = document.createElement('button');
-  saveBtn.classList.add('btn', 'btn-success');
+  const saveBtn = document.createElement("button");
+  saveBtn.classList.add("btn", "btn-success");
   saveBtn.innerText = "Save To Itinerary";
-  
-  saveBtn.onclick = e => {
+
+  saveBtn.onclick = (e) => {
     const activityId = props.key;
     e.preventDefault();
-    fetch('/save-activity', {
-      method: 'post',
-      mode: 'cors',
+    fetch("/save-activity", {
+      method: "post",
+      mode: "cors",
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(activityId)
+      body: JSON.stringify(activityId),
     })
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.log(error));
-  }
+      .then((response) => response.json())
+      .then((data) => console.log(data))
+      .catch((error) => console.log(error));
+  };
   cardTitle.append(props.cardTitle);
   cardText.append(props.cardContent);
   cardBody.appendChild(cardTitle);
@@ -41,7 +41,7 @@ const CardComponent = props => {
   col.appendChild(card);
   return col;
 };
-const fetchResults = e => {
+const fetchResults = (e) => {
   e.preventDefault();
   const locationInput = document.getElementById("location");
   const dayOfDateInput = document.getElementById("calendar");
@@ -73,17 +73,17 @@ const fetchResults = e => {
             );
           })
         : eventResults.append("Sorry! No events were found!");
-    data.restaurants.length > 0 ?
-    data.restaurants.map(el => {
-      restaurantResults
-        .appendChild(
-          CardComponent({
-            key: el.id,
-            imageSrc: el.image_url,
-            cardTitle: el.name,
-            cardText: el.location.address,
+      data.restaurants.length > 0
+        ? data.restaurants.map((el) => {
+            restaurantResults.appendChild(
+              CardComponent({
+                key: el.id,
+                imageSrc: el.image_url,
+                cardTitle: el.name,
+                cardText: el.location.address,
+              })
+            );
           })
-        )
-    }) : restaurantResults.append("Sorry! No restaurants were found!");
-  });
+        : restaurantResults.append("Sorry! No restaurants were found!");
+    });
 };
