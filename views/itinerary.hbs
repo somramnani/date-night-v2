@@ -4,7 +4,7 @@
   <!-- Navbar content -->
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
   </div>
-  <ul class="navbar-nav ml-auto">
+  <ul class="navbar-nav ml-auto itinerary-navbar">
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
         aria-haspopup="true" aria-expanded="false">
@@ -13,13 +13,16 @@
         {{user.name.givenName}}
       </a>
       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item disabled" href="/users">Profile</a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="/logout">Sign Out</a>
+
+
+        <a class="dropdown-item" href="/logout">Sign Out
+          <i class="fas fa-sign-out-alt"></i></a>
       </div>
     </li>
   </ul>
 </nav>
+
+<h1>Date: {{date}} </h1>
 
 <div class="jumbotron itinerarypage-jumbtron jumbotron-fluid" data-aos="fade-in">
   <div class="container ">
@@ -30,7 +33,7 @@
       <div class="input-group border rounded-pill p-1 itinerary-search-bar">
         <input type="search" placeholder="Enter Zip Code or City" aria-describedby="button-addon3"
           class="form-control bg-none border-0 divider-vertical" />
-        <input id="calender" type="date" name="trip-start" value="" min="" max="2021-09-29" />
+        <input id="calender" type="date" name="trip-start" value={{date}} min="{{date}}" max="2021-09-29" />
         <div class="input-group-append">
           <a href="/results">
             <button id="button-addon3" type="button" class="btn btn-link searchbutton">

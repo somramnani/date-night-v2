@@ -147,6 +147,9 @@ body {
 .navbar-nav {
   padding-top: 8px;
 }
+.itinerary-navbar {
+  padding-right: 40px;
+}
 /*==========================================================================*/
 /* Header Styles
 /*==========================================================================*/
@@ -507,5 +510,9 @@ img {
   .itinerary-form {
     width: 100%;
     font-size: 20px;
+  }
+
+  .itinerary-navbar {
+    padding-right: 0px;
   }
 }
