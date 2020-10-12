@@ -6,7 +6,7 @@ const cors = require("cors");
 const cookieParser = require('cookie-parser');
 const apiRoutes = require("./routes/api-routes");
 const pageRoutes = require("./routes/html-routes");
-const flash = require('connect-flash');
+const flash = require("connect-flash");
 const PORT = process.env.PORT || 8080;
 const db = require("./models");
 const session = require("express-session");
@@ -51,22 +51,21 @@ var strategy = new Auth0Strategy(
       firstName: profile.name.givenName,
       lastName: profile.name.familyName,
       email: profile.emails[0].value,
-      image: profile.picture
-    }
+      image: profile.picture,
+    };
 
-    let foundUser = 
-      await user.findOne({ where: { firstName: profile.name.givenName }})
-      .then(user => user);
+    let foundUser = await user
+      .findOne({ where: { firstName: profile.name.givenName } })
+      .then((user) => user);
 
-    if(foundUser) {
-      console.log('this user already exists');
-        return done(null, profile);
+    if (foundUser) {
+      console.log("this user already exists");
+      return done(null, profile);
     } else {
-      user.create(newUser).then(user => { 
+      user.create(newUser).then((user) => {
         return done(null, profile);
-      })
+      });
     }
-    
   }
 );
 
