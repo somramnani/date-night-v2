@@ -61,5 +61,9 @@ router.get("/date1", function (req, res) {
 router.get("/date2", function (req, res) {
   res.sendFile(path.join(__dirname, "../public/images/datenight.jpg"));
 });
-
+router.get("/favicon", function (req, res) {
+  res.sendFile(
+    path.join(__dirname, "../public/images/favicon-calendar-check-o.ico")
+  );
+});
 module.exports = router;

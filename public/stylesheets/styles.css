@@ -69,6 +69,7 @@ body {
   border-right: black;
 }
 .mycontent-left {
+  display: block;
   height: 100%;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   padding-bottom: 1em;
@@ -128,6 +129,10 @@ body {
 .itinerary-section {
   padding-bottom: 1em;
   display: block;
+}
+
+hr.solid {
+  display: none;
 }
 
 /*==========================================================================*/
@@ -370,6 +375,10 @@ img {
   height: auto;
 }
 
+.mobile-icons {
+  display: none;
+}
+
 /*========================================================================== */
 /* Button Styles 
 /*========================================================================== */
@@ -439,7 +448,7 @@ img {
 /*========================================================================== */
 @media (max-width: 480px) {
   /*==========================================================================  
-  /*Homepage (login.html)
+  /*Homepage (main.hbs)
   /*========================================================================== */
   .homepage-background-photo {
     background-image: url("/fireworks-mobile");
@@ -486,7 +495,7 @@ img {
 
   #aboutDateNightHeader {
     font-weight: bold;
-    padding-top: 0px;
+    padding-top: 20px;
     padding-bottom: 0px;
     text-align: center !important;
   }
@@ -496,7 +505,7 @@ img {
   }
 
   /*==========================================================================  
-  /*Search Results Page (search-results.html)
+  /*Search Results Page (search-results.hbs)
   /*========================================================================== */
   .navbar-search-results {
     position: fixed;
@@ -508,27 +517,44 @@ img {
   .navbar-filter-type-container {
     display: block;
   }
-  .results-page-column {
-    padding-top: 8em;
+  .mobile-icons {
+    display: block;
+    padding-top: 12em;
+    padding-left: 30px;
   }
   .mycontent-left {
+    margin-right: 3px;
+    display: none;
   }
 
   .search-results-form {
     padding-top: 0.5em;
     padding-right: 0%;
   }
-  .results-div {
-  }
+
   .web-page-navicons {
     display: none;
   }
   .mobile-navbar-icons {
     display: block;
   }
+  hr.solid {
+    display: block;
+    border-top: 1px solid #bbb;
+    width: 100%;
+  }
+  .current-location-header {
+    font-weight: bold;
+  }
+  .fa-sort-amount-down {
+    font-size: 20px;
+  }
+  .about-section {
+    padding-bottom: 20px;
+  }
 
   /*==========================================================================  
-  /*Itinerary (itinerary.html)
+  /*Itinerary (itinerary.hbs)
   /*========================================================================== */
   .itinerary-form {
     width: 100%;

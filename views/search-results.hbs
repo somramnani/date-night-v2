@@ -14,7 +14,6 @@
         <a class="nav-link " href="/login">
           <i class="fas fa-sign-in-alt login-icon"></i>
           Login
-
         </a>
       </li>
       <li class="nav-item">
@@ -41,7 +40,6 @@
     <div class="container navbar-filter-type-container text-center">
       <div class="row filter-types">
         <div class="col"><a href="#restaurant-results-section">Restaurants</a></div>
-
         <div class="col filter-types"><a href="#event-results-section">Events</a></div>
       </div>
     </div>
@@ -62,10 +60,37 @@
   </ul>
 </nav>
 
+<section class="mobile-icons text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h6 class="current-location-header">
+          <i class="fas fa-location-arrow"></i>Current Location</h6>
+      </div>
+      <div class="col">
+        <a class="" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          <i class="fas fa-sort-amount-down"></i>
+        </a>
+
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <button type="button" id="$" class=" dropdown-item btn btn-dark">$</button>
+          <button type="button" id="$$" class=" dropdown-item btn btn-dark">$$</button>
+          <button type="button" id="$$$" class=" dropdown-item btn btn-dark">$$$</button>
+          <button type="button" id="$$$$" class=" dropdown-item btn btn-dark">$$$$</button>
+          <button type="button" id="$$$$" class=" dropdown-item btn btn-dark">$$$$</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<hr class="solid">
+
 <!-- Whole Results Section -->
 <section class="results-page-column">
   <div data-aos="fade-in" class="row results-page-column-row">
     <!--Left Side-Filter Section-->
+
     <div class="col-lg-3 col-sm-2  filter-column mycontent-left border-right">
       <div class="container">
         <div class="row">
@@ -78,10 +103,9 @@
         </div>
       </div>
       <div class="container filter-type-container">
-        <div class="row filter-types">
+        <div class="row filter-types text-center">
           <div class="col"><a href="">Restaurants</a></div>
-          <div class="col filter-types"><a href="">Movies</a></div>
-          <div class="col filter-types"><a href="">Events</a></div>
+          <div class="col "><a href="">Events</a></div>
         </div>
       </div>
       <div class="container">
@@ -111,7 +135,7 @@
     </div>
 
     <!--Right Side - Results Section (Cards will be outputed here) -->
-    <div class="col-lg col-sm-2">
+    <div class="col-lg col-sm-2 right-side-results">
       <!-- Restaurant Results -->
       <div class="results-sections-styling" data-aos="fade-in" id="restaurant-results-section">
         <h3 class="results-header">Restaurants</h3>
