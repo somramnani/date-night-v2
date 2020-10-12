@@ -87,3 +87,7 @@ const fetchResults = (e) => {
         : restaurantResults.append("Sorry! No restaurants were found!");
     });
 };
+
+var searchBarCalender = document.getElementById("calender");
+
+searchBarCalender.value = moment().format("YYYY-MM-DD");
