@@ -93,7 +93,7 @@ const fetchResults = e => {
             cardTitle: el.name,
             cardText: el.location.address,
           })
-        );
-      });
-    });
+        )
+    }) : restaurantResults.append("Sorry! No restaurants were found!");
+  });
 };

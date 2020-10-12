@@ -2,12 +2,8 @@ require("dotenv").config();
 const userInViews = require("./lib/middleware/userInViews");
 const express = require("express");
 const handlebars = require("express-handlebars");
-const bodyParser = require("body-parser");
 const cors = require("cors");
-const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
-const morgan = require('morgan');
-const logger = require('logger');
 const apiRoutes = require("./routes/api-routes");
 const pageRoutes = require("./routes/html-routes");
 const flash = require('connect-flash');
@@ -18,10 +14,8 @@ const passport = require("passport");
 const Auth0Strategy = require("passport-auth0");
 const authRouter = require("./routes/auth-routes");
 const usersRouter = require("./routes/user-routes");
-const { requiresAuth } = require("express-openid-connect");
 
 const app = express();
-
 app.set("view engine", "hbs");
 app.engine(
   "hbs",
@@ -33,8 +27,8 @@ app.engine(
   })
 );
 app.use(express.json());
+app.use(cookieParser());
 app.use(cors());
-app.use(bodyParser.urlencoded({ extended: false }));
 app.use("/api", apiRoutes);
 app.use("/", pageRoutes);
 
@@ -85,16 +79,6 @@ passport.serializeUser(function (user, done) {
 passport.deserializeUser(function (user, done) {
   done(null, user);
 });
-
-const app = express();
-
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(express.json());
-app.use(cookieParser());
-app.use(cors());
-app.use("/", pageRoutes);
-app.use("/api", apiRoutes);
-app.use(express.static("public"));
 
 var sess = {
   secret: "datenight",

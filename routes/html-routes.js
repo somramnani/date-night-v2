@@ -1,5 +1,4 @@
 const path = require("path");
-var secured = require("../lib/middleware/userInViews");
 const router = require("express").Router();
 const secured = require("../lib/middleware/secured");
 
