@@ -41,53 +41,55 @@ const CardComponent = (props) => {
   col.appendChild(card);
   return col;
 };
-const fetchResults = (e) => {
-  e.preventDefault();
-  const locationInput = document.getElementById("location");
-  const dayOfDateInput = document.getElementById("calendar");
-  const restaurantResults = document.getElementById("restaurant-results");
-  const eventResults = document.getElementById("event-results");
-  const dateData = {
-    location: locationInput.value,
-    startDate: dayOfDateInput.value,
-  };
-  fetch(`http://localhost:8080/api/get-date-data`, {
-    headers: {
-      "Content-Type": "application/json",
-    },
-    method: "post",
-    body: JSON.stringify(dateData),
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-      data.events.length > 0
-        ? data.events.map((el) => {
-            eventResults.appendChild(
-              CardComponent({
-                key: el.id,
-                imageSrc: el.image_url,
-                cardTitle: el.name,
-                cardText: el.description,
-              })
-            );
-          })
-        : eventResults.append("Sorry! No events were found!");
-      data.restaurants.length > 0
-        ? data.restaurants.map((el) => {
-            restaurantResults.appendChild(
-              CardComponent({
-                key: el.id,
-                imageSrc: el.image_url,
-                cardTitle: el.name,
-                cardText: el.location.address,
-              })
-            );
-          })
-        : restaurantResults.append("Sorry! No restaurants were found!");
-    });
-};
+// const fetchResults = (e) => {
+//   e.preventDefault();
+//   const locationInput = document.getElementById("location");
+//   const dayOfDateInput = document.getElementById("calendar");
+//   const restaurantResults = document.getElementById("restaurant-results");
+//   const eventResults = document.getElementById("event-results");
+//   const dateData = {
+//     location: locationInput.value,
+//     startDate: dayOfDateInput.value,
+//   };
+//   fetch(`http://localhost:8080/api/get-date-data`, {
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//     method: "post",
+//     body: JSON.stringify(dateData),
+//   })
+//     .then((response) => response.json())
+//     .then((data) => {
+//       console.log(data);
+//       data.events.length > 0
+//         ? data.events.map((el) => {
+//             eventResults.appendChild(
+//               CardComponent({
+//                 key: el.id,
+//                 imageSrc: el.image_url,
+//                 cardTitle: el.name,
+//                 cardText: el.description,
+//               })
+//             );
+//           })
+//         : eventResults.append("Sorry! No events were found!");
+//       data.restaurants.length > 0
+//         ? data.restaurants.map((el) => {
+//             restaurantResults.appendChild(
+//               CardComponent({
+//                 key: el.id,
+//                 imageSrc: el.image_url,
+//                 cardTitle: el.name,
+//                 cardText: el.location.address,
+//               })
+//             );
+//           })
+//         : restaurantResults.append("Sorry! No restaurants were found!");
+//     });
+// };
 
 var searchBarCalender = document.getElementById("calender");
-
 searchBarCalender.value = moment().format("YYYY-MM-DD");
+window.onload = function () {
+  document.getElementById("loading").style.display = "none";
+};
