@@ -197,11 +197,11 @@ hr.solid {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-  /* background-color: #3e8e41; */
-}
+/* 
+Change the background color of the dropdown button when the dropdown content is shown */
+/* .dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+} */
 
 /*==========================================================================*/
 /* Header Styles
@@ -500,6 +500,12 @@ img {
 /*========================================================================== */
 @media (max-width: 480px) {
   /*==========================================================================  
+  /*General Styling
+  /*========================================================================== */
+  .navbar-content {
+    padding-right: 0px;
+  }
+  /*==========================================================================  
   /*Homepage (main.hbs)
   /*========================================================================== */
   .homepage-background-photo {
@@ -582,6 +588,7 @@ img {
   .search-results-form {
     padding-top: 0.5em;
     padding-right: 0%;
+    padding-left: 0%;
   }
   .webpage-navbar-icons {
     display: none;
