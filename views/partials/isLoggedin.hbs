@@ -1,0 +1,28 @@
+{{!-- IF: if user is logged in: --}}
+{{#if user}}
+<div class="dropdown">
+  <button class="dropbtn">
+    <img src='{{user.picture}}' alt="Profile picture" class="nav-user-profile profile-image rounded-circle user-image"
+      width="40" />
+    {{user.name.givenName}}
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content">
+    <a href="/itinerary">
+      <i class="far fa-calendar-plus itinerary-icon"></i>
+      Itinerary
+    </a>
+    <a href="/logout">
+      <i class="fas fa-sign-out-alt"></i>
+      Sign Out
+    </a>
+  </div>
+</div>
+</li>
+{{!--ELSE:  If the user is not logged in --}}
+{{else}}
+<a class="nav-link" href="/login">
+  <i class="fas fa-sign-in-alt login-icon"></i>
+  Login
+</a>
+{{/if}}

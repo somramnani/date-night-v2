@@ -54,7 +54,7 @@ body {
 }
 .search-results-form {
   padding-top: 0.5em;
-  padding-right: 30%;
+  padding-left: 20%;
 }
 
 .planyourdatenight {
@@ -115,7 +115,7 @@ body {
   background-color: white !important;
 }
 
-.itinerary-search-bar {
+.input-group {
   background-color: white;
 }
 
@@ -153,7 +153,7 @@ hr.solid {
   padding-top: 8px;
 }
 
-.itinerary-navbar {
+.navbar-content {
   padding-right: 40px;
 }
 /* The container <div> - needed to position the dropdown content */
@@ -172,6 +172,7 @@ hr.solid {
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   border-radius: 0.25rem;
+  display: absolute;
 }
 
 /* Links inside the dropdown */
@@ -426,6 +427,10 @@ img {
   display: none;
 }
 
+.webpage-navbar-icons {
+  display: block;
+}
+
 /*========================================================================== */
 /* Button Styles 
 /*========================================================================== */
@@ -578,8 +583,7 @@ img {
     padding-top: 0.5em;
     padding-right: 0%;
   }
-
-  .web-page-navicons {
+  .webpage-navbar-icons {
     display: none;
   }
   .mobile-navbar-icons {

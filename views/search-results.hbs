@@ -1,52 +1,14 @@
 <!--NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-light navbar-search-results">
   <a class="navbar-brand" id="navbar-logo" href="/">Date Night</a>
-  <!-- Collapse button -->
-  <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse"
-    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-    aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"><i class=""></i></span>
-  </button>
   <!-- Navbar content -->
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="nav navbar-nav mobile-navbar-icons ">
-      <li class="nav-item ">
-
-        {{#if user}}
-        <p class="">
-          {{user.name.givenName}}
-        </p>
-
-        {{else}}
-        <a class="nav-link " href="/login">
-          <i class="fas fa-sign-in-alt login-icon"></i>
-          Login
-
-        </a>
-        {{/if}}
-
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/itinerary">
-          <i class="far fa-calendar-plus itinerary-icon"></i>
-          Itinerary
-        </a>
-      </li>
-    </ul>
-  </div>
+  <ul class="nav navbar-nav ml-auto mobile-navbar-icons">
+    <li class="nav-item ">
+      {{> isLoggedin }}
+    </li>
+  </ul>
   <form class="search-results-form ">
-    <div class=" text-center input-group border rounded-pill p-1">
-      <input id="location" type="search" value="" placeholder="Enter Zip Code or City" aria-describedby="button-addon3"
-        class="form-control bg-none border-0 divider-vertical" />
-      <input id="calender" type="date" name="trip-start" value="" min="" max="2021-09-29" />
-      <div class="input-group-append">
-        <a href="/results">
-          <button onclick="fetchResults(event)" id="search" type="button" class="btn btn-link searchbutton">
-            <i class="fa fa-search"></i>
-          </button>
-        </a>
-      </div>
-    </div>
+    {{> searchbar }}
     <div class="container navbar-filter-type-container text-center">
       <div class="row filter-types">
         <div class="col"><a href="#restaurant-results-section">Restaurants</a></div>
@@ -54,18 +16,10 @@
       </div>
     </div>
   </form>
-  <ul class="nav navbar-nav mr-auto web-page-navicons">
+
+  <ul class="nav navbar-nav ml-auto webpage-navbar-icons navbar-content ">
     <li class="nav-item ">
-      <a class="nav-link " href="/login">
-        <i class="fas fa-sign-in-alt login-icon"></i>
-        Login
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/itinerary">
-        <i class="far fa-calendar-plus itinerary-icon"></i>
-        Itinerary
-      </a>
+      {{> isLoggedin }}
     </li>
   </ul>
 </nav>
