@@ -16,7 +16,6 @@
       </div>
     </div>
   </form>
-
   <ul class="nav navbar-nav ml-auto webpage-navbar-icons navbar-content ">
     <li class="nav-item ">
       {{> isLoggedin }}
@@ -36,7 +35,6 @@
           aria-expanded="false">
           <i class="fas fa-sort-amount-down"></i>
         </a>
-
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <button type="button" id="$" class=" dropdown-item btn btn-dark">$</button>
           <button type="button" id="$$" class=" dropdown-item btn btn-dark">$$</button>
@@ -48,13 +46,13 @@
     </div>
   </div>
 </section>
+
 <hr class="solid">
 
 <!-- Whole Results Section -->
 <section class="results-page-column">
   <div data-aos="fade-in" class="row results-page-column-row">
     <!--Left Side-Filter Section-->
-
     <div class="col-lg-3 col-sm-2  filter-column mycontent-left border-right">
       <div class="container">
         <div class="row">
@@ -97,7 +95,6 @@
         </div>
       </div>
     </div>
-
     <!--Right Side - Results Section (Cards will be outputed here) -->
     <div class="col-lg col-sm-2 right-side-results">
       <!-- Restaurant Results -->
@@ -109,11 +106,9 @@
             <div class="col-sm  results-div">
               {{> card }}
             </div>
-
             <div class="col-sm results-div">
               {{> card }}
             </div>
-
             <div class="col-sm results-div">
               {{> card }}
             </div>
