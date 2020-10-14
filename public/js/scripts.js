@@ -93,11 +93,9 @@ searchBarCalender.value = moment().format("YYYY-MM-DD");
 window.onload = function () {
   document.getElementById("loading").style.display = "none";
 };
-document.getElementById("dropbtn").addEventListener("click", function (event) {
-  event.preventDefault();
-});
+
 //Shows dropdown content
-function displayDropDown(event) {
+function displayDropDown() {
   var dropdowns = document.getElementsByClassName("dropdown-content");
   for (let i = 0; i < dropdowns.length; i++) {
     var dropdown = dropdowns[i];
