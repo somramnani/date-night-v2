@@ -166,6 +166,7 @@ hr.solid {
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
+  margin-top: 15px;
   display: none;
   position: absolute;
   background-color: white;
@@ -185,6 +186,7 @@ hr.solid {
 }
 
 .dropbtn {
+  cursor: pointer;
   border: none;
   background-color: white;
 }
@@ -193,11 +195,14 @@ hr.solid {
 .dropdown-content a:hover {
   background-color: #ddd;
 }
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
+.show {
   display: block;
 }
+
+/* Show the dropdown menu on hover */
+/* .dropdown:hover .dropdown-content {
+  display: block;
+} */
 /* 
 Change the background color of the dropdown button when the dropdown content is shown */
 /* .dropdown:hover .dropbtn {
@@ -207,7 +212,7 @@ Change the background color of the dropdown button when the dropdown content is 
 /* Pure CSS Loader */
 .loader {
   border: 16px solid #f3f3f3; /* Light grey */
-  border-top: 16px solid #3498db; /* Blue */
+  border-top: 16px solid black; /* Blue */
   border-radius: 50%;
   width: 120px;
   height: 120px;
@@ -234,9 +239,6 @@ Change the background color of the dropdown button when the dropdown content is 
   top: 40%;
   left: 45%;
   z-index: 100;
-}
-
-#loading-image {
 }
 
 /*==========================================================================*/
@@ -463,9 +465,9 @@ img {
   display: none;
 }
 
-.webpage-navbar-icons {
+/* .webpage-navbar-icons {
   display: block;
-}
+} */
 
 /*========================================================================== */
 /* Button Styles 
