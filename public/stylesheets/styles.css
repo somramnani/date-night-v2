@@ -341,6 +341,12 @@ Change the background color of the dropdown button when the dropdown content is 
 
 .searchbutton {
   color: black;
+  position: static;
+}
+
+.input-group-append .btn,
+.input-group-prepend .btn {
+  position: static;
 }
 
 #calender {
