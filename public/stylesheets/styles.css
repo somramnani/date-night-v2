@@ -140,9 +140,6 @@ hr.solid {
 /* Navbar Styles
 /*==========================================================================*/
 
-.mobile-navbar-icons {
-  display: none;
-}
 .login-icon,
 .itinerary-icon {
   padding-right: 5px;
@@ -465,9 +462,12 @@ img {
   display: none;
 }
 
-/* .webpage-navbar-icons {
+.webpage-navbar-icons {
   display: block;
-} */
+}
+.mobile-navbar-icons {
+  display: none;
+}
 
 /*========================================================================== */
 /* Button Styles 
