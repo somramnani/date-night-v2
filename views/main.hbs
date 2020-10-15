@@ -21,17 +21,19 @@
         <h3 class="text-center" id="homepage-header">
           Plan your date night
         </h3>
-        <form class="homepage-form">
+        <form action="/api/get-activities" method="POST" class="homepage-form">
           <div class="input-group border rounded-pill p-1">
             <input type="search" placeholder="Enter Zip Code or City" aria-describedby="button-addon3"
-              id="zipcode-input" class="form-control bg-none border-0 divider-vertical" />
-            <input id="calender" type="date" name="trip-start" value="" min="" max="2021-09-29" />
+              id="location" name="location" class="form-control bg-none border-0 divider-vertical" />
+            <input id="calendar" type="date" name="startDate" value="" min="" max="2021-09-29" />
             <div class="input-group-append">
-              <a href="/results">
-                <button id="button-addon3" type="button" class="btn btn-link searchbutton">
-                  <i class="fa fa-search"></i>
-                </button>
-              </a>
+              <button 
+                id="button-addon3"
+                type="submit"
+                class="btn btn-link searchbutton"
+              >
+                <i class="fa fa-search"></i>
+              </button>
             </div>
           </div>
         </form>
