@@ -14,7 +14,13 @@ const authRouter = require("./routes/auth-routes");
 const apiRoutes = require("./routes/api-routes");
 const pageRoutes = require("./routes/html-routes");
 const usersRouter = require("./routes/user-routes");
+
 const app = express();
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(cookieParser());
+app.use(cors());
+app.use(express.static("/public"));
 app.set("view engine", "hbs");
 app.engine(
   "hbs",
@@ -25,11 +31,9 @@ app.engine(
     partialsDir: `${__dirname}/views/partials`,
   })
 );
-app.use(express.json());
-app.use(cookieParser());
-app.use(cors());
 
-app.use(express.static("/public"));
+app.use("/api", apiRoutes);
+app.use("/", pageRoutes);
 
 var strategy = new Auth0Strategy(
   {
