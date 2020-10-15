@@ -200,14 +200,12 @@ hr.solid {
   display: block;
 }
 
-
-  .animate {
-    animation-duration: 0.3s;
-    -webkit-animation-duration: 0.3s;
-    animation-fill-mode: both;
-    -webkit-animation-fill-mode: both;
-  }
-
+.animate {
+  animation-duration: 0.3s;
+  -webkit-animation-duration: 0.3s;
+  animation-fill-mode: both;
+  -webkit-animation-fill-mode: both;
+}
 
 @keyframes slideIn {
   0% {
@@ -387,7 +385,7 @@ hr.solid {
   position: static;
 }
 
-#calender {
+#calendar {
   border: 1px solid #dee2e6 !important;
   border-radius: 0.25rem;
   padding-left: 1em;
