@@ -32,9 +32,6 @@ app.engine(
   })
 );
 
-app.use("/api", apiRoutes);
-app.use("/", pageRoutes);
-
 var strategy = new Auth0Strategy(
   {
     domain: process.env.AUTH0_DOMAIN,
