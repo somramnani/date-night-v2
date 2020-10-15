@@ -1,12 +1,12 @@
-<div class=" text-center input-group border rounded-pill p-1">
-  <input id="location" type="search" value="" placeholder="Enter Zip Code or City" aria-describedby="button-addon3"
+<div class="text-center input-group border-rounded-pill p-1">
+<form action="/api/get-activities" method="POST">
+  <input id="location" name="location" type="search" value="" placeholder="Enter Zip Code or City" aria-describedby="button-addon3"
     class="form-control bg-none border-0 divider-vertical" />
-  <input id="calender" type="date" name="trip-start" value="" min="" max="2021-09-29" />
+  <input id="calendar" type="date" name="startDate" value="" min="" max="2021-09-29" />
   <div class="input-group-append">
-    <a href="/results">
-      <button onclick="fetchResults(event)" id="search" type="button" class="btn btn-link searchbutton">
-        <i class="fa fa-search"></i>
-      </button>
-    </a>
+    <button id="search" type="submit" class="btn btn-link searchbutton">
+      <i class="fa fa-search"></i>
+    </button>
   </div>
+</form>
 </div>

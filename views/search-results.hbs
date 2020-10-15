@@ -103,15 +103,20 @@
         <!-- Cards -->
         <div class="container">
           <div class="row">
-            <div class="col-sm  results-div">
-              {{> card }}
-            </div>
-            <div class="col-sm results-div">
-              {{> card }}
-            </div>
-            <div class="col-sm results-div">
-              {{> card }}
-            </div>
+
+              {{#each restaurants}}
+                <div class="col m-2">
+                  {{> card 
+                    name=name 
+                    price=price 
+                    location=location 
+                    rating=rating 
+                    id=id 
+                    img=image_url 
+                  }}
+                </div>
+              {{/each}}
+
           </div>
         </div>
       </div>
@@ -120,6 +125,18 @@
         <h3 class="results-header">Events</h3>
         <div class="container">
           <div class="row">
+            {{#each events}}
+              <div class="col">
+                {{> card 
+                  name=name 
+                  price=price 
+                  location=location 
+                  rating=rating 
+                  id=id 
+                  img=image_url 
+                }}
+              </div>
+            {{/each}}
           </div>
         </div>
       </div>
