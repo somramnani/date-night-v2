@@ -1,18 +1,18 @@
 require("dotenv").config();
-const userInViews = require("./lib/middleware/userInViews");
 const express = require("express");
 const handlebars = require("express-handlebars");
 const cors = require("cors");
-const cookieParser = require('cookie-parser');
 const flash = require("connect-flash");
 const PORT = process.env.PORT || 8080;
 const db = require("./models");
 const session = require("express-session");
 const passport = require("passport");
 const Auth0Strategy = require("passport-auth0");
+const cookieParser = require("cookie-parser");
+const userInViews = require("./lib/middleware/userInViews");
+const authRouter = require("./routes/auth-routes");
 const apiRoutes = require("./routes/api-routes");
 const pageRoutes = require("./routes/html-routes");
-const authRouter = require("./routes/auth-routes");
 const usersRouter = require("./routes/user-routes");
 
 const app = express();
@@ -31,6 +31,7 @@ app.engine(
     partialsDir: `${__dirname}/views/partials`,
   })
 );
+
 app.use("/api", apiRoutes);
 app.use("/", pageRoutes);
 
@@ -97,8 +98,9 @@ app.use(session(sess));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
-
 app.use(userInViews());
+app.use("/api", apiRoutes);
+app.use("/", pageRoutes);
 app.use("/", authRouter);
 app.use("/", usersRouter);
 
