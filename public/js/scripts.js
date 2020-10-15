@@ -1,3 +1,6 @@
+var searchBarCalendar = document.getElementById("calendar");
+searchBarCalendar.value = moment().format("YYYY-MM-DD");
+
 window.onload = function () {
   document.getElementById("loading").style.display = "none";
 };

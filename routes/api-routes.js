@@ -24,13 +24,13 @@ router.post(`/get-activities`, (req, res) => {
       let restaurants = 
         results[0].data.length === 0 ?
         res.send('Sorry, no restaurants were found in your search!') :
-        results[0].data.businesses.slice(0, 5);
+        results[0].data.businesses.slice(0, 8);
         
       let events = 
         results[1].data.length === 0 ? 
         res.send('Sorry, no events were found for this date/location!') : 
         results[1].data.events;
-        console.log(restaurants)
+
         res.render('search-results', { restaurants, events });
     }).catch(error => console.log(error))
 
