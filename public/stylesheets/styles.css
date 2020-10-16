@@ -135,6 +135,12 @@ body {
   display: block;
 }
 
+.main-page-searchbar {
+  width: 60%;
+  margin-left: 20%;
+  padding-top: 5%;
+}
+
 hr.solid {
   display: none;
 }
