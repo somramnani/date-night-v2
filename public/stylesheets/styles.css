@@ -53,10 +53,6 @@ body {
 .divder {
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
-.search-results-form {
-  padding-top: 0.5em;
-  padding-left: 20%;
-}
 
 .planyourdatenight {
   padding-top: 10em;
@@ -120,20 +116,39 @@ body {
   background-color: white;
 }
 
-.itinerary-form {
-  width: 28%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  position: absolute;
+.search-results-form {
+  width: 80%;
+  margin-left: 18%;
 }
+
+.itinerary-form {
+  width: 40%;
+
+  margin-right: -50%;
+  margin-left: 30%;
+  display: block;
+  text-align: center;
+}
+
 .itinerary-section {
   padding-bottom: 1em;
   display: block;
 }
 
+.main-page-searchbar {
+  width: 70%;
+  margin-left: 15%;
+  padding-top: 5%;
+}
+
 hr.solid {
   display: none;
+}
+
+.border-rounded-pill {
+  border-radius: 1.2rem;
+  border: #c1c1c1 solid 1px;
+  background-color: white;
 }
 
 /*==========================================================================*/
@@ -145,7 +160,7 @@ hr.solid {
   padding-right: 5px;
 }
 .p-1 {
-  padding-left: 0.4em !important;
+  padding: 0.4rem !important;
 }
 .navbar-nav {
   padding-top: 8px;
@@ -310,7 +325,7 @@ hr.solid {
   font-weight: bold;
   color: white;
   font-family: "Sansita Swashed", cursive;
-  padding-bottom: 1em;
+  padding-bottom: 0.2em;
   font-size: 3em;
 }
 
@@ -423,10 +438,6 @@ hr.solid {
 
 .filter-type-container {
   padding-top: 1em;
-}
-.navbar-filter-type-container {
-  padding-top: 1em;
-  display: none;
 }
 
 .social-icons {
@@ -652,9 +663,7 @@ img {
     left: 0;
     z-index: 1;
   }
-  .navbar-filter-type-container {
-    display: block;
-  }
+
   .mobile-icons {
     display: block;
     padding-top: 12em;
