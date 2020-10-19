@@ -1,0 +1,40 @@
+<div id={{id}} class="card mx-auto result-cards">
+  <img class="card-img-top" src={{img}} alt="Card image cap" />
+  <div class="card-body results-cardbody">
+    <a href="{{event_site_url}}" class="href" target="_blank">
+      <h5 class="card-title">{{name}}</h5>
+    </a>
+    <p class="card-text">
+      {{description}}
+    </p>
+    <p class="card-text">
+      <i class="far fa-calendar-alt"></i>
+      {{time_start}}
+    </p>
+    <p class="card-text ">
+      <i class="fas fa-map-marker-alt"></i>
+      {{#if location.address1}}{{ location.address1}},{{/if}} {{#if location.city}} {{location.city}},{{/if}}
+      {{#if location.state}} {{location.state}} {{/if}} {{#if location.zip_code}} {{location.zip_code}} {{/if}}
+    </p>
+
+    <p class="card-text">
+      {{display_phone}}
+    </p>
+
+    <div class="row">
+      <div class="col">
+        <a href="{{tickets_url}}" class="" target="_blank">
+          <i class="fas fa-ticket-alt"></i></i> Get Tickets
+        </a>
+      </div>
+
+      <div class="col addbuttoncol">
+        <div class="event-button ml-auto">
+          <button onclick="saveActivity({{idToString id}}, {{idToString activityType}})"
+            class="plus-button plus-button--small">
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
