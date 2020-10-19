@@ -88,6 +88,9 @@ body {
   height: auto;
   font-size: 11px;
 }
+.result-col {
+  padding-bottom: 20px;
+}
 .results-div {
   padding-bottom: 20px;
 }
@@ -572,6 +575,9 @@ img {
 .button {
   padding-top: 0px;
   padding-left: 2em;
+}
+.event-button {
+  padding-left: 6em;
 }
 .addbuttoncol {
   padding-right: 0px;

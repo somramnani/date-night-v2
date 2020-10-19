@@ -6,28 +6,33 @@
     </a>
     <p class="card-text">
     <div class="rating">
-      {{ rating }}
+      {{!-- {{ rating}} --}}
       {{>stars}}
-      {{review_count}}
+      {{review_count}} reviews
     </div>
     </p>
-    <p class="card-text">
-    </p>
-    <p class="card-text ">
-      Location: {{ location.address1}}, {{location.city}}, {{location.state}}, {{location.zip_code}}
-    </p>
-    <p class="card-text">
-      Phone: {{phone}}
-    </p>
+
     <p class="card-text">
       Price Range: {{price}}
     </p>
+    <p class="card-text ">
+      <i class="fas fa-map-marker-alt"></i>
+      {{ location.address1}}, {{location.city}}, {{location.state}} {{location.zip_code}}
+    </p>
+    <p class="card-text">
+      {{#if display_phone}}
+      <i class="fas fa-phone"> </i>
+      {{display_phone}}
+      {{/if}}
+    </p>
+
+
     <div class="row">
       <div class="col">
         <i class="fas fa-check"></i> Dine in
       </div>
       <div class="col">
-        <i class="fas fa-check"></i>Takeout
+        <i class="fas fa-check"></i> Takeout
       </div>
       <div class="col addbuttoncol">
         <div class="button ml-auto">
