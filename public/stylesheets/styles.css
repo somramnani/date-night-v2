@@ -582,6 +582,18 @@ img {
 .addbuttoncol {
   padding-right: 0px;
 }
+.marker {
+  unicode-bidi: isolate;
+  font-variant-numeric: tabular-nums;
+  text-transform: none;
+}
+.fa-circle {
+  font-size: 5px;
+  padding-bottom: 2px;
+}
+.bullet {
+  content: " • ";
+}
 
 /*==========================================================================  
 /*Footer Styles

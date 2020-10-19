@@ -3,7 +3,7 @@ const router = require("express").Router();
 
 //HTML Routes
 router.get("/", (req, res) => {
-  res.render("main", { layout: "index", title: "Date Night" });
+  res.render("main", { layout: "index", title: "Date Night | Home" });
 });
 
 router.get("/results", (req, res) => {
