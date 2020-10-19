@@ -103,20 +103,19 @@
         <!-- Cards -->
         <div class="container">
           <div class="row">
-
             {{#each restaurants}}
-            <div class="col m-2">
-              {{> card 
-                    name=name 
-                    price=price 
-                    location=location 
-                    rating=rating 
-                    id=id 
-                    img=image_url 
-                  }}
-            </div>
+              <div class="col m-2">
+                {{> card
+                  activityType="restaurant"
+                  name=name 
+                  price=price 
+                  location=location 
+                  rating=rating 
+                  id=id 
+                  img=image_url
+                }}
+              </div>
             {{/each}}
-
           </div>
         </div>
       </div>
@@ -126,8 +125,9 @@
         <div class="container">
           <div class="row">
             {{#each events}}
-            <div class="col">
-              {{> card 
+              <div class="col">
+                {{> card
+                  activityType="event"
                   name=name 
                   price=price 
                   location=location 

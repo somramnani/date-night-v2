@@ -9,11 +9,24 @@ router.get("/itinerary", secured(), function (req, res, next) {
   res.render("itinerary", { layout: "index", title: "Date Night | Itinerary" });
 });
 
-router.post("/save-activity", (req, res, next) => {
-  const { activityId } = req.body;
-  // const { _raw, _json, ...userProfile } = req.user;
+router.post("/save-activity", secured(), async (req, res, next) => {
+  const { user, itinerary } = db.sequelize.models;
+  const { ...userProfile } = req.user;
+  const { type, id } = req.body;
 
-  res.json(activityId);
+  let newActivity = {
+    [type]: id
+  };
+
+  let thisUser = 
+    await user.findOne({ 
+      where: { 
+        oauthId: userProfile.id 
+      }
+    }).then(u => u);
+
+  thisUser.update({itinerary: newActivity}).then(it => console.log(it, it.id))
+
 });
 
 module.exports = router;

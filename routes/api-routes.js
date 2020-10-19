@@ -3,7 +3,8 @@ const axios = require("axios");
 const yelpKey = process.env.YELP_TOKEN;
 const moment = require("moment");
 
-router.post(`/get-activities`, (req, res) => {
+router.post(`/get-activities/`, (req, res) => {
+  console.log(req.body)
   const { location, startDate } = req.body;
   const date = moment().unix(startDate);
   const baseURL = `https://api.yelp.com/v3`;

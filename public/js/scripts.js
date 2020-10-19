@@ -15,7 +15,7 @@ function displayDropDown() {
     var dropdown = dropdowns[i];
     dropdown.classList.toggle("show");
   }
-}
+};
 
 // Close the dropdown menu if the user clicks outside of it
 window.onclick = function (event) {
@@ -28,4 +28,19 @@ window.onclick = function (event) {
       }
     }
   }
+};
+
+const saveActivity = (id, type) => {
+  const pack = { id, type };
+
+  fetch(`/save-activity`, { 
+    method: 'post',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(pack)
+  })
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error(error))
 };
