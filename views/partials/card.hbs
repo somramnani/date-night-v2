@@ -28,11 +28,14 @@
     </p>
 
     <p class="card-text">
-      Price Range: {{ price }}
+      Price Range: {{price}}
     </p>
   </div>
   <div class="button ml-auto">
-    <button class=" plus-button plus-button--small">
+    <button 
+      onclick="saveActivity({{idToString id}}, {{idToString activityType}})"
+      class="plus-button plus-button--small"
+    >
     </button>
   </div>
 </div>

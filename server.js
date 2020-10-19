@@ -28,6 +28,7 @@ app.engine(
     layoutsDir: `${__dirname}/views/layouts`,
     extname: "hbs",
     defaultLayout: "index",
+    helpers: require('./views/helpers/toString'),
     partialsDir: `${__dirname}/views/partials`,
   })
 );
@@ -114,7 +115,7 @@ app.use(function (req, res, next) {
 
 // Catch 404 and forward to error handler
 app.use(function (req, res, next) {
-  const err = new Error("Not Fucking Found");
+  const err = new Error("Not Found");
   err.status = 404;
   next(err);
 });
