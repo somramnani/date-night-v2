@@ -3,13 +3,30 @@
   <div class="card-body">
     <h5 class="card-title">{{name}}</h5>
     <p class="card-text">
-    </p>
-    <p class="card-text ">
-      Location: {{ location.address1 }}
+    <div class="rating">
+      {{ rating }}
+      {{!-- {{#if rating == '5'}} --}}
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      {{!-- {{else}}
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span>
+      {{/if}} --}}
+    </div>
     </p>
     <p class="card-text">
-      User Rating: {{ rating }}
     </p>
+    <p class="card-text ">
+      Location: {{ location.address1}}, {{location.city}}, {{location.state}}, {{location.zip_code}}
+
+    </p>
+
     <p class="card-text">
       Price Range: {{ price }}
     </p>

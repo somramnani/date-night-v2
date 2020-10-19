@@ -36,6 +36,7 @@ router.post(`/get-activities`, (req, res) => {
         layout: "index",
         title: "Date Night | Search Results",
       });
+      console.log(restaurants);
     })
     .catch((error) => console.log(error));
 });
