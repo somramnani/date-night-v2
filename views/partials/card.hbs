@@ -1,12 +1,14 @@
 <div id={{id}} class="card mx-auto result-cards">
   <img class="card-img-top" src={{img}} alt="Card image cap" />
-  <div class="card-body">
-    <h5 class="card-title">{{name}}</h5>
+  <div class="card-body results-cardbody">
+    <a href="{{url}}" class="href" target="_blank">
+      <h5 class="card-title">{{name}}</h5>
+    </a>
     <p class="card-text">
     <div class="rating">
       {{ rating }}
       {{>stars}}
-
+      {{review_count}}
     </div>
     </p>
     <p class="card-text">
@@ -15,12 +17,25 @@
       Location: {{ location.address1}}, {{location.city}}, {{location.state}}, {{location.zip_code}}
     </p>
     <p class="card-text">
+      Phone: {{phone}}
+    </p>
+    <p class="card-text">
       Price Range: {{price}}
     </p>
-  </div>
-  <div class="button ml-auto">
-    <button onclick="saveActivity({{idToString id}}, {{idToString activityType}})"
-      class="plus-button plus-button--small">
-    </button>
+    <div class="row">
+      <div class="col">
+        <i class="fas fa-check"></i> Dine in
+      </div>
+      <div class="col">
+        <i class="fas fa-check"></i>Takeout
+      </div>
+      <div class="col addbuttoncol">
+        <div class="button ml-auto">
+          <button onclick="saveActivity({{idToString id}}, {{idToString activityType}})"
+            class="plus-button plus-button--small">
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
