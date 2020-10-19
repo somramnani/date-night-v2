@@ -1,6 +1,5 @@
 const path = require("path");
 const router = require("express").Router();
-const secured = require("../lib/middleware/secured");
 
 //HTML Routes
 router.get("/", (req, res) => {
