@@ -2,9 +2,9 @@ const router = require('express').Router();
 const axios = require('axios');
 const yelpKey = process.env.YELP_TOKEN;
 const moment = require("moment");
-const secured = require('../lib/middleware/secured');
 
-router.post(`/get-activities`, (req, res) => {
+router.post(`/get-activities/`, (req, res) => {
+  console.log(req.body)
   const { location, startDate } = req.body;
   const date = moment().unix(startDate);
   const baseURL = `https://api.yelp.com/v3`;
@@ -24,7 +24,7 @@ router.post(`/get-activities`, (req, res) => {
       let restaurants = 
         results[0].data.length === 0 ?
         res.send('Sorry, no restaurants were found in your search!') :
-        results[0].data.businesses.slice(0, 8);
+        results[0].data.businesses.slice(0, 6);
         
       let events = 
         results[1].data.length === 0 ? 

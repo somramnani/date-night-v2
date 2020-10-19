@@ -7,7 +7,6 @@
       {{> isLoggedin }}
     </li>
   </ul>
-  <form class="search-results-form ">
     {{> searchbar }}
     <div class="container navbar-filter-type-container text-center">
       <div class="row filter-types">
@@ -15,7 +14,6 @@
         <div class="col filter-types"><a href="#event-results-section">Events</a></div>
       </div>
     </div>
-  </form>
   <ul class="nav navbar-nav ml-auto webpage-navbar-icons navbar-content ">
     <li class="nav-item ">
       {{> isLoggedin }}
@@ -103,20 +101,19 @@
         <!-- Cards -->
         <div class="container">
           <div class="row">
-
-              {{#each restaurants}}
-                <div class="col m-2">
-                  {{> card 
-                    name=name 
-                    price=price 
-                    location=location 
-                    rating=rating 
-                    id=id 
-                    img=image_url 
-                  }}
-                </div>
-              {{/each}}
-
+            {{#each restaurants}}
+              <div class="col m-2">
+                {{> card
+                  activityType="restaurant"
+                  name=name 
+                  price=price 
+                  location=location 
+                  rating=rating 
+                  id=id 
+                  img=image_url
+                }}
+              </div>
+            {{/each}}
           </div>
         </div>
       </div>
@@ -127,7 +124,8 @@
           <div class="row">
             {{#each events}}
               <div class="col">
-                {{> card 
+                {{> card
+                  activityType="event"
                   name=name 
                   price=price 
                   location=location 
