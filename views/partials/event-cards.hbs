@@ -1,16 +1,20 @@
 <div id={{id}} class="card mx-auto result-cards">
   <img class="card-img-top" src={{img}} alt="Card image cap" />
   <div class="card-body results-cardbody">
+
     <a href="{{event_site_url}}" class="href" target="_blank">
       <h5 class="card-title">{{name}}</h5>
     </a>
+
     <p class="card-text">
       {{description}}
     </p>
+
     <p class="card-text">
       <i class="far fa-calendar-alt"></i>
-      {{time_start}}
+      {{moment time_start "MM/DD/YYYY"}} {{moment time_start " hh:mm a"}} - {{moment time_end " hh:mm a"}}
     </p>
+
     <p class="card-text ">
       <i class="fas fa-map-marker-alt"></i>
       {{#if location.address1}}{{ location.address1}},{{/if}} {{#if location.city}} {{location.city}},{{/if}}

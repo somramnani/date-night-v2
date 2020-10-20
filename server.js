@@ -14,6 +14,9 @@ const authRouter = require("./routes/auth-routes");
 const apiRoutes = require("./routes/api-routes");
 const pageRoutes = require("./routes/html-routes");
 const usersRouter = require("./routes/user-routes");
+const Handlebars = require("handlebars");
+const MomentHandler = require("handlebars.moment");
+MomentHandler.registerHelpers(Handlebars);
 
 const app = express();
 app.use(express.urlencoded({ extended: false }));
