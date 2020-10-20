@@ -17,15 +17,17 @@
       {{#if location.state}} {{location.state}} {{/if}} {{#if location.zip_code}} {{location.zip_code}} {{/if}}
     </p>
 
-    <p class="card-text">
-      {{display_phone}}
-    </p>
-
     <div class="row">
       <div class="col">
-        <a href="{{tickets_url}}" class="" target="_blank">
+        {{#ifItemInObject tickets_url}}
+        <a href="{{tickets_url}}" target="_blank">
           <i class="fas fa-ticket-alt"></i></i> Get Tickets
         </a>
+        {{else}}
+        <a href="{{tickets_url}}" class="disabled" target="_blank">
+          <i class="fas fa-ticket-alt"></i></i> Get Tickets
+        </a>
+        {{/ifItemInObject}}
       </div>
 
       <div class="col addbuttoncol">

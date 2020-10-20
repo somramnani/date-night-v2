@@ -12,4 +12,11 @@ module.exports = {
       return opts.inverse(this);
     }
   },
+  ifItemInObject: function (a, opts) {
+    if (a) {
+      return opts.fn(this);
+    } else {
+      return opts.inverse(this);
+    }
+  },
 };

@@ -28,7 +28,7 @@ app.engine(
     layoutsDir: `${__dirname}/views/layouts`,
     extname: "hbs",
     defaultLayout: "index",
-    helpers: require('./views/helpers/toString'),
+    helpers: require("./views/helpers/helpers"),
     partialsDir: `${__dirname}/views/partials`,
   })
 );
@@ -87,12 +87,10 @@ var sess = {
 
 if (app.get("env") === "production") {
   // app.set('trust proxy', 1);
-
   sess.cookie.secure = true;
 }
 
 app.use(session(sess));
-
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
