@@ -129,9 +129,15 @@ body {
 
 .itinerary-form {
   width: 40%;
-
   margin-right: -50%;
   margin-left: 30%;
+  display: block;
+  text-align: center;
+}
+.results-page-form {
+  width: 30%;
+  margin-right: -50%;
+  margin-left: 20%;
   display: block;
   text-align: center;
 }
@@ -169,7 +175,16 @@ a.disabled {
   cursor: default;
   color: grey;
 }
+.icon-cards {
+  padding-right: 2px;
+}
+.location-icon-cards {
+  padding-right: px;
+}
 
+.date-icon-cards {
+  padding-right: 3px;
+}
 /*==========================================================================*/
 /* Navbar Styles
 /*==========================================================================*/
