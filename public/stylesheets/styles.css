@@ -160,6 +160,9 @@ hr.solid {
 .fa-check {
   color: green;
 }
+.fa-times {
+  color: red;
+}
 
 /*==========================================================================*/
 /* Navbar Styles

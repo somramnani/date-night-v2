@@ -30,10 +30,19 @@
 
     <div class="row">
       <div class="col">
-        <i class="fas fa-check"></i> Dine in
+        {{#ifStringInArray transactions "pickup"}}
+        <i class="fas fa-check"></i>
+        {{else}}
+        <i class="fas fa-times"></i>
+        {{/ifStringInArray}} Takeout
       </div>
       <div class="col">
-        <i class="fas fa-check"></i> Takeout
+        {{#ifStringInArray transactions "delivery"}}
+        <i class="fas fa-check"></i>
+        {{else}}
+        <i class="fas fa-times"></i>
+        {{/ifStringInArray}}
+        Delivery
       </div>
       <div class="col addbuttoncol">
         <div class="button ml-auto">
