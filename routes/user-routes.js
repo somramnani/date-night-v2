@@ -14,6 +14,10 @@ router.post("/save-activity", secured(), async (req, res, next) => {
   const { ...userProfile } = req.user;
   const { type, id } = req.body;
 
+  if(!req.user) {
+    return res.status(400).json({error: 'You must be logged in to save activities!'})
+  }
+
   let newActivity = {
     [type]: id
   };
