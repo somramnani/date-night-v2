@@ -538,6 +538,9 @@ img {
 .checked {
   color: orange;
 }
+.fa-star {
+  color: orange;
+}
 
 /*========================================================================== */
 /* Button Styles 
