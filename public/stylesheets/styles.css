@@ -783,6 +783,9 @@ img {
   .current-location-header {
     font-weight: bold;
   }
+  .searchbutton {
+    display: static;
+  }
   .fa-sort-amount-down {
     font-size: 20px;
     padding-right: 10px;
