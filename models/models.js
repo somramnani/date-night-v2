@@ -22,7 +22,7 @@ module.exports = function (sequelize, DataTypes) {
   });
   Itinerary.belongsTo(User, {
     as: "user",
-    foreignKey: "oauthId",
+    // foreignKey: "oauthId",
     // targetKey: "oauthId",
   });
 
