@@ -89,12 +89,7 @@ var sess = {
 };
 
 if (app.get("env") === "production") {
-<<<<<<< HEAD
-  app.set("trust proxy", 1);
-
-=======
-  // app.set('trust proxy', 1);
->>>>>>> 9a94eca8fd9c280e48c1883c8a18787a30b4839d
+  app.set('trust proxy', 1);
   sess.cookie.secure = true;
 }
 
@@ -121,11 +116,7 @@ app.use(function (req, res, next) {
 
 // Catch 404 and forward to error handler
 app.use(function (req, res, next) {
-<<<<<<< HEAD
   const err = new Error("Not  Found");
-=======
-  const err = new Error("Not Found");
->>>>>>> 9a94eca8fd9c280e48c1883c8a18787a30b4839d
   err.status = 404;
   next(err);
 });
