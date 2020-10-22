@@ -1,26 +1,29 @@
 require("dotenv").config();
-const userInViews = require("./lib/middleware/userInViews");
 const express = require("express");
 const handlebars = require("express-handlebars");
 const cors = require("cors");
-const bodyParser = require("body-parser");
-const cookieParser = require("cookie-parser");
-const morgan = require("morgan");
-const logger = require("logger");
-const apiRoutes = require("./routes/api-routes");
-const pageRoutes = require("./routes/html-routes");
 const flash = require("connect-flash");
 const PORT = process.env.PORT || 8080;
 const db = require("./models");
 const session = require("express-session");
 const passport = require("passport");
 const Auth0Strategy = require("passport-auth0");
+const cookieParser = require("cookie-parser");
+const userInViews = require("./lib/middleware/userInViews");
 const authRouter = require("./routes/auth-routes");
+const apiRoutes = require("./routes/api-routes");
+const pageRoutes = require("./routes/html-routes");
 const usersRouter = require("./routes/user-routes");
-const { requiresAuth } = require("express-openid-connect");
+const Handlebars = require("handlebars");
+const MomentHandler = require("handlebars.moment");
+MomentHandler.registerHelpers(Handlebars);
 
 const app = express();
-
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(cookieParser());
+app.use(cors());
+app.use(express.static("/public"));
 app.set("view engine", "hbs");
 app.engine(
   "hbs",
@@ -28,16 +31,10 @@ app.engine(
     layoutsDir: `${__dirname}/views/layouts`,
     extname: "hbs",
     defaultLayout: "index",
+    helpers: require("./views/helpers/helpers"),
     partialsDir: `${__dirname}/views/partials`,
   })
 );
-app.use(express.json());
-app.use(cors());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use("/api", apiRoutes);
-app.use("/", pageRoutes);
-
-app.use(express.static("/public"));
 
 var strategy = new Auth0Strategy(
   {
@@ -84,14 +81,6 @@ passport.deserializeUser(function (user, done) {
   done(null, user);
 });
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(express.json());
-app.use(cookieParser());
-app.use(cors());
-app.use("/", pageRoutes);
-app.use("/api", apiRoutes);
-app.use(express.static("public"));
-
 var sess = {
   secret: "datenight",
   cookie: {},
@@ -100,18 +89,22 @@ var sess = {
 };
 
 if (app.get("env") === "production") {
+<<<<<<< HEAD
   app.set("trust proxy", 1);
 
+=======
+  // app.set('trust proxy', 1);
+>>>>>>> 9a94eca8fd9c280e48c1883c8a18787a30b4839d
   sess.cookie.secure = true;
 }
 
 app.use(session(sess));
-
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
-
 app.use(userInViews());
+app.use("/api", apiRoutes);
+app.use("/", pageRoutes);
 app.use("/", authRouter);
 app.use("/", usersRouter);
 
@@ -128,7 +121,11 @@ app.use(function (req, res, next) {
 
 // Catch 404 and forward to error handler
 app.use(function (req, res, next) {
+<<<<<<< HEAD
   const err = new Error("Not  Found");
+=======
+  const err = new Error("Not Found");
+>>>>>>> 9a94eca8fd9c280e48c1883c8a18787a30b4839d
   err.status = 404;
   next(err);
 });

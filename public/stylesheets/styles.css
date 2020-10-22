@@ -1,6 +1,7 @@
 /*==========================================================================*/
 /* General Styles
 /*==========================================================================*/
+
 html {
   scroll-behavior: smooth;
   height: 100%;
@@ -52,10 +53,6 @@ body {
 .divder {
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
-.search-results-form {
-  padding-top: 0.5em;
-  padding-right: 30%;
-}
 
 .planyourdatenight {
   padding-top: 10em;
@@ -69,6 +66,7 @@ body {
   border-right: black;
 }
 .mycontent-left {
+  display: block;
   height: 100%;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   padding-bottom: 1em;
@@ -81,11 +79,17 @@ body {
 .results-sections-styling {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
+.results-cardbody {
+  padding-bottom: 5px;
+}
 .result-cards {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0);
   width: 250px;
   height: auto;
-  font-size: 10px;
+  font-size: 11px;
+}
+.result-col {
+  padding-bottom: 20px;
 }
 .results-div {
   padding-bottom: 20px;
@@ -114,39 +118,215 @@ body {
   background-color: white !important;
 }
 
-.itinerary-search-bar {
+.input-group {
   background-color: white;
 }
 
-.itinerary-form {
-  width: 28%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  position: absolute;
+.search-results-form {
+  width: 80%;
+  margin-left: 18%;
 }
+
+.itinerary-form {
+  width: 40%;
+  margin-right: -50%;
+  margin-left: 30%;
+  display: block;
+  text-align: center;
+}
+.results-page-form {
+  width: 30%;
+  margin-right: -50%;
+  margin-left: 20%;
+  display: block;
+  text-align: center;
+}
+
 .itinerary-section {
   padding-bottom: 1em;
   display: block;
 }
 
+.main-page-searchbar {
+  width: 70%;
+  margin-left: 15%;
+  padding-top: 5%;
+}
+
+hr.solid {
+  display: none;
+}
+
+.border-rounded-pill {
+  border-radius: 1.2rem;
+  border: #c1c1c1 solid 1px;
+  background-color: white;
+}
+
+.fa-check {
+  color: green;
+}
+.fa-times {
+  color: red;
+}
+
+a.disabled {
+  pointer-events: none;
+  cursor: default;
+  color: grey;
+}
+.icon-cards {
+  padding-right: 2px;
+}
+.location-icon-cards {
+  padding-right: 5px;
+}
+
+.date-icon-cards {
+  padding-right: 3px;
+}
+.transaction-icon {
+  padding-right: 1px;
+  font-size: 11px;
+}
 /*==========================================================================*/
 /* Navbar Styles
 /*==========================================================================*/
 
-.mobile-navbar-icons {
-  display: none;
-}
 .login-icon,
 .itinerary-icon {
   padding-right: 5px;
 }
 .p-1 {
-  padding-left: 0.4em !important;
+  padding: 0.4rem !important;
 }
 .navbar-nav {
   padding-top: 8px;
 }
+
+.navbar-content {
+  padding-right: 40px;
+}
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  border: none;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  margin-top: 15px;
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 115px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 0.25rem;
+  display: absolute;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropbtn:focus {
+  outline: none;
+  outline: none;
+}
+
+.dropbtn {
+  cursor: pointer;
+  border: none;
+  background-color: white;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+.show {
+  display: block;
+}
+
+.animate {
+  animation-duration: 0.3s;
+  -webkit-animation-duration: 0.3s;
+  animation-fill-mode: both;
+  -webkit-animation-fill-mode: both;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes slideIn {
+  0% {
+    -webkit-transform: transform;
+    -webkit-opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    -webkit-opacity: 1;
+  }
+  0% {
+    -webkit-transform: translateY(1rem);
+    -webkit-opacity: 0;
+  }
+}
+
+.slideIn {
+  -webkit-animation-name: slideIn;
+  animation-name: slideIn;
+}
+
+/* Pure CSS Loader */
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid black; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#loading {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  display: block;
+  z-index: 99;
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  z-index: 100;
+}
+
 /*==========================================================================*/
 /* Header Styles
 /*==========================================================================*/
@@ -183,7 +363,7 @@ body {
   font-weight: bold;
   color: white;
   font-family: "Sansita Swashed", cursive;
-  padding-bottom: 1em;
+  padding-bottom: 0.2em;
   font-size: 3em;
 }
 
@@ -206,6 +386,18 @@ body {
   display: block;
   height: 100%;
   width: 100%;
+}
+.about-section {
+  background-color: #efefef;
+}
+#aboutDateNightHeader {
+  font-weight: bold;
+  padding-top: 70px;
+  padding-bottom: 60px;
+}
+#aboutDateNighttext {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .icon {
@@ -238,9 +430,15 @@ body {
 
 .searchbutton {
   color: black;
+  position: static;
 }
 
-#calender {
+.input-group-append .btn,
+.input-group-prepend .btn {
+  position: static;
+}
+
+#calendar {
   border: 1px solid #dee2e6 !important;
   border-radius: 0.25rem;
   padding-left: 1em;
@@ -278,10 +476,6 @@ body {
 
 .filter-type-container {
   padding-top: 1em;
-}
-.navbar-filter-type-container {
-  padding-top: 1em;
-  display: none;
 }
 
 .social-icons {
@@ -355,6 +549,24 @@ img {
   height: auto;
 }
 
+.mobile-icons {
+  display: none;
+}
+
+.webpage-navbar-icons {
+  display: block;
+}
+.mobile-navbar-icons {
+  display: none;
+}
+
+.checked {
+  color: orange;
+}
+.fa-star {
+  color: orange;
+}
+
 /*========================================================================== */
 /* Button Styles 
 /*========================================================================== */
@@ -393,8 +605,25 @@ img {
 }
 .button {
   padding-top: 0px;
-  padding-right: 10px;
-  padding-bottom: 10px;
+  padding-left: 2em;
+}
+.event-button {
+  padding-left: 6em;
+}
+.addbuttoncol {
+  padding-right: 0px;
+}
+.marker {
+  unicode-bidi: isolate;
+  font-variant-numeric: tabular-nums;
+  text-transform: none;
+}
+.fa-circle {
+  font-size: 5px;
+  padding-bottom: 2px;
+}
+.bullet {
+  content: " • ";
 }
 
 /*==========================================================================  
@@ -424,16 +653,40 @@ img {
 /*========================================================================== */
 @media (max-width: 480px) {
   /*==========================================================================  
-  /*Homepage (login.html)
+  /*General Styling
+  /*========================================================================== */
+  .navbar-content {
+    padding-right: 0px;
+  }
+  #location::placeholder {
+    font-size: 12px;
+  }
+
+  #calendar {
+    padding-left: 0em;
+    padding-right: 0em;
+    margin-right: 0px;
+    width: 35%;
+    font-size: 11px;
+  }
+  /*==========================================================================  
+  /*Homepage (main.hbs)
   /*========================================================================== */
   .homepage-background-photo {
     background-image: url("/fireworks-mobile");
     height: 20rem;
   }
 
+  .main-page-searchbar {
+    width: 100%;
+    margin-left: 0%;
+    padding-top: 0%;
+  }
+
   .homepage-image-div {
     padding-left: 0px;
     padding-right: 0px;
+    font-size: 10px;
   }
 
   #homepage-header {
@@ -469,8 +722,19 @@ img {
     height: 200px;
   }
 
+  #aboutDateNightHeader {
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 0px;
+    text-align: center !important;
+  }
+  #aboutDateNighttext {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
   /*==========================================================================  
-  /*Search Results Page (search-results.html)
+  /*Search Results Page (search-results.hbs)
   /*========================================================================== */
   .navbar-search-results {
     position: fixed;
@@ -479,33 +743,59 @@ img {
     left: 0;
     z-index: 1;
   }
-  .navbar-filter-type-container {
+
+  .mobile-icons {
     display: block;
-  }
-  .results-page-column {
-    padding-top: 8em;
+    padding-top: 12em;
+    padding-left: 30px;
   }
   .mycontent-left {
+    margin-right: 3px;
+    display: none;
   }
 
-  .search-results-form {
+  .results-page-form {
+    width: 100%;
+    margin-right: 0%;
+    margin-left: 0%;
+    display: block;
+    text-align: center;
     padding-top: 0.5em;
     padding-right: 0%;
+    padding-left: 0%;
   }
-  .results-div {
-  }
-  .web-page-navicons {
+
+  .webpage-navbar-icons {
     display: none;
   }
   .mobile-navbar-icons {
     display: block;
   }
+  hr.solid {
+    display: block;
+    border-top: 1px solid #bbb;
+    width: 100%;
+  }
+  .current-location-header {
+    font-weight: bold;
+  }
+  .fa-sort-amount-down {
+    font-size: 20px;
+    padding-right: 10px;
+  }
+  .about-section {
+    padding-bottom: 20px;
+  }
 
   /*==========================================================================  
-  /*Itinerary (itinerary.html)
+  /*Itinerary (itinerary.hbs)
   /*========================================================================== */
   .itinerary-form {
     width: 100%;
     font-size: 20px;
+  }
+
+  .itinerary-navbar {
+    padding-right: 0px;
   }
 }

@@ -1,15 +1,19 @@
 const path = require("path");
 const router = require("express").Router();
-const secured = require("../lib/middleware/secured");
 
 //HTML Routes
-
 router.get("/", (req, res) => {
-  res.render("main", { layout: "index" });
+  res.render("main", { layout: "index", title: "Date Night | Home" });
 });
 
 router.get("/results", (req, res) => {
-  res.render("search-results", { layout: "index" });
+  res.render("search-results", {
+    layout: "index",
+    title: "Date Night | Search Results",
+  });
+});
+router.get("/error", (req, res) => {
+  res.render("error");
 });
 
 router.get("/profile", (req, res) => {
@@ -56,5 +60,9 @@ router.get("/date1", function (req, res) {
 router.get("/date2", function (req, res) {
   res.sendFile(path.join(__dirname, "../public/images/datenight.jpg"));
 });
-
+router.get("/favicon", function (req, res) {
+  res.sendFile(
+    path.join(__dirname, "../public/images/favicon-calendar-check-o.ico")
+  );
+});
 module.exports = router;

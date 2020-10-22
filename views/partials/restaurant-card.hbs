@@ -1,0 +1,52 @@
+<div id={{id}} class="card mx-auto result-cards">
+  <img class="card-img-top" src={{img}} alt="Card image cap" />
+  <div class="card-body results-cardbody">
+    <a href="{{url}}" class="href" target="_blank">
+      <h5 class="card-title">{{name}}</h5>
+    </a>
+    <p class="card-text">
+    <div class="rating">
+      {{!-- {{ rating}} --}}
+      {{price}} •
+      {{>stars}}
+      {{review_count}} reviews
+    </div>
+    </p>
+
+    <p class="card-text ">
+      <i class="fas fa-map-marker-alt  location-icon-cards"></i>
+      {{ location.address1}}, {{location.city}}, {{location.state}} {{location.zip_code}}
+    </p>
+    <p class="card-text">
+      {{#if display_phone}}
+      <i class="fas fa-phone icon-cards"> </i>
+      {{display_phone}}
+      {{/if}}
+    </p>
+
+    <div class="row">
+      <div class="col">
+        {{#ifStringInArray transactions "pickup"}}
+        <i class="fas fa-check transaction-icon"></i>
+        {{else}}
+        <i class="fas fa-times transaction-icon"></i>
+        {{/ifStringInArray}} Takeout
+      </div>
+      <div class="col">
+        {{#ifStringInArray transactions "delivery"}}
+        <i class="fas fa-check transaction-icon"></i>
+        {{else}}
+        <i class="fas fa-times transaction-icon"></i>
+        {{/ifStringInArray}}
+        Delivery
+      </div>
+      <div class="col addbuttoncol">
+        <div class="button ml-auto">
+          <button onclick="saveActivity({{idToString id}}, {{idToString activityType}})"
+            class="plus-button plus-button--small">
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

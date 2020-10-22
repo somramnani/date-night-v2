@@ -1,16 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light">
-  <a class="navbar-brand" id="navbar-logo" href="/">Date Night</a>
-  <!-- Navbar content -->
-  <ul class="nav navbar-nav ml-auto">
-    <li class="nav-item">
-      <a class="nav-link" href="/login">
-        <i class="fas fa-sign-in-alt login-icon"></i>
-        Login
-      </a>
-    </li>
-  </ul>
-</nav>
-
+{{> navbar }}
 <section class="welcomepageheader" data-aos="fade-in">
   <div class="row">
     <div class="col-lg col-sm-6 homepage-image-div">
@@ -18,23 +6,14 @@
     </div>
     <div class="col-lg col-sm-6 planyourdatenight">
       <div class="container">
-        <h3 class="text-center" id="homepage-header">
+        <h3 class="text-center " id="homepage-header">
           Plan your date night
         </h3>
-        <form class="homepage-form">
-          <div class="input-group border rounded-pill p-1">
-            <input type="search" placeholder="Enter Zip Code or City" aria-describedby="button-addon3"
-              id="zipcode-input" class="form-control bg-none border-0 divider-vertical" />
-            <input id="calender" type="date" name="trip-start" value="" min="" max="2021-09-29" />
-            <div class="input-group-append">
-              <a href="/results">
-                <button id="button-addon3" type="button" class="btn btn-link searchbutton">
-                  <i class="fa fa-search"></i>
-                </button>
-              </a>
-            </div>
-          </div>
-        </form>
+        <div class="main-page-searchbar text-center">
+          {{>searchbar}}
+        </div>
+
+
       </div>
     </div>
   </div>
@@ -65,11 +44,9 @@
       </div>
     </div>
   </div>
-
   <div class="container">
     <hr class="featurette-divider" />
   </div>
-
   <div class="container text-center aboutinformation">
     <div class="row">
       <div class=".col-xs-12 .col-sm-6 .col-lg-8 aboutinformation-col1">
@@ -79,11 +56,30 @@
         <p id="aboutinformation-text">
           Search for your activties and save your favorite activities to
           your own personal itinerery to plan your date night! With the Date
-          Night App, it's easy to find your activites and plan the evening.
+          Night application, it's easy to find your activites and plan the evening.
         </p>
       </div>
       <div class=".col-xs-12 .col-sm-6 .col-lg-8 dateimagecol">
         <img src="/datenight" class="text-center date-night-img img-fluid img-thumbnail img-responsive" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-aos="fade-in" class="about-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md ">
+        <h4 id="aboutDateNightHeader"> About Date Night </h4>
+      </div>
+      <div class="col-md" id="aboutDateNighttext">
+        <p>
+          Date Night assists the average person in searching multiple activity options that are available in new and
+          familiar places to make it easier
+          to go out and have some fun with your significant other. We use Yelp's API to show you restauraunts and events
+          in your area. Enter your location and price range
+          and we will filter your results. You can also save your favorite results to your personal itinerary page.
+        </p>
       </div>
     </div>
   </div>
