@@ -18,12 +18,12 @@ module.exports = function (sequelize, DataTypes) {
   User.hasMany(Itinerary, {
     as: "itineraries",
     foreignKey: "oauthId",
-    targetKey: "oauthId",
+    // targetKey: "oauthId",
   });
   Itinerary.belongsTo(User, {
     as: "user",
     foreignKey: "oauthId",
-    targetKey: "oauthId",
+    // targetKey: "oauthId",
   });
 
   return User, Itinerary;
