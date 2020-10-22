@@ -690,7 +690,7 @@ img {
   }
 
   #homepage-header {
-    font-size: 30px;
+    font-size: 35px;
     padding-bottom: 20px;
   }
 
@@ -797,6 +797,8 @@ img {
   .itinerary-form {
     width: 100%;
     font-size: 20px;
+
+    margin-left: 0%;
   }
 
   .itinerary-navbar {
