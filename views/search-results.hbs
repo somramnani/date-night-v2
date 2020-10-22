@@ -104,8 +104,8 @@
         <div class="container">
           <div class="row">
             {{#each restaurants}}
-              <div class="col m-2">
-                {{> card
+            <div class="col m-2 result-col">
+              {{> restaurant-card
                   activityType="restaurant"
                   name=name 
                   price=price 
@@ -114,7 +114,7 @@
                   id=id 
                   img=image_url
                 }}
-              </div>
+            </div>
             {{/each}}
           </div>
         </div>
@@ -123,10 +123,11 @@
       <div data-aos="fade-in" class="results-sections-styling" id="event-results-section">
         <h3 class="results-header">Events</h3>
         <div class="container">
+          {{#if events}}
           <div class="row">
             {{#each events}}
-              <div class="col">
-                {{> card
+            <div class="col m-2 result-col">
+              {{> event-cards
                   activityType="event"
                   name=name 
                   price=price 
@@ -137,6 +138,13 @@
                 }}
             </div>
             {{/each}}
+            {{else}}
+            <h4 class="text-center result-col">
+              Sorry, there are no events happening in your area.
+
+              </h5>
+
+              {{/if}}
           </div>
         </div>
       </div>

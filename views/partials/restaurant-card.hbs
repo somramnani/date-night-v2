@@ -1,0 +1,47 @@
+<div id={{id}} class="card mx-auto result-cards">
+  <img class="card-img-top" src={{img}} alt="Card image cap" />
+  <div class="card-body results-cardbody">
+    <a href="{{url}}" class="href" target="_blank">
+      <h5 class="card-title">{{name}}</h5>
+    </a>
+    <p class="card-text">
+    <div class="rating">
+      {{!-- {{ rating}} --}}
+      {{price}} •
+      {{>stars}}
+      {{review_count}} reviews
+    </div>
+    </p>
+
+    <p class="card-text">
+
+    </p>
+    <p class="card-text ">
+      <i class="fas fa-map-marker-alt"></i>
+      {{ location.address1}}, {{location.city}}, {{location.state}} {{location.zip_code}}
+    </p>
+    <p class="card-text">
+      {{#if display_phone}}
+      <i class="fas fa-phone"> </i>
+      {{display_phone}}
+      {{/if}}
+    </p>
+
+
+    <div class="row">
+      <div class="col">
+        <i class="fas fa-check"></i> Dine in
+      </div>
+      <div class="col">
+        <i class="fas fa-check"></i> Takeout
+      </div>
+      <div class="col addbuttoncol">
+        <div class="button ml-auto">
+          <button onclick="saveActivity({{idToString id}}, {{idToString activityType}})"
+            class="plus-button plus-button--small">
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

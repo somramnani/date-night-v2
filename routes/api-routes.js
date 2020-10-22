@@ -4,7 +4,7 @@ const yelpKey = process.env.YELP_TOKEN;
 const moment = require("moment");
 
 router.post(`/get-activities/`, (req, res) => {
-  console.log(req.body)
+  console.log(req.body);
   const { location, startDate } = req.body;
   const date = moment().unix(startDate);
   const baseURL = `https://api.yelp.com/v3`;
@@ -37,7 +37,7 @@ router.post(`/get-activities/`, (req, res) => {
         layout: "index",
         title: "Date Night | Search Results",
       });
-      console.log(restaurants);
+      console.log(events);
     })
     .catch((error) => console.log(error));
 });
