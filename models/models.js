@@ -1,4 +1,4 @@
-module.exports = function(sequelize, DataTypes) {
+module.exports = function (sequelize, DataTypes) {
   const { STRING } = DataTypes;
 
   const User = sequelize.define("user", {
@@ -12,31 +12,19 @@ module.exports = function(sequelize, DataTypes) {
 
   const Itinerary = sequelize.define("itinerary", {
     oauthId: STRING,
-    activities: DataTypes.JSON
+    activities: DataTypes.JSON,
   });
 
-  const ActivityEvent = sequelize.define("event", {
-    yelpId: STRING,
-    thumbnail: STRING.BINARY,
-    title: STRING,
-    address: STRING,
+  User.hasMany(Itinerary, {
+    as: "itineraries",
+    // foreignKey: "oauthId",
+    // targetKey: "oauthId",
   });
-
-  const ActivityRestaurant = sequelize.define("restaurant", {
-    yelpId: STRING,
-    thumbnail: STRING.BINARY,
-    title: STRING,
-    address: STRING,
-    rating: STRING,
-    price: STRING,
+  Itinerary.belongsTo(User, {
+    as: "user",
+    // foreignKey: "oauthId",
+    // targetKey: "oauthId",
   });
-
-  Itinerary.hasMany(ActivityEvent, { as: 'events', foreignKey: 'id' });
-
-  ActivityEvent.belongsTo(Itinerary, { as: 'itineraries', foreignKey: 'id'});
-
-  User.hasMany(Itinerary, { as: 'itineraries', foreignKey: 'oauthId', targetKey: 'oauthId'});
-  Itinerary.belongsTo(User, { as: 'user', foreignKey: 'oauthId', targetKey: 'oauthId'});
 
   return User, Itinerary;
 };

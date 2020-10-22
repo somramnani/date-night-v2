@@ -74,7 +74,7 @@ body {
 .results-page-column {
   display: block;
   width: 100%;
-  padding-top: 10px;
+  padding-top: 5em;
 }
 .results-sections-styling {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
@@ -690,7 +690,7 @@ img {
   }
 
   #homepage-header {
-    font-size: 30px;
+    font-size: 35px;
     padding-bottom: 20px;
   }
 
@@ -746,12 +746,16 @@ img {
 
   .mobile-icons {
     display: block;
-    padding-top: 12em;
+    padding-top: 10em;
     padding-left: 30px;
   }
   .mycontent-left {
     margin-right: 3px;
     display: none;
+  }
+
+  .results-page-column {
+    padding-top: 2em;
   }
 
   .results-page-form {
@@ -779,6 +783,9 @@ img {
   .current-location-header {
     font-weight: bold;
   }
+  .searchbutton {
+    display: static;
+  }
   .fa-sort-amount-down {
     font-size: 20px;
     padding-right: 10px;
@@ -793,6 +800,8 @@ img {
   .itinerary-form {
     width: 100%;
     font-size: 20px;
+
+    margin-left: 0%;
   }
 
   .itinerary-navbar {

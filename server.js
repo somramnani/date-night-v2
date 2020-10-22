@@ -89,8 +89,8 @@ var sess = {
 };
 
 if (app.get("env") === "production") {
-  // app.set('trust proxy', 1);
   sess.cookie.secure = true;
+  app.set("trust proxy", 1);
 }
 
 app.use(session(sess));
@@ -116,7 +116,7 @@ app.use(function (req, res, next) {
 
 // Catch 404 and forward to error handler
 app.use(function (req, res, next) {
-  const err = new Error("Not Found");
+  const err = new Error("Not  Found");
   err.status = 404;
   next(err);
 });
