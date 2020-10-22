@@ -179,11 +179,15 @@ a.disabled {
   padding-right: 2px;
 }
 .location-icon-cards {
-  padding-right: px;
+  padding-right: 5px;
 }
 
 .date-icon-cards {
   padding-right: 3px;
+}
+.transaction-icon {
+  padding-right: 1px;
+  font-size: 11px;
 }
 /*==========================================================================*/
 /* Navbar Styles
@@ -654,6 +658,17 @@ img {
   .navbar-content {
     padding-right: 0px;
   }
+  #location::placeholder {
+    font-size: 12px;
+  }
+
+  #calendar {
+    padding-left: 0em;
+    padding-right: 0em;
+    margin-right: 0px;
+    width: 35%;
+    font-size: 11px;
+  }
   /*==========================================================================  
   /*Homepage (main.hbs)
   /*========================================================================== */
@@ -662,9 +677,16 @@ img {
     height: 20rem;
   }
 
+  .main-page-searchbar {
+    width: 100%;
+    margin-left: 0%;
+    padding-top: 0%;
+  }
+
   .homepage-image-div {
     padding-left: 0px;
     padding-right: 0px;
+    font-size: 10px;
   }
 
   #homepage-header {
@@ -732,11 +754,17 @@ img {
     display: none;
   }
 
-  .search-results-form {
+  .results-page-form {
+    width: 100%;
+    margin-right: 0%;
+    margin-left: 0%;
+    display: block;
+    text-align: center;
     padding-top: 0.5em;
     padding-right: 0%;
     padding-left: 0%;
   }
+
   .webpage-navbar-icons {
     display: none;
   }

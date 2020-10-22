@@ -27,16 +27,16 @@
     <div class="row">
       <div class="col">
         {{#ifStringInArray transactions "pickup"}}
-        <i class="fas fa-check"></i>
+        <i class="fas fa-check transaction-icon"></i>
         {{else}}
-        <i class="fas fa-times"></i>
+        <i class="fas fa-times transaction-icon"></i>
         {{/ifStringInArray}} Takeout
       </div>
       <div class="col">
         {{#ifStringInArray transactions "delivery"}}
-        <i class="fas fa-check"></i>
+        <i class="fas fa-check transaction-icon"></i>
         {{else}}
-        <i class="fas fa-times"></i>
+        <i class="fas fa-times transaction-icon"></i>
         {{/ifStringInArray}}
         Delivery
       </div>
