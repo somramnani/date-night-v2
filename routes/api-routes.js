@@ -32,6 +32,7 @@ router.post(`/get-activities/`, (req, res) => {
           : results[1].data.events;
 
       res.render("search-results", {
+        location,
         restaurants,
         events,
         layout: "index",
