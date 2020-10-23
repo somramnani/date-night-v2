@@ -56,48 +56,73 @@
 <section class="results-page-column">
   <div data-aos="fade-in" class="row results-page-column-row">
     <!--Left Side-Filter Section-->
-    <div class="col-lg-3 col-sm-2  filter-column mycontent-left border-right">
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <h4 class="filter-header" id="filter-heading">Filters</h4>
+    <div class="col-lg-3 col-sm-2  filter-column ">
+      <div class="mycontent-left current-itinerary-section container">
+        <h5 class="text-center filter-header">
+          Current Itinerary
+        </h5>
+        <div class="container">
+          <div class="row  ">
+            <div class="col m-2">
+              {{> sample-card}}
+            </div>
           </div>
-          <div id="clear-all-button" class="col">
-            <a href="">Clear All</a>
-          </div>
-        </div>
-      </div>
-      <div class="container filter-type-container">
-        <div class="row filter-types text-center">
-          <div class="col"><a href="">Restaurants</a></div>
-          <div class="col "><a href="">Events</a></div>
-        </div>
-      </div>
-      <div class="container">
-        <h5 class="price-header text-center">Price</h5>
-        <div class="row">
-          <div class="col dollar-sign-button">
-            <button type="button" id="$" class="btn btn-dark">$</button>
-          </div>
-          <div class="col dollar-sign-button">
-            <button type="button" id="$$" class="btn btn-dark">$$</button>
-          </div>
-          <div class="col dollar-sign-button">
-            <button type="button" id="$$$" class="btn btn-dark">$$$</button>
-          </div>
-          <div class="col dollar-sign-button">
-            <button type="button" id="$$$$" class="btn btn-dark">
-              $$$$
+          <div class="text-center">
+            <button>
+              Add to Itinerary
             </button>
           </div>
-          <div class="col dollar-sign-button">
-            <button type="button" id="$$$$$" class="btn btn-dark">
-              $$$$$
-            </button>
-          </div>
+
         </div>
       </div>
     </div>
+    {{!-- <div class="mycontent-left">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <h4 class="filter-header" id="filter-heading">Filters</h4>
+            </div>
+            <div id="clear-all-button" class="col">
+              <a href="">Clear All</a>
+            </div>
+          </div>
+        </div>
+        <div class="container filter-type-container">
+          <div class="row filter-types text-center">
+            <div class="col"><a href="">Restaurants</a></div>
+            <div class="col "><a href="">Events</a></div>
+          </div>
+        </div>
+        <div class="container">
+          <h5 class="price-header text-center">Price</h5>
+          <div class="row">
+            <div class="col dollar-sign-button">
+              <button type="button" id="$" class="btn btn-dark">$</button>
+            </div>
+            <div class="col dollar-sign-button">
+              <button type="button" id="$$" class="btn btn-dark">$$</button>
+            </div>
+            <div class="col dollar-sign-button">
+              <button type="button" id="$$$" class="btn btn-dark">$$$</button>
+            </div>
+            <div class="col dollar-sign-button">
+              <button type="button" id="$$$$" class="btn btn-dark">
+                $$$$
+              </button>
+            </div>
+            <div class="col dollar-sign-button">
+              <button type="button" id="$$$$$" class="btn btn-dark">
+                $$$$$
+              </button>
+            </div>
+          </div>
+        </div>
+      </div> --}}
+
+
+
+
+
     <!--Right Side - Results Section (Cards will be outputed here) -->
     <div class="col-lg col-sm-2 right-side-results">
       <!-- Restaurant Results -->

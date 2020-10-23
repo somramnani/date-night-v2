@@ -71,6 +71,10 @@ body {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   padding-bottom: 1em;
 }
+
+.current-itinerary-section {
+  padding-top: 20px;
+}
 .results-page-column {
   display: block;
   width: 100%;
@@ -550,7 +554,7 @@ img {
 }
 
 .mobile-icons {
-  display: none;
+  display: block;
 }
 
 .webpage-navbar-icons {
