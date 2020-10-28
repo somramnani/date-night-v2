@@ -13,14 +13,14 @@ To assist the average person in searching multiple activity options that are ava
   - Animate.css
 - Bootstrap
 - JavaScript
+  - Handlebars
+  - Node.js
+  - Express.js
+- JQuery
 - JSON
 - AJAX
 - API
-  - Google Places
   - Yelp
-  - EventBrite
-- JQuery
-- Passport
 - Sequelize
 
 ## Features
@@ -29,10 +29,14 @@ To assist the average person in searching multiple activity options that are ava
   - Interests
   - Budget
 - Shows the pricing of each event
-- Features that will be displayed
+- Information that will be displayed
+  - Image
   - Price
   - Rating
-  - Image
+  - Location
+  - Phone Number
+  
+
  
 
  
