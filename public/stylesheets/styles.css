@@ -71,10 +71,28 @@ body {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   padding-bottom: 1em;
 }
+
+.current-itinerary-section {
+  padding-top: 20px;
+}
+
+.filter-container {
+  left: 50%;
+  padding-left: 25%;
+}
+
+.webpage-icons {
+  padding-top: 3em;
+}
+
 .results-page-column {
   display: block;
   width: 100%;
-  padding-top: 5em;
+}
+
+.mobile-icons {
+  margin-left: auto;
+  margin-right: auto;
 }
 .results-sections-styling {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
@@ -153,10 +171,6 @@ body {
   padding-top: 5%;
 }
 
-hr.solid {
-  display: none;
-}
-
 .border-rounded-pill {
   border-radius: 1.2rem;
   border: #c1c1c1 solid 1px;
@@ -185,9 +199,20 @@ a.disabled {
 .date-icon-cards {
   padding-right: 3px;
 }
+
 .transaction-icon {
   padding-right: 1px;
   font-size: 11px;
+}
+
+.itinerary-card {
+  border-radius: 5pt;
+  background-color: #fff;
+  margin: 0.35rem 0rem;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0);
+}
+.times {
+  padding-left: 4em;
 }
 /*==========================================================================*/
 /* Navbar Styles
@@ -347,7 +372,7 @@ a.disabled {
 
 .results-header {
   font-weight: bold;
-  padding-left: 10px;
+  padding-left: 20px;
   padding-top: 20px;
 }
 .welcomepageheader {
@@ -550,7 +575,8 @@ img {
 }
 
 .mobile-icons {
-  display: none;
+  display: block;
+  padding-top: 5em;
 }
 
 .webpage-navbar-icons {
@@ -756,6 +782,10 @@ img {
 
   .results-page-column {
     padding-top: 2em;
+  }
+  .filter-container {
+    left: 0%;
+    margin-left: 0%;
   }
 
   .results-page-form {
