@@ -8,10 +8,13 @@
     <i class="fa fa-caret-down"></i>
   </button>
   <div id="myDropdown" class="dropdown-content  animate slideIn">
+    {{#ifDoesNotEqual title "Date Night | Itinerary"}}
     <a href="/itinerary">
       <i class="far fa-calendar-plus itinerary-icon "></i>
       Itinerary
     </a>
+    {{/ifDoesNotEqual}}
+
     <a href="/logout">
       <i class="fas fa-sign-out-alt"></i>
       Sign Out
