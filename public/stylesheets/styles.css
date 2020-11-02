@@ -554,7 +554,7 @@ img {
   padding-left: 30%;
 }
 .location-placeholder {
-  font-family: "Roboto";
+  font-family: "Roboto", FontAwesome;
 }
 
 .itinerarypage-jumbtron {
