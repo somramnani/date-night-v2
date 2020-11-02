@@ -553,6 +553,9 @@ img {
 .dateimagecol {
   padding-left: 30%;
 }
+.location-placeholder {
+  font-family: "Roboto", FontAwesome;
+}
 
 .itinerarypage-jumbtron {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
