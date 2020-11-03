@@ -12,31 +12,28 @@ module.exports = function(sequelize, DataTypes) {
 
   const Itinerary = sequelize.define("itinerary", {
     oauthId: STRING,
-    activities: DataTypes.JSON
-  });
-
-  const ActivityEvent = sequelize.define("event", {
-    yelpId: STRING,
-    thumbnail: STRING.BINARY,
-    title: STRING,
-    address: STRING,
-  });
-
-  const ActivityRestaurant = sequelize.define("restaurant", {
-    yelpId: STRING,
-    thumbnail: STRING.BINARY,
-    title: STRING,
-    address: STRING,
-    rating: STRING,
+    type: STRING,
+    name: STRING,
     price: STRING,
+    location: STRING,
+    yelpId: STRING,
+    img: STRING,
+    phone: STRING,
+    reviews: STRING,
+    url: STRING,
   });
 
-  Itinerary.hasMany(ActivityEvent, { as: 'events', foreignKey: 'id' });
-
-  ActivityEvent.belongsTo(Itinerary, { as: 'itineraries', foreignKey: 'id'});
-
-  User.hasMany(Itinerary, { as: 'itineraries', foreignKey: 'oauthId', targetKey: 'oauthId'});
-  Itinerary.belongsTo(User, { as: 'user', foreignKey: 'oauthId', targetKey: 'oauthId'});
+  User.hasMany(Itinerary, { 
+    as: 'itineraries', 
+    foreignKey: 'oauthId', 
+    // targetKey: 'oauthId' 
+  });
+  
+  Itinerary.belongsTo(User, { 
+    as: 'user', 
+    foreignKey: 'oauthId', 
+    // targetKey: 'oauthId' 
+  });
 
   return User, Itinerary;
 };

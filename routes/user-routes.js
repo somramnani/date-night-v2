@@ -2,7 +2,6 @@ const db = require("../models");
 const express = require("express");
 const secured = require("../lib/middleware/secured");
 const router = express.Router();
-const axios = require('axios');
 
 /* GET user profile. */
 router.get("/itinerary", secured(), async function (req, res, next) {
@@ -15,17 +14,21 @@ router.get("/itinerary", secured(), async function (req, res, next) {
         where: {
           oauthId: userProfile.id
         }
-      }).then(it => it)
+      }).then(usersItineraries => usersItineraries);
 
-  console.log(foundItineraries[0].activities) //returns yelp event/restaurant id
-
-  res.render("itinerary", { layout: "index", title: "Date Night | Itinerary" });
+    return res.render('itinerary', { data: foundItineraries });
 });
 
 router.post("/save-activity", secured(), async (req, res, next) => {
-  const { user, itinerary, event } = db.sequelize.models;
+  const { user, itinerary } = db.sequelize.models;
   const { ...userProfile } = req.user;
-  const { type, id } = req.body;
+  const { type, yelpId, img, location, name, phone, price, reviews, url } = JSON.parse(req.body[0][1]);
+
+  const restaurant = JSON.parse(req.body[0][1]);
+  const event = req.body[1];
+
+  console.log(event);
+  console.log(restaurant);
 
   if(!req.user) {
     console.error('must be logged in!')
@@ -43,14 +46,22 @@ router.post("/save-activity", secured(), async (req, res, next) => {
       where: { 
         oauthId: userProfile.id 
       }
-    }).then(u => {
-      return u;
+    }).then(user => {
+      return user;
     });
 
 //we create the itinerary with data from the client request
 //and the associated users information..
   itinerary.create({
-    activities: { [type]: id },
+    type,
+    name,
+    price,
+    location,
+    yelpId,
+    img,
+    phone,
+    reviews,
+    url,
     user: { 
       oauthId: currentUser.oauthId 
     }
@@ -60,7 +71,7 @@ router.post("/save-activity", secured(), async (req, res, next) => {
       as: 'user',
       where: { oauthId: currentUser.oauthId }
     }],
-  }).then(log => console.log(log))
+  }).then(log => log)
   .catch(error => console.log(error))
 });
 
