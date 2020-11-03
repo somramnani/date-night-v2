@@ -14,6 +14,9 @@ const authRouter = require("./routes/auth-routes");
 const apiRoutes = require("./routes/api-routes");
 const pageRoutes = require("./routes/html-routes");
 const usersRouter = require("./routes/user-routes");
+const Handlebars = require("handlebars");
+const MomentHandler = require("handlebars.moment");
+MomentHandler.registerHelpers(Handlebars);
 
 const app = express();
 app.use(express.urlencoded({ extended: false }));
@@ -28,7 +31,7 @@ app.engine(
     layoutsDir: `${__dirname}/views/layouts`,
     extname: "hbs",
     defaultLayout: "index",
-    helpers: require('./views/helpers/toString'),
+    helpers: require("./views/helpers/helpers"),
     partialsDir: `${__dirname}/views/partials`,
   })
 );
@@ -86,13 +89,11 @@ var sess = {
 };
 
 if (app.get("env") === "production") {
-  // app.set('trust proxy', 1);
-
   sess.cookie.secure = true;
+  app.set("trust proxy", 1);
 }
 
 app.use(session(sess));
-
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
@@ -115,7 +116,7 @@ app.use(function (req, res, next) {
 
 // Catch 404 and forward to error handler
 app.use(function (req, res, next) {
-  const err = new Error("Not Found");
+  const err = new Error("Not  Found");
   err.status = 404;
   next(err);
 });

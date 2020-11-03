@@ -13,27 +13,32 @@
     </div>
     </p>
 
-    <p class="card-text">
-
-    </p>
     <p class="card-text ">
-      <i class="fas fa-map-marker-alt"></i>
+      <i class="fas fa-map-marker-alt  location-icon-cards"></i>
       {{ location.address1}}, {{location.city}}, {{location.state}} {{location.zip_code}}
     </p>
     <p class="card-text">
       {{#if display_phone}}
-      <i class="fas fa-phone"> </i>
+      <i class="fas fa-phone icon-cards"> </i>
       {{display_phone}}
       {{/if}}
     </p>
 
-
     <div class="row">
       <div class="col">
-        <i class="fas fa-check"></i> Dine in
+        {{#ifStringInArray transactions "pickup"}}
+        <i class="fas fa-check transaction-icon"></i>
+        {{else}}
+        <i class="fas fa-times transaction-icon"></i>
+        {{/ifStringInArray}} Takeout
       </div>
       <div class="col">
-        <i class="fas fa-check"></i> Takeout
+        {{#ifStringInArray transactions "delivery"}}
+        <i class="fas fa-check transaction-icon"></i>
+        {{else}}
+        <i class="fas fa-times transaction-icon"></i>
+        {{/ifStringInArray}}
+        Delivery
       </div>
       <div class="col addbuttoncol">
         <div class="button ml-auto">

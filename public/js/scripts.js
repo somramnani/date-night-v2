@@ -5,9 +5,6 @@ window.onload = function () {
   document.getElementById("loading").style.display = "none";
 };
 
-var searchBarCalendar = document.getElementById("calendar");
-searchBarCalendar.value = moment().format("YYYY-MM-DD");
-
 //Shows dropdown content
 function displayDropDown() {
   var dropdowns = document.getElementsByClassName("dropdown-content");
@@ -15,7 +12,7 @@ function displayDropDown() {
     var dropdown = dropdowns[i];
     dropdown.classList.toggle("show");
   }
-};
+}
 
 // Close the dropdown menu if the user clicks outside of it
 window.onclick = function (event) {
@@ -96,7 +93,7 @@ const saveItinerary = () => {
   fetch(`/save-activity`, { 
     method: 'post',
     headers: {
-      'Content-Type': 'application/json'
+      "Content-Type": "application/json",
     },
     body: JSON.stringify(activityArray)
   })

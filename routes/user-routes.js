@@ -30,14 +30,12 @@ router.post("/save-activity", secured(), async (req, res, next) => {
   console.log(event);
   console.log(restaurant);
 
-  if(!req.user) {
-    console.error('must be logged in!')
-    return res
-      .status(400)
-      .json({ 
-        error: 'You must be logged in to save activities!'
-      });
-  };
+  if (!req.user) {
+    console.error("must be logged in!");
+    return res.status(400).json({
+      error: "You must be logged in to save activities!",
+    });
+  }
 
 //we go to the db and locate the user whose oauthId 
 //matches the current logged in user. we store that user in the currentUser binding...
@@ -74,6 +72,5 @@ router.post("/save-activity", secured(), async (req, res, next) => {
   }).then(log => log)
   .catch(error => console.log(error))
 });
-
 
 module.exports = router;

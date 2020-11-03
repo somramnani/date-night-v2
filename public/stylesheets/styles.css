@@ -71,11 +71,25 @@ body {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   padding-bottom: 1em;
 }
+
+.current-itinerary-section {
+  padding-top: 20px;
+}
+
+.filter-container {
+  left: 50%;
+  padding-left: 25%;
+}
+
+.webpage-icons {
+  padding-top: 3em;
+}
+
 .results-page-column {
   display: block;
   width: 100%;
-  padding-top: 10px;
 }
+
 .results-sections-styling {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
@@ -129,9 +143,15 @@ body {
 
 .itinerary-form {
   width: 40%;
-
   margin-right: -50%;
   margin-left: 30%;
+  display: block;
+  text-align: center;
+}
+.results-page-form {
+  width: 30%;
+  margin-right: -50%;
+  margin-left: 20%;
   display: block;
   text-align: center;
 }
@@ -147,10 +167,6 @@ body {
   padding-top: 5%;
 }
 
-hr.solid {
-  display: none;
-}
-
 .border-rounded-pill {
   border-radius: 1.2rem;
   border: #c1c1c1 solid 1px;
@@ -160,7 +176,40 @@ hr.solid {
 .fa-check {
   color: green;
 }
+.fa-times {
+  color: red;
+}
 
+a.disabled {
+  pointer-events: none;
+  cursor: default;
+  color: grey;
+}
+.icon-cards {
+  padding-right: 2px;
+}
+.location-icon-cards {
+  padding-right: 5px;
+}
+
+.date-icon-cards {
+  padding-right: 3px;
+}
+
+.transaction-icon {
+  padding-right: 1px;
+  font-size: 11px;
+}
+
+.itinerary-card {
+  border-radius: 5pt;
+  background-color: #fff;
+  margin: 0.35rem 0rem;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0);
+}
+.times {
+  padding-left: 4em;
+}
 /*==========================================================================*/
 /* Navbar Styles
 /*==========================================================================*/
@@ -319,7 +368,7 @@ hr.solid {
 
 .results-header {
   font-weight: bold;
-  padding-left: 10px;
+  padding-left: 20px;
   padding-top: 20px;
 }
 .welcomepageheader {
@@ -504,6 +553,9 @@ img {
 .dateimagecol {
   padding-left: 30%;
 }
+.location-placeholder {
+  font-family: "Roboto", FontAwesome;
+}
 
 .itinerarypage-jumbtron {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -522,7 +574,10 @@ img {
 }
 
 .mobile-icons {
-  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  padding-top: 6em;
 }
 
 .webpage-navbar-icons {
@@ -533,6 +588,9 @@ img {
 }
 
 .checked {
+  color: orange;
+}
+.fa-star {
   color: orange;
 }
 
@@ -547,6 +605,21 @@ img {
   width: 2.5em;
   border-radius: 999px;
   position: relative;
+}
+
+.minus {
+  border-radius: 999px;
+  border: 2px solid lightgrey;
+  background-color: #fff;
+  font-size: 16px;
+  height: 2.5em;
+  width: 2.5em;
+  border-radius: 500px;
+  position: relative;
+}
+.fa-minus {
+  color: grey;
+  font-size: 12px;
 }
 
 .plus-button:after,
@@ -627,6 +700,17 @@ img {
   .navbar-content {
     padding-right: 0px;
   }
+  #location::placeholder {
+    font-size: 12px;
+  }
+
+  #calendar {
+    padding-left: 0em;
+    padding-right: 0em;
+    margin-right: 0px;
+    width: 35%;
+    font-size: 11px;
+  }
   /*==========================================================================  
   /*Homepage (main.hbs)
   /*========================================================================== */
@@ -635,13 +719,20 @@ img {
     height: 20rem;
   }
 
+  .main-page-searchbar {
+    width: 100%;
+    margin-left: 0%;
+    padding-top: 0%;
+  }
+
   .homepage-image-div {
     padding-left: 0px;
     padding-right: 0px;
+    font-size: 10px;
   }
 
   #homepage-header {
-    font-size: 30px;
+    font-size: 35px;
     padding-bottom: 20px;
   }
 
@@ -697,7 +788,7 @@ img {
 
   .mobile-icons {
     display: block;
-    padding-top: 12em;
+    padding-top: 10em;
     padding-left: 30px;
   }
   .mycontent-left {
@@ -705,11 +796,26 @@ img {
     display: none;
   }
 
-  .search-results-form {
+  .results-page-column {
+    padding-top: 2em;
+  }
+  .filter-container {
+    left: 0%;
+    padding-left: 0%;
+    margin-left: 0%;
+  }
+
+  .results-page-form {
+    width: 100%;
+    margin-right: 0%;
+    margin-left: 0%;
+    display: block;
+    text-align: center;
     padding-top: 0.5em;
     padding-right: 0%;
     padding-left: 0%;
   }
+
   .webpage-navbar-icons {
     display: none;
   }
@@ -723,6 +829,9 @@ img {
   }
   .current-location-header {
     font-weight: bold;
+  }
+  .searchbutton {
+    display: static;
   }
   .fa-sort-amount-down {
     font-size: 20px;
@@ -738,6 +847,8 @@ img {
   .itinerary-form {
     width: 100%;
     font-size: 20px;
+
+    margin-left: 0%;
   }
 
   .itinerary-navbar {
