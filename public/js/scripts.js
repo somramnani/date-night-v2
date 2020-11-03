@@ -33,7 +33,6 @@ window.onclick = function (event) {
 //rules for activities:
 //cannot contain more than one of the same type (restaurant, event)
 //cannot contain more than two total activities
-//ids should not be duplicates either
 
 const addActivity = (
   type,
@@ -60,9 +59,12 @@ const addActivity = (
 
   for(let i = 0; i < 2; i++) {
     if(sessionStorage.key(i) === 'restaurant' || 'event') {
-      return console.log('duplicate selection type was made - please try adding a different activity type (ie. restaurant or event!')
-    }
-  }
+      return console.error(
+        `duplicate selection type was made 
+        - please try adding a different activity type (ie. restaurant or event!`
+      )
+    };
+  };
 
   if(sessionStorage.length === 2) {
     return console.error(
@@ -71,8 +73,7 @@ const addActivity = (
     )
   } else {
     sessionStorage.setItem(type, JSON.stringify(activityObj))
-  }
-
+  };
 };
 
 const removeActivity = id => {
@@ -83,6 +84,13 @@ const removeActivity = id => {
 };
 
 const saveItinerary = () => {
+  if(sessionStorage.length <= 1) {
+    return console.error(`
+      cannot save an incomplete itinerary 
+      - please add some activities!`
+    )
+  }
+
   let activityArray = Object.entries(sessionStorage);
 
   fetch(`/save-activity`, { 
@@ -95,6 +103,5 @@ const saveItinerary = () => {
   .then(response => response.json())
   .then(data => console.log(data))
   .catch(error => console.error(error))
-  
 };
 
