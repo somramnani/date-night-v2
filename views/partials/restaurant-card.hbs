@@ -42,8 +42,22 @@
       </div>
       <div class="col addbuttoncol">
         <div class="button ml-auto">
-          <button onclick="saveActivity({{idToString id}}, {{idToString activityType}})"
+          <button onclick="
+            addActivity(
+              {{idToString activityType}},
+              {{idToString id}},
+              {{idToString img}}, 
+              {{idToString url}}, 
+              {{idToString name}}, 
+              {{idToString location}}, 
+              {{idToString price}},
+              {{idToString review_count}},
+              {{idToString display_phone}}
+            )"
             class="plus-button plus-button--small">
+          </button>
+          <button onclick="saveItinerary()">
+            test to save itinerary
           </button>
         </div>
       </div>
