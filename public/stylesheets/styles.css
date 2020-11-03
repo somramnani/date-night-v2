@@ -607,6 +607,21 @@ img {
   position: relative;
 }
 
+.minus {
+  border-radius: 999px;
+  border: 2px solid lightgrey;
+  background-color: #fff;
+  font-size: 16px;
+  height: 2.5em;
+  width: 2.5em;
+  border-radius: 500px;
+  position: relative;
+}
+.fa-minus {
+  color: grey;
+  font-size: 12px;
+}
+
 .plus-button:after,
 .plus-button:before {
   content: "";
