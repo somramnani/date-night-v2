@@ -25,13 +25,13 @@ module.exports = function (sequelize, DataTypes) {
 
   User.hasMany(Itinerary, { 
     as: 'itineraries', 
-    foreignKey: 'oauthId', 
+    // foreignKey: 'oauthId', 
     // targetKey: 'oauthId' 
   });
   
   Itinerary.belongsTo(User, { 
     as: 'user', 
-    foreignKey: 'oauthId', 
+    // foreignKey: 'oauthId', 
     // targetKey: 'oauthId' 
   });
 
