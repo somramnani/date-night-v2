@@ -35,5 +35,6 @@ module.exports = function (sequelize, DataTypes) {
     // targetKey: 'oauthId' 
   });
 
-  return User, Itinerary;
+  // return User, Itinerary;
+  return User;
 };
