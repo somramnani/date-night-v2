@@ -5,6 +5,37 @@ window.onload = function () {
   document.getElementById("loading").style.display = "none";
 };
 
+let restaurantSlot = document.getElementById('restaurant');
+let eventSlot = document.getElementById('event');
+let eventWrapper = document.getElementById('event-wrapper');
+let restaurantWrapper = document.getElementById('rest-wrapper')
+
+const truncateSlotText = text => {
+  let letters = text.split('');
+  if(letters.length > 20) {
+    letters.splice(30, letters.length - 30, '...');
+  }
+  return letters.join('');
+}
+// This conditional block runs everytime the page loads - it first checks the sessionStorage for keys...
+if(sessionStorage.length !== 0) {
+//If there are events, it sets the event slot DOM el inner HTML to the name. Otherwise, it hides the el.
+  if(sessionStorage.getItem('event')) {
+    eventSlot.innerHTML = truncateSlotText(JSON.parse(sessionStorage.getItem('event')).name);
+  } else {
+    eventWrapper.style.display = 'none';
+  }
+//Same logic as above, but for the restaurant. Good candidate for a refactor at some point.
+  if(sessionStorage.getItem('restaurant')) {
+    restaurantSlot.innerHTML = truncateSlotText(JSON.parse(sessionStorage.getItem('restaurant')).name);
+  } else {
+    restaurantWrapper.style.display = 'none';
+  } 
+} else {
+  restaurantWrapper.style.display = 'none';
+  eventWrapper.style.display = 'none';
+};
+
 //Shows dropdown content
 function displayDropDown() {
   var dropdowns = document.getElementsByClassName("dropdown-content");
@@ -54,43 +85,47 @@ const addActivity = (
     phone
   };
 
-  for(let i = 0; i < 2; i++) {
-    if(sessionStorage.key(i) === 'restaurant' || 'event') {
-      return console.error(
-        `duplicate selection type was made 
-        - please try adding a different activity type (ie. restaurant or event!`
-      )
-    };
-  };
-
   if(sessionStorage.length === 2) {
     return console.error(
       `cannot store another activity 
       - please remove an activity from your itinerary first.`
     )
   } else {
-    sessionStorage.setItem(type, JSON.stringify(activityObj))
+    let activitySlot = 
+      type === 'event' ? 
+      document.getElementById('event-wrapper') : 
+      document.getElementById('rest-wrapper');
+
+      console.log(activityObj);
+
+    sessionStorage.setItem(type, JSON.stringify(activityObj));
+    document.getElementById(type).innerHTML = truncateSlotText(JSON.parse(sessionStorage.getItem(type)).name);
+    activitySlot.style.display = 'flex';
   };
 };
 
-const removeActivity = id => {
+const removeActivity = type => {
   if(sessionStorage.length === 0) {
     return console.error('cannot remove any activities - try adding one first!')
   }
-  sessionStorage.removeItem(id)
+
+  let activitySlot = 
+    type === 'event' ? 
+    document.getElementById('event-wrapper') : 
+    document.getElementById('rest-wrapper');
+
+  activitySlot.style.display = 'none';
+  sessionStorage.removeItem(type)
 };
 
 const saveItinerary = () => {
   if(sessionStorage.length <= 1) {
-    return console.error(`
-      cannot save an incomplete itinerary 
-      - please add some activities!`
-    )
+    return console.error(`cannot save an incomplete itinerary - please add some activities!`)
   }
 
   let activityArray = Object.entries(sessionStorage);
 
-  fetch(`/save-activity`, { 
+  fetch(`/save-itinerary`, { 
     method: 'post',
     headers: {
       "Content-Type": "application/json",
@@ -101,4 +136,3 @@ const saveItinerary = () => {
   .then(data => console.log(data))
   .catch(error => console.error(error))
 };
-
