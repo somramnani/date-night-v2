@@ -19,23 +19,25 @@ router.get("/itinerary", secured(), async function (req, res, next) {
     return res.render('itinerary', { data: foundItineraries });
 });
 
-router.post("/save-activity", secured(), async (req, res, next) => {
+router.post("/save-itinerary", secured(), async (req, res, next) => {
   const { user, itinerary } = db.sequelize.models;
   const { ...userProfile } = req.user;
+
+  if (!req.user) {
+    console.error("must be logged in to save activities!");
+    return res.status(400).json({
+      error: "You must be logged in to save activities!",
+    });
+  };
+
   const { type, yelpId, img, location, name, phone, price, reviews, url } = JSON.parse(req.body[0][1]);
 
+  //what if someone clicks the event first, and the restaurant second? you cant hard code in the indices.
   const restaurant = JSON.parse(req.body[0][1]);
   const event = req.body[1];
 
   console.log(event);
   console.log(restaurant);
-
-  if (!req.user) {
-    console.error("must be logged in!");
-    return res.status(400).json({
-      error: "You must be logged in to save activities!",
-    });
-  }
 
 //we go to the db and locate the user whose oauthId 
 //matches the current logged in user. we store that user in the currentUser binding...

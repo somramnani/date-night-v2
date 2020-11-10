@@ -66,7 +66,6 @@ body {
   border-right: black;
 }
 .mycontent-left {
-  display: block;
   height: 100%;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   padding-bottom: 1em;
@@ -539,6 +538,43 @@ img {
 
 .embed-responsive .card-img-top {
   object-fit: cover;
+}
+
+.slot-icon {
+  color: rgb(115, 226, 215);
+}
+
+.slot-btn {
+  border: none;
+  background: transparent;
+}
+
+.slot-remove {
+  color: rgb(226, 79, 79);
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) all .9s;
+}
+
+.slot-remove:hover {
+  transform: rotateZ(360deg)
+}
+
+.slot-wrapper {
+  font-size: 1rem;
+  margin: .5rem 0rem;
+  width: 100%;
+  border-radius: 5pt;
+  display: flex;
+  font-family: arial;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  cursor: pointer;
+  transition: all .5s;
+  padding: .3rem;
+}
+
+.slot-wrapper:hover {
+  background-color: rgba(64, 224, 208, 0.245);
 }
 
 .card-img-top {

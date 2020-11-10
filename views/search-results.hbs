@@ -57,29 +57,7 @@
   <div data-aos="fade-in" class="row results-page-column-row">
 
     <!--Left Side-Filter Section-->
-    <div class="col-lg-3 col-sm-2  filter-column ">
-      <div class="mycontent-left current-itinerary-section container">
-        <h5 class="text-center filter-header">
-          Current Itinerary
-        </h5>
-        <hr class="solid">
-        <div class="container ">
-          <div class="row ">
-            <div class="col m-2 ">
-              {{> sample-card}}
-            </div>
-            <div class="col m-2">
-              {{> sample-card}}
-            </div>
-          </div>
-          <div class="text-center">
-            <button>
-              Add to Itinerary
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+    {{>itinerary-preview }}
 
     <!--Right Side - Results Section (Cards will be outputed here) -->
     <div class="col-lg col-sm-2 right-side-results">
@@ -109,7 +87,7 @@
       </div>
       <!-- Events Results -->
       <div data-aos="fade-in" class="results-sections-styling" id="event-results-section">
-        <h3 class="results-header  text-center">Events</h3>
+        <h3 class="results-header text-center">Events</h3>
         <div class="container">
           <hr class="solid">
           {{#if events}}

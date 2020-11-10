@@ -1,0 +1,34 @@
+<div class="w-100 col-lg-3 col-sm-2 filter-column" style="min-width: 400px">
+  <div class="mycontent-left current-itinerary-section container">
+    <h5 class="text-center filter-header">
+      Current Itinerary
+    </h5>
+    <hr class="solid">
+    <div class="container">
+      <div id="panel">
+        {{!-- restaurant slot --}}
+        <div id="rest-wrapper" class="slot-wrapper">
+          <i class="fas fa-utensils slot-icon"></i>
+          <div id="restaurant"></div>
+          <button class="slot-btn" onclick="removeActivity('restaurant')">
+            <i class="fas fa-times-circle slot-remove"></i>
+          </button>
+        </div>
+        {{!-- event slot --}}
+        <div id="event-wrapper" class="slot-wrapper">
+          <i class="fas fa-ticket-alt slot-icon"></i>
+          <div id="event"></div>
+          <button class="slot-btn" onclick="removeActivity('event')">
+            <i class="fas fa-times-circle slot-remove"></i>
+          </button>
+        </div>
+
+      </div>
+      <div class="text-center">
+        <button class="btn btn-info w-100" onclick="saveItinerary()">
+          Save My Itinerary
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
