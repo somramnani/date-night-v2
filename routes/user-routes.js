@@ -16,7 +16,7 @@ router.get("/itinerary", secured(), async function (req, res, next) {
         }
       }).then(usersItineraries => usersItineraries);
 
-    return res.render('itinerary', { data: foundItineraries });
+    return res.render('itinerary',{ data: foundItineraries,  title: "Date Night | Itinerary" });
 });
 
 router.post("/save-itinerary", secured(), async (req, res, next) => {
