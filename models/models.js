@@ -17,6 +17,6 @@ module.exports = function (sequelize, DataTypes) {
 
   User.hasMany(Itinerary, { as: 'itinerary' });
   Itinerary.belongsTo(User, { as: 'user' });
-
+  
   return User, Itinerary;
 };
