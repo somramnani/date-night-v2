@@ -1,5 +1,5 @@
 # Date-Night-V2
-A web app that finds your location and shows what events are happening that day.
+A web app that finds events that are happening that day depending on your location.
 
 ![](public/images/homepage.PNG)
 
