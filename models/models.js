@@ -11,29 +11,12 @@ module.exports = function (sequelize, DataTypes) {
   });
 
   const Itinerary = sequelize.define("itinerary", {
-    oauthId: STRING,
-    type: STRING,
-    name: STRING,
-    price: STRING,
-    location: STRING,
-    yelpId: STRING,
-    img: STRING,
-    phone: STRING,
-    reviews: STRING,
-    url: STRING,
+    restaurant: DataTypes.JSON,
+    event: DataTypes.JSON,
   });
 
-  User.hasMany(Itinerary, { 
-    as: 'itineraries', 
-    // foreignKey: 'oauthId', 
-    // targetKey: 'oauthId' 
-  });
+  User.hasMany(Itinerary, { as: 'itinerary' });
+  Itinerary.belongsTo(User, { as: 'user' });
   
-  Itinerary.belongsTo(User, { 
-    as: 'user', 
-    // foreignKey: 'oauthId', 
-    // targetKey: 'oauthId' 
-  });
-
   return User, Itinerary;
 };

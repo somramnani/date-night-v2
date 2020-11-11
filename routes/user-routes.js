@@ -6,38 +6,35 @@ const router = express.Router();
 /* GET user profile. */
 router.get("/itinerary", secured(), async function (req, res, next) {
   const { _raw, _json, ...userProfile } = req.user;
-  const { itinerary } = db.sequelize.models;
+  const { itinerary, user } = db.sequelize.models;
+
+  let currentUser = 
+  await user.findOne({ 
+    where: { 
+      oauthId: userProfile.id 
+    }
+  }).then(user => {
+    return user;
+  });
 
   let foundItineraries = 
     await 
       itinerary.findAll({
         where: {
-          oauthId: userProfile.id
+          userId: currentUser.id
         }
-      }).then(usersItineraries => usersItineraries);
-
-    return res.render('itinerary',{ data: foundItineraries,  title: "Date Night | Itinerary" });
+      }).then(usersItineraries => {
+        return usersItineraries;
+      });
+  res.render('itinerary', { data: foundItineraries });
 });
 
 router.post("/save-itinerary", secured(), async (req, res, next) => {
   const { user, itinerary } = db.sequelize.models;
   const { ...userProfile } = req.user;
 
-  if (!req.user) {
-    console.error("must be logged in to save activities!");
-    return res.status(400).json({
-      error: "You must be logged in to save activities!",
-    });
-  };
-
-  const { type, yelpId, img, location, name, phone, price, reviews, url } = JSON.parse(req.body[0][1]);
-
-  //what if someone clicks the event first, and the restaurant second? you cant hard code in the indices.
-  const restaurant = JSON.parse(req.body[0][1]);
-  const event = req.body[1];
-
-  console.log(event);
-  console.log(restaurant);
+  const eventInfo = JSON.parse(req.body[0][1]);
+  const restaurantInfo = JSON.parse(req.body[1][1]);
 
 //we go to the db and locate the user whose oauthId 
 //matches the current logged in user. we store that user in the currentUser binding...
@@ -50,29 +47,12 @@ router.post("/save-itinerary", secured(), async (req, res, next) => {
       return user;
     });
 
-//we create the itinerary with data from the client request
-//and the associated users information..
   itinerary.create({
-    type,
-    name,
-    price,
-    location,
-    yelpId,
-    img,
-    phone,
-    reviews,
-    url,
-    user: { 
-      oauthId: currentUser.oauthId 
-    }
-  }, {
-    include: [{
-      model: user,
-      as: 'user',
-      where: { oauthId: currentUser.oauthId }
-    }],
+    restaurant: restaurantInfo,
+    event: eventInfo,
+    userId: currentUser.dataValues.id
   }).then(log => log)
-  .catch(error => console.log(error))
+    .catch(error => console.log(error))
 });
 
 module.exports = router;
