@@ -6,6 +6,7 @@ To assist the average person in searching multiple activity options that are ava
 
 ![](public/images/homepage.PNG)
 
+
 ## Languages/Tools Used
 - HTML5
 - CSS3
