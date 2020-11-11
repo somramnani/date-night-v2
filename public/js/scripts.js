@@ -58,10 +58,6 @@ window.onclick = function (event) {
   }
 };
 
-//rules for activities:
-//cannot contain more than one of the same type (restaurant, event)
-//cannot contain more than two total activities
-
 const addActivity = (
   type,
   yelpId,
@@ -95,8 +91,6 @@ const addActivity = (
       type === 'event' ? 
       document.getElementById('event-wrapper') : 
       document.getElementById('rest-wrapper');
-
-      console.log(activityObj);
 
     sessionStorage.setItem(type, JSON.stringify(activityObj));
     document.getElementById(type).innerHTML = truncateSlotText(JSON.parse(sessionStorage.getItem(type)).name);
@@ -133,6 +127,6 @@ const saveItinerary = () => {
     body: JSON.stringify(activityArray)
   })
   .then(response => response.json())
-  .then(data => console.log(data))
+  .then(data => data)
   .catch(error => console.error(error))
 };
