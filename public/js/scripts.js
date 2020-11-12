@@ -66,7 +66,8 @@ const addActivity = (
   name,
   location, 
   price, 
-  reviews, 
+  reviews,
+  rating, 
   phone) => {
 
   const activityObj = {
@@ -78,13 +79,13 @@ const addActivity = (
     url,
     price,
     reviews,
+    rating,
     phone
   };
 
   if(sessionStorage.length === 2) {
-    return console.error(
-      `cannot store another activity 
-      - please remove an activity from your itinerary first.`
+   alert(
+      `Cannot store another activity. Please remove an activity from your itinerary first.`
     )
   } else {
     let activitySlot = 
@@ -114,7 +115,7 @@ const removeActivity = type => {
 
 const saveItinerary = () => {
   if(sessionStorage.length <= 1) {
-    return console.error(`cannot save an incomplete itinerary - please add some activities!`)
+   alert(`Cannot save an incomplete itinerary - please add some activities!`)
   }
 
   let activityArray = Object.entries(sessionStorage);
@@ -129,4 +130,5 @@ const saveItinerary = () => {
   .then(response => response.json())
   .then(data => data)
   .catch(error => console.error(error))
+ 
 };

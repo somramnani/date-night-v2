@@ -17,24 +17,27 @@
     <div class="row">
       <div class="col itinerary-div">
         {{#each data}}
-        {{#with dataValues}} 
+        {{#with dataValues}}
         {{!-- the dataValues object returns a restaurant object and an event object --}}
         <div class="col m-2 result-col">
-        <div>
-          {{> itinerary-cards
+          <div>
+            {{> itinerary-cards
               activityType=restaurant.type
               name=restaurant.name
               url=restaurant.url
               price=restaurant.price
               location=restaurant.location
+              address=restaurant.location.address1
+              city=restaurant.location.city
               rating=restaurant.rating
               id=restaurant.id
               phone=restaurant.phone
               img=restaurant.img
+              reviews=restaurant.reviews
             }}
-        </div>
+          </div>
           <div class="col m-2 result-col">
-              {{> itinerary-cards
+            {{> itinerary-cards
               activityType=event.type
               name=event.name
               url=event.url
@@ -46,7 +49,7 @@
               img=event.img
             }}
           </div>
-          </div>
+        </div>
         {{/with}}
         {{/each}}
       </div>

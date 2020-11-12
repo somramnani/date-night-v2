@@ -1,25 +1,25 @@
+{{!-- Event Cards --}}
 <div class="card mx-auto result-cards">
-  <img class="card-img-top"
-    src={{img}}
-    alt="Card image cap" />
+  <img class="card-img-top" src={{img}} alt="Card image cap" />
   <div class="card-body results-cardbody">
     <a href={{url}} class="href" target="_blank">
       <h5 class="card-title">{{name}}</h5>
     </a>
     <p class="card-text">
     <div class="rating">
-      {{ rating}}
+      {{price}} •
+      {{rating}}
       <span class="fa fa-star checked"></span>
       <span class="fa fa-star checked"></span>
       <span class="fa fa-star checked"></span>
       <span class="fa fa-star checked"></span>
       <span class="fas fa-star-half-alt checked "></span>
-      1600 reviews
+      {{reviews}} reviews
     </div>
     </p>
     <p class="card-text ">
       <i class="fas fa-map-marker-alt  location-icon-cards"></i>
-      {{location}}
+      {{address}}, {{city}}, {{location.state}} {{location.zip_code}}
     </p>
     <p class="card-text">
       <i class="fas fa-phone icon-cards"> </i>

@@ -46,7 +46,7 @@ router.post("/save-itinerary", secured(), async (req, res, next) => {
     }).then(user => {
       return user;
     });
-
+   
   itinerary.create({
     restaurant: restaurantInfo,
     event: eventInfo,
@@ -54,5 +54,6 @@ router.post("/save-itinerary", secured(), async (req, res, next) => {
   }).then(log => log)
     .catch(error => console.log(error))
 });
+
 
 module.exports = router;
