@@ -61,9 +61,10 @@ body {
 .filter-column {
   background-color: #fbfbfc;
   display: block;
-  height: 100%;
+  position: fixed;
   width: 100%;
   border-right: black;
+  z-index: 1;
 }
 .mycontent-left {
   height: 100%;
@@ -208,6 +209,10 @@ a.disabled {
 }
 .times {
   padding-left: 4em;
+}
+
+.right-side-results {
+  padding-left: 25em;
 }
 /*==========================================================================*/
 /* Navbar Styles
@@ -551,16 +556,16 @@ img {
 
 .slot-remove {
   color: rgb(226, 79, 79);
-  transition: cubic-bezier(0.075, 0.82, 0.165, 1) all .9s;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) all 0.9s;
 }
 
 .slot-remove:hover {
-  transform: rotateZ(360deg)
+  transform: rotateZ(360deg);
 }
 
 .slot-wrapper {
   font-size: 1rem;
-  margin: .5rem 0rem;
+  margin: 0.5rem 0rem;
   width: 100%;
   border-radius: 5pt;
   display: flex;
@@ -569,8 +574,8 @@ img {
   align-items: center;
   flex-wrap: nowrap;
   cursor: pointer;
-  transition: all .5s;
-  padding: .3rem;
+  transition: all 0.5s;
+  padding: 0.3rem;
 }
 
 .slot-wrapper:hover {
