@@ -7,7 +7,6 @@
     </a>
     <p class="card-text">
     <div class="rating">
-
       {{price}} •
       {{>stars}}
       {{reviews}} reviews
@@ -15,12 +14,13 @@
     </p>
     <p class="card-text ">
       <i class="fas fa-map-marker-alt  location-icon-cards"></i>
-      {{location}}
+      {{address}} {{city}} {{state}} {{zipcode}}
     </p>
     <p class="card-text">
       <i class="fas fa-phone icon-cards"> </i>
       {{phone}}
     </p>
+    <p class="">{{description}}</p>
     <div class="row">
       <div class="col">
         <i class="fas fa-check transaction-icon"></i> Takeout
