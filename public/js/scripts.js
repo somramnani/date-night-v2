@@ -65,9 +65,9 @@ const addActivity = (
   url,
   name,
   location, 
-  price, 
-  reviews,
+  price,
   rating, 
+  reviews,
   phone) => {
 
   const activityObj = {
@@ -78,8 +78,8 @@ const addActivity = (
     img,
     url,
     price,
-    reviews,
     rating,
+    reviews,
     phone
   };
 

@@ -1,8 +1,6 @@
 {{!-- Event Cards --}}
 <div class="card mx-auto result-cards">
-  <img class="card-img-top"
-    src={{img}}
-
+  <img class="card-img-top" src={{img}} />
   <div class="card-body results-cardbody">
     <a href={{url}} class="href" target="_blank">
       <h5 class="card-title">{{name}}</h5>
@@ -11,12 +9,7 @@
     <div class="rating">
 
       {{price}} •
-      {{rating}}
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fas fa-star-half-alt checked "></span>
+      {{>stars}}
       {{reviews}} reviews
     </div>
     </p>

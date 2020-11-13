@@ -16,7 +16,7 @@
         </div>
         {{!-- event slot --}}
         <div id="event-wrapper" class="slot-wrapper">
-          <i class="fas fa-ticket-alt slot-icon"></i>
+          <i class="fas fa-calendar-check slot-icon"></i>
           <div id="event"></div>
           <button class="slot-btn" onclick="removeActivity('event')">
             <i class="fas fa-times-circle slot-remove"></i>
@@ -25,9 +25,16 @@
 
       </div>
       <div class="text-center">
+        {{#if user}}
         <button class="btn btn-info w-100" onclick="saveItinerary()">
           Save My Itinerary
         </button>
+
+        {{else}}
+        <button class="btn btn-info w-100" type="disabled">
+          Save My Itinerary
+        </button>
+        {{/if}}
       </div>
     </div>
   </div>
