@@ -58,31 +58,43 @@ window.onclick = function (event) {
   }
 };
 
+
+
 const addActivity = (
   type,
   yelpId,
   img,
   url,
   name,
-  location, 
-  price, 
-  reviews,
+  address,
+  city,
+  state,
+  zipcode, 
+  price,
   rating, 
-  phone) => {
+  reviews,
+  phone,
+  description
+  ) => {
 
   const activityObj = {
     type,
     yelpId,
-    location,
-    name,
     img,
     url,
+    name,
+    address,
+    city,
+    state,
+    zipcode, 
     price,
+    rating, 
     reviews,
-    rating,
-    phone
+    phone, 
+    transactions, 
+    description
   };
-
+ 
   if(sessionStorage.length === 2) {
    alert(
       `Cannot store another activity. Please remove an activity from your itinerary first.`
@@ -116,6 +128,9 @@ const removeActivity = type => {
 const saveItinerary = () => {
   if(sessionStorage.length <= 1) {
    alert(`Cannot save an incomplete itinerary - please add some activities!`)
+  }
+  else{
+    alert(" Saved to your itinerary!")
   }
 
   let activityArray = Object.entries(sessionStorage);
