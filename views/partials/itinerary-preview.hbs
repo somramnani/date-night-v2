@@ -27,12 +27,11 @@
       <div class="text-center">
         {{#if user}}
         <button class="btn btn-info w-100" onclick="saveItinerary()">
-          Save My Itinerary
+          Save To My Itinerary
         </button>
-
         {{else}}
-        <button class="btn btn-info w-100" type="disabled">
-          Save My Itinerary
+        <button class="btn btn-info w-100" onclick="signInAlert()">
+          Save To My Itinerary
         </button>
         {{/if}}
       </div>
