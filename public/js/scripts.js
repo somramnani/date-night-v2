@@ -91,7 +91,7 @@ const addActivity = (
     rating, 
     reviews,
     phone, 
-    transactions, 
+
     description
   };
  
@@ -147,3 +147,7 @@ const saveItinerary = () => {
   .catch(error => console.error(error))
  
 };
+
+const signInAlert = () =>{
+  alert("Please sign in to save items to your Itinerary.")
+}

@@ -15,13 +15,13 @@
   <div class="container">
     <h3 id="itinerary-section-header">Your Itinerary</h3>
     <div class="row">
-      <div class="col itinerary-div">
+      <div class="itinerary-div">
         {{#each data}}
         {{#with dataValues}}
         {{!-- the dataValues object returns a restaurant object and an event object --}}
-        <div class="col m-2 result-col">
-          <div>
-            {{> itinerary-cards
+        <div class="col m-2 result-col ">
+
+          {{> itinerary-cards
               activityType=restaurant.type
               name=restaurant.name
               url=restaurant.url
@@ -35,9 +35,8 @@
               phone=restaurant.phone
               img=restaurant.img
               reviews=restaurant.reviews
-              transactions = restaurant.transactions
             }}
-          </div>
+
           <div class="col m-2 result-col">
             {{> itinerary-cards
               activityType=event.type
@@ -49,7 +48,6 @@
               id=event.id
               phone=event.phone
               img=event.img
-              description = event.description
             }}
           </div>
         </div>

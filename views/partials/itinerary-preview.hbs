@@ -29,10 +29,9 @@
         <button class="btn btn-info w-100" onclick="saveItinerary()">
           Save My Itinerary
         </button>
-
         {{else}}
-        <button class="btn btn-info w-100" type="disabled">
-          Save My Itinerary
+        <button class="btn btn-info w-100" onclick="signInAlert()">
+          Save My Itinerary (no User)
         </button>
         {{/if}}
       </div>
