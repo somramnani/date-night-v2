@@ -58,8 +58,6 @@ window.onclick = function (event) {
   }
 };
 
-
-
 const addActivity = (
   type,
   yelpId,
@@ -91,7 +89,6 @@ const addActivity = (
     rating, 
     reviews,
     phone, 
-
     description
   };
  

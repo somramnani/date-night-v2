@@ -42,6 +42,7 @@
         <!-- Cards -->
         <div class="container">
           <hr class="solid">
+          {{#if restaurants}}
           <div class="row">
             {{#each restaurants}}
             <div class="col m-2 result-col">
@@ -56,6 +57,11 @@
                 }}
             </div>
             {{/each}}
+            {{else}}
+            <h4 class="text-center result-col">
+              Sorry, there are no restaurants in your area.
+            </h4>
+            {{/if}}
           </div>
         </div>
       </div>
@@ -82,12 +88,11 @@
             {{else}}
             <h4 class="text-center result-col">
               Sorry, there are no events happening in your area.
-              </h5>
-              {{/if}}
+            </h4>
+            {{/if}}
           </div>
         </div>
       </div>
     </div>
-  </div>
   </div>
 </section>
