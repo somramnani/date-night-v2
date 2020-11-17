@@ -14,14 +14,12 @@
 <section class="itinerary-section" data-aos="fade-in">
   <div class="container">
     <h3 id="itinerary-section-header">Your Itinerary</h3>
-    <div class="row">
-      <div class="itinerary-div">
-        {{#each data}}
-        {{#with dataValues}}
-        {{!-- the dataValues object returns a restaurant object and an event object --}}
-        <div class="col m-2 result-col ">
-
-          {{> itinerary-cards
+    <div class="row itinerary-div">
+      {{#each data}}
+      {{#with dataValues}}
+      {{!-- the dataValues object returns a restaurant object and an event object --}}
+      <div class="col m-2 result-col ">
+        {{>   itinerary-cards
               activityType=restaurant.type
               name=restaurant.name
               url=restaurant.url
@@ -36,23 +34,31 @@
               img=restaurant.img
               reviews=restaurant.reviews
             }}
-
-          <div class="col m-2 result-col">
-            {{> itinerary-cards
+      </div>
+      <div class="col m-2 result-col">
+        {{> itinerary-cards
               activityType=event.type
               name=event.name
               url=event.url
               price=event.price
               location=event.location
+              address=event.address
+              city=event.city
+              state =event.state
+              zipcode = event.zipcode
               rating=event.rating
               id=event.id
               phone=event.phone
               img=event.img
+              description= event.description
+              timeStart = event.timeStart
+              timeEnd = event.timeEnd
+              ticketsUrl = event.ticketsUrl
             }}
-          </div>
-        </div>
-        {{/with}}
-        {{/each}}
       </div>
+      {{/with}}
+      {{/each}}
+
     </div>
+  </div>
 </section>
