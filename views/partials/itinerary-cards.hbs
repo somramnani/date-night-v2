@@ -45,10 +45,12 @@
 
     {{!-- Phone Number --}}
     {{#ifEqual activityType "restaurant" }}
+    {{#if phone}}
     <p class="card-text">
       <i class="fas fa-phone icon-cards"> </i>
       {{phone}}
     </p>
+    {{/if}}
     {{/ifEqual}}
 
     <div class="row">
