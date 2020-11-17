@@ -59,6 +59,7 @@ window.onclick = function (event) {
 };
 
 const addActivity = (
+  date,
   type,
   yelpId,
   img,
@@ -79,6 +80,7 @@ const addActivity = (
   ) => {
 
   const activityObj = {
+    date,
     type,
     yelpId,
     img,

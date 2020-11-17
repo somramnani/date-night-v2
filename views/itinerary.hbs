@@ -14,9 +14,10 @@
 <section class="itinerary-section" data-aos="fade-in">
   <div class="container">
     <h3 id="itinerary-section-header">Your Itinerary</h3>
+    {{#each data}}
+    {{#with dataValues}}
     <div class="row itinerary-div">
-      {{#each data}}
-      {{#with dataValues}}
+      {{date}}
       {{!-- the dataValues object returns a restaurant object and an event object --}}
       <div class="col m-2 result-col ">
         {{>   itinerary-cards
@@ -56,9 +57,8 @@
               ticketsUrl = event.ticketsUrl
             }}
       </div>
-      {{/with}}
-      {{/each}}
-
     </div>
   </div>
+  {{/with}}
+  {{/each}}
 </section>
