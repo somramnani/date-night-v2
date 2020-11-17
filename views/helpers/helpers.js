@@ -10,6 +10,9 @@ module.exports = {
   ifDoesNotEqual: function(a,b,opts){
     if(a !== b){
       return opts.fn(this);
+    } else {
+      return opts.inverse(this);
+    
     }
   },
   ifStringInArray: function (a, b, opts) {
