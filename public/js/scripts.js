@@ -72,7 +72,10 @@ const addActivity = (
   rating, 
   reviews,
   phone,
-  description
+  description,
+  timeStart,
+  timeEnd,
+  ticketsUrl
   ) => {
 
   const activityObj = {
@@ -89,7 +92,10 @@ const addActivity = (
     rating, 
     reviews,
     phone, 
-    description
+    description, 
+    timeStart,
+    timeEnd,
+    ticketsUrl
   };
  
   if(sessionStorage.length === 2) {
