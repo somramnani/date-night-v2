@@ -45,7 +45,7 @@
           <div class="row">
             {{#each restaurants}}
             <div class="col m-2 result-col">
-              {{> restaurant-card
+              {{> result-cards
                   activityType="restaurant"
                   name=name 
                   price=price 
@@ -73,7 +73,7 @@
           <div class="row">
             {{#each events}}
             <div class="col m-2 result-col">
-              {{> event-cards
+              {{> result-cards
                   activityType="event"
                   name=name 
                   price=price 
