@@ -76,7 +76,8 @@ const addActivity = (
   description,
   timeStart,
   timeEnd,
-  ticketsUrl
+  ticketsUrl,
+  transactions
   ) => {
 
   const activityObj = {
@@ -97,7 +98,8 @@ const addActivity = (
     description, 
     timeStart,
     timeEnd,
-    ticketsUrl
+    ticketsUrl,
+    transactions
   };
  
   if(sessionStorage.length === 2) {
@@ -135,7 +137,7 @@ const saveItinerary = () => {
    alert(`Cannot save an incomplete itinerary - please add some activities!`)
   }
   else{
-    alert(" Saved to your itinerary!")
+    alert("Saved to your itinerary!")
   }
 
   let activityArray = Object.entries(sessionStorage);
