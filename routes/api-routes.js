@@ -32,14 +32,15 @@ router.post(`/get-activities/`, (req, res) => {
           : results[1].data.events;
 
       res.render("search-results", {
-        date,
+        startDate,
         location,
         restaurants,
         events,
         layout: "index",
         title: "Date Night | Search Results",
       });
-      console.log(events);
+      // console.log( restaurants);
+      // console.log( events);
     })
     .catch((error) => console.log(error));
 });

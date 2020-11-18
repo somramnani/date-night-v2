@@ -892,3 +892,9 @@ img {
     padding-right: 0px;
   }
 }
+
+@media (min-width: 1898px) {
+  .right-side-results {
+    padding-left: 30em;
+  }
+}
