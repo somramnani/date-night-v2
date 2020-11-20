@@ -10,15 +10,33 @@
   <div class="results-page-form">
     {{> searchbar }}
   </div>
-  <div class="container  text-center">
+  {{!-- <div class="container  text-center">
     <div class="row filter-types mobile-navbar-icons">
       <div class="col">
         <a href="#restaurant-results">Restaurants</a>
       </div>
       <div class="col filter-types">
-        <a href="#event-results-section">Events</a></div>
+      
     </div>
+  </div> --}}
+  <div class="mobile-navbar-icons">
+    <div class="container ">
+      <div class="row">
+        <div class="col ">
+          <a href="#filter-column">Itinerary</a>
+        </div>
+        <div class="col ">
+          <a href="#restaurant-results-section">Restaurants</a>
+        </div>
+        <div class="col ">
+          <a href="#event-results-section">Events</a></div>
+      </div>
+    </div>
+
   </div>
+
+
+
   <ul class="nav navbar-nav ml-auto webpage-navbar-icons navbar-content ">
     <li class="nav-item ">
       {{> isLoggedin }}
@@ -35,7 +53,6 @@
     <!--Right Side - Results Section (Cards will be outputed here) -->
     <div class="col-lg col-sm-2 right-side-results">
       <!-- Restaurant Results -->
-      <div id="restaurant-results"></div>
       <div class="results-sections-styling" data-aos="fade-in" id="restaurant-results-section">
         <h3 class="results-header  text-center">Restaurants</h3>
 
