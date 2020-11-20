@@ -61,6 +61,7 @@ body {
 .filter-column {
   display: block;
   position: fixed;
+  min-width: 400px;
   width: 100%;
   border-right: black;
   z-index: 1;
@@ -625,6 +626,7 @@ img {
 .webpage-navbar-icons {
   display: block;
 }
+
 .mobile-navbar-icons {
   display: none;
 }
@@ -873,6 +875,11 @@ img {
   }
   .mobile-navbar-icons {
     display: block;
+
+    padding-left: 25px;
+    padding-right: 20px;
+
+    padding-top: 1em;
   }
   hr.solid {
     display: block;
