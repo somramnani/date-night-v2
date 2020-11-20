@@ -871,9 +871,11 @@ img {
   .webpage-navbar-icons {
     display: none;
   }
+
   .mobile-navbar-icons {
     display: block;
   }
+  
   hr.solid {
     display: block;
     border-top: 1px solid #bbb;
