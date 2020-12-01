@@ -11,7 +11,7 @@ router.get("/itinerary", secured(), async function (req, res, next) {
   let currentUser = 
   await user.findOne({ 
     where: { 
-      oauthId: userProfile.id 
+      oauthId: userProfile.id  
     }
   }).then(user => {
     return user;
