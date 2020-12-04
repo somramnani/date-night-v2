@@ -155,6 +155,10 @@ const saveItinerary = () => {
  
 };
 
+function deleteItinerary(){
+  alert("Clicked!");
+};
+
 const signInAlert = () =>{
-  alert("Please sign in to save items to your Itinerary.")
+  alert("Please sign in to save items to your Itinerary.");
 }

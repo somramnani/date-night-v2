@@ -699,6 +699,10 @@ img {
 .addbuttoncol {
   padding-right: 0px;
 }
+.minus-buttoncol {
+  padding-right: 0px;
+  display: none;
+}
 .marker {
   unicode-bidi: isolate;
   font-variant-numeric: tabular-nums;
@@ -903,7 +907,6 @@ img {
   .itinerary-form {
     width: 100%;
     font-size: 20px;
-
     margin-left: 0%;
   }
 

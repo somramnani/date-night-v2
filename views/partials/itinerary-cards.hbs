@@ -83,18 +83,18 @@
         {{/ifEqual}}
 
         {{!-- Minus Button --}}
-        <div class="col addbuttoncol">
+        <div class="col minus-buttoncol">
           {{#ifEqual activityType "restaurant" }}
           <div class="itinerary-restaurant-button ml-auto">
             {{else}}
             <div class="itinerary-event-button ml-auto">
               {{/ifEqual}}
-              <button onclick="" class="minus">
-                <i class="fas fa-minus"></i>
+              <button class="minus" onclick="window.location.href='/delete-itinerary'">
+                <i class=" fas fa-minus"></i>
               </button>
             </div>
           </div>
-
         </div>
+
       </div>
     </div>
