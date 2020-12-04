@@ -27,6 +27,7 @@ router.get("/itinerary", secured(), async function (req, res, next) {
         return usersItineraries;
       });
   res.render('itinerary', { 
+    layout: "index",
     data: foundItineraries,
     title: "Date Night | Itinerary"
   });
@@ -57,5 +58,20 @@ router.post("/save-itinerary", secured(), async (req, res, next) => {
   }).then(log => log)
     .catch(error => console.log(error))
 });
+
+router.delete("/delete-itinerary", function(req,res,next){
+  const { user, itinerary } = db.sequelize.models;
+
+  itinerary.destroy({
+    where:{
+      restaurant: restaurantInfo,
+      event:eventInfo
+    }
+    
+  }).then(log => log)
+  .catch(error => console.log(error))
+
+})
+
 
 module.exports = router;
