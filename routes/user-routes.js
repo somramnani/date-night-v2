@@ -11,7 +11,7 @@ router.get("/itinerary", secured(), async function (req, res, next) {
   let currentUser = 
   await user.findOne({ 
     where: { 
-      oauthId: userProfile.id 
+      oauthId: userProfile.id  
     }
   }).then(user => {
     return user;
@@ -26,7 +26,10 @@ router.get("/itinerary", secured(), async function (req, res, next) {
       }).then(usersItineraries => {
         return usersItineraries;
       });
-  res.render('itinerary', { data: foundItineraries });
+  res.render('itinerary', { 
+    data: foundItineraries,
+    title: "Date Night | Itinerary"
+  });
 });
 
 router.post("/save-itinerary", secured(), async (req, res, next) => {

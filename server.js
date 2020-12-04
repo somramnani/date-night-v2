@@ -48,16 +48,15 @@ var strategy = new Auth0Strategy(
     const { user } = db.sequelize.models;
 
     const newUser = {
-      oauthId: profile.id,
+      oauthId: profile.id || profile.user_id,
       displayName: profile.displayName,
-      firstName: profile.name.givenName,
-      lastName: profile.name.familyName,
+      firstName: profile.name.givenName || profile.displayName,
       email: profile.emails[0].value,
       image: profile.picture,
     };
 
     let foundUser = await user
-      .findOne({ where: { firstName: profile.name.givenName } })
+      .findOne({ where: { firstName: profile.name.givenName || profile.displayName } })
       .then((user) => user);
 
     if (foundUser) {
@@ -116,7 +115,7 @@ app.use(function (req, res, next) {
 
 // Catch 404 and forward to error handler
 app.use(function (req, res, next) {
-  const err = new Error("Not  Found");
+  const err = new Error("Not Found");
   err.status = 404;
   next(err);
 });
@@ -132,7 +131,7 @@ if (app.get("env") === "development") {
   });
 }
 
-db.sequelize.sync().then(function () {
+db.sequelize.sync({force: true}).then(function () {
   app.listen(PORT, function () {
     console.log(
       "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",

@@ -5,7 +5,6 @@ module.exports = function (sequelize, DataTypes) {
     oauthId: STRING,
     displayName: STRING,
     firstName: STRING,
-    lastName: STRING,
     email: STRING,
     image: STRING,
   });
