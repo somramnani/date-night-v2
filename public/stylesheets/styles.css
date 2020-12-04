@@ -698,6 +698,9 @@ img {
 }
 .addbuttoncol {
   padding-right: 0px;
+}
+.minus-buttoncol {
+  padding-right: 0px;
   display: none;
 }
 .marker {
