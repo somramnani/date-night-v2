@@ -1,4 +1,4 @@
-# Date-Night-V2
+#  Date-Night &#128197;
 
 A web app that finds events that are happening that day depending on your location.
 
