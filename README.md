@@ -29,7 +29,7 @@ To assist the average person in searching multiple activity options that are ava
   - Yelp
 - Sequelize
 
-## Features
+## &#x1f4f2; Features
 - Shows result based on your:
   - Location
   - Interests
