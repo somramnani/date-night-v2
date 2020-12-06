@@ -4,7 +4,7 @@ A web app that finds events that are happening that day depending on your locati
 
 ![](public/images/homepage.PNG)
 
-## Purpose
+## &#128161; Purpose
 
 To assist the average person in searching multiple activity options that are available in new and familiar places to make it easier to go out and have some fun with your significant other.
 
