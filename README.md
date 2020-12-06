@@ -12,7 +12,7 @@ To assist the average person in searching multiple activity options that are ava
 
 
 
-## &#x1f527;Languages/Tools 
+## &#x1f527; Languages/Tools 
 
 - HTML5
 - CSS3
