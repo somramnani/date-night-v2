@@ -3,8 +3,8 @@ A web app that finds events that are happening that day depending on your locati
 
 ## Table of contents
 * [ &#128161; Purpose](#-purpose)
-* [&#x1f527; Technologies & Tools](#&#x1f527;-technologies-&-tools)
-* [&#x1f4f2; Features](#features)
+* [&#x1f527; Technologies & Tools](#-technology--tools)
+* [&#x1f4f2; Features](#-features)
 
 
 
