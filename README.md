@@ -1,12 +1,14 @@
 #  Date-Night &#128197;
 
+A web app that finds events that are happening that day depending on your location.
+![](public/images/homepage.PNG)
+
 ## Table of contents
 * [ &#128161; Purpose](#-purpose)
 * [&#x1f527; Technologies & Tools](#-technology--tools)
 * [&#x1f4f2; Features](#-features)
 
-A web app that finds events that are happening that day depending on your location.
-![](public/images/homepage.PNG)
+
 
 ## &#128161; Purpose
 To assist the average person in searching multiple activity options that are available in new and familiar places to make it easier to go out and have some fun with your significant other.
