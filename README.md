@@ -1,6 +1,12 @@
 #  Date-Night &#128197;
-
 A web app that finds events that are happening that day depending on your location.
+
+## Table of contents
+* [Purpose](#purpose)
+* [Technologies & Tools](#technologies-&-tools)
+* [Features](#features)
+
+
 
 ![](public/images/homepage.PNG)
 
