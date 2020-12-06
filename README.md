@@ -2,8 +2,8 @@
 A web app that finds events that are happening that day depending on your location.
 
 ## Table of contents
-* [Purpose](#purpose)
-* [Technologies & Tools](#technologies-&-tools)
+* [ &#128161; Purpose](#&#128161;-purpose)
+* [&#x1f527; Technologies & Tools](#&#x1f527;-technologies-&-tools)
 * [Features](#features)
 
 
