@@ -7,6 +7,7 @@ A web app that finds events that are happening that day depending on your locati
 * [ &#128161; Purpose](#-purpose)
 * [&#x1f527; Technologies & Tools](#-technology--tools)
 * [&#x1f4f2; Features](#-features)
+* [:framed_picture: Images](#-images)
 
 
 
@@ -43,7 +44,7 @@ To assist the average person in searching multiple activity options that are ava
   - Location
   - Phone Number
   
-## &#x1f527; Images
+## :framed_picture: Images
 ![](public/images/homepage.PNG) 
 
 ![](public/images/results.jpg)
