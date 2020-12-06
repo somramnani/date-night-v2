@@ -7,13 +7,8 @@ A web app that finds events that are happening that day depending on your locati
 ## Purpose
 
 To assist the average person in searching multiple activity options that are available in new and familiar places to make it easier to go out and have some fun with your significant other.
-![](public/images/results.jpg)
-![](public/images/event-results.jpg)
 
-
-
-## &#x1f527; Languages/Tools 
-
+## &#x1f527; Technology & Tools
 - HTML5
 - CSS3
   - Parralax
@@ -31,7 +26,6 @@ To assist the average person in searching multiple activity options that are ava
 - Sequelize
 
 ## Features
-
 - Shows result based on your:
   - Location
   - Interests
@@ -43,3 +37,7 @@ To assist the average person in searching multiple activity options that are ava
   - Rating
   - Location
   - Phone Number
+  
+  ## Screenshots
+  ![](public/images/results.jpg)
+  ![](public/images/event-results.jpg)
