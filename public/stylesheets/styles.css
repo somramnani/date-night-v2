@@ -732,9 +732,6 @@ img {
   background-color: #263238 !important;
   font-size: 0.9rem;
   padding-top: 1.5rem !important;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
 }
 
 .mt-md-0 {
