@@ -1,6 +1,6 @@
 # Date-Night &#128197;
 
-A web app that finds events and restauraunts in your location.
+A full stack web application that finds events and restauraunts in your given location.
 
 ## Table of contents
 
