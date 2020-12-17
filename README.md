@@ -30,18 +30,15 @@ To assist the average person in searching multiple activity options that are ava
 
 ## &#x1f4f2; Features
 
-- Shows result based on your:
-  - Location
-  - Interests
-  - Budget
-- Shows the pricing of each event
-- Information that will be displayed
+- Results are generated based on location
+- Information that will be displayed:
   - Image
+  - Name
   - Price
   - Rating
   - Location
   - Phone Number
-
+- Save Restauraunts and Events to your itinerary page
 ## :framed_picture: Images
 
 ![](public/images/homepage.PNG)
