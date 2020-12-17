@@ -13,23 +13,20 @@ A full stack web application that finds events and restauraunts in your given lo
 
 To assist the average person in searching multiple activity options that are available in new and familiar places to make it easier to go out and have some fun with your significant other.
 
-## &#x1f527; Technology & Tools
+## &#x1f527; Key Technology & Tools
 
 - HTML5
 - CSS3
-  - Parralax
-  - Animate.css
-- Bootstrap
 - JavaScript
-  - Handlebars
+  - Handlebars.js
   - Node.js
   - Express.js
-- JQuery
-- JSON
-- AJAX
-- API
-  - Yelp
+  - Passport.js
+- Bootstrap
 - Sequelize
+- API's:
+  - Yelp
+  - Auth0
 
 ## &#x1f4f2; Features
 
