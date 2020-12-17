@@ -120,7 +120,7 @@ app.use(function (req, res, next) {
   next(err);
 });
 
-//handles errors in development
+//Handles errors in development
 if (app.get("env") === "development") {
   app.use(function (err, req, res, next) {
     res.status(err.status || 500);
