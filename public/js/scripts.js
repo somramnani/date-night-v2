@@ -131,13 +131,17 @@ const removeActivity = type => {
   activitySlot.style.display = 'none';
   sessionStorage.removeItem(type)
 };
+var modalBody = document.getElementsByClassName("modal-body");
 
 const saveItinerary = () => {
+
   if(sessionStorage.length <= 1) {
-   alert(`Cannot save an incomplete itinerary - please add some activities!`)
+    document.getElementById("ModalLabel").innerHTML = "Cannot save an incomplete itinerary ";
+    document.getElementById("modal-body").innerHTML = "Please add some activities!";
   }
   else{
-    alert("Saved to your itinerary!")
+    document.getElementById("ModalLabel").innerHTML = "Saved to your itinerary! ";
+    document.getElementById("modal-body").innerHTML = `Your itinerary has been updated.`;
   }
 
   let activityArray = Object.entries(sessionStorage);
@@ -160,5 +164,9 @@ function deleteItinerary(){
 };
 
 const signInAlert = () =>{
-  alert("Please sign in to save items to your Itinerary.");
+  document.getElementById("ModalLabel").innerHTML = "You are not signed in. ";
+  document.getElementById("modal-body").innerHTML = "Please sign in to save items to your Itinerary.";
 }
+
+
+

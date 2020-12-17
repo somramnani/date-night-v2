@@ -23,17 +23,28 @@
           </button>
         </div>
 
+
+
       </div>
       <div class="text-center">
         {{#if user}}
-        <button class="btn btn-info w-100" onclick="saveItinerary()">
+        {{!-- <button class="btn btn-info w-100" onclick="saveItinerary()">
+          Save To My Itinerary
+        </button> --}}
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary w-100 text-center" data-toggle="modal" data-target="#exampleModal"
+          onclick="saveItinerary()">
           Save To My Itinerary
         </button>
+        {{>modal}}
+
         {{else}}
-        <button class="btn btn-info w-100" onclick="signInAlert()">
+        <button type="button" class="btn btn-primary w-100 text-center" data-toggle="modal" data-target="#exampleModal"
+          onclick="signInAlert()">
           Save To My Itinerary
         </button>
         {{/if}}
+        {{>modal}}
       </div>
     </div>
   </div>
