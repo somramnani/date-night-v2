@@ -31,7 +31,7 @@ To assist the average person in searching multiple activity options that are ava
 ## &#x1f4f2; Features
 
 - Results are generated based on location
-- Information that will be displayed:
+- Information that will be displayed through Yelp's API:
   - Image
   - Name
   - Price
