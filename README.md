@@ -2,7 +2,7 @@
 
 A full stack web application that finds events and restauraunts in your given location.
 
-## Table of contents
+## :clipboard: Table of contents
 
 - [ &#128161; Purpose](#-purpose)
 - [&#x1f527; Technologies & Tools](#-technology--tools)
