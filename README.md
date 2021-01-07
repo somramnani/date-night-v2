@@ -17,13 +17,13 @@ To assist the average person in searching multiple activity options that are ava
 
 - HTML5
 - CSS3
+- Bootstrap
 - JavaScript
   - Handlebars.js
   - Node.js
   - Express.js
   - Passport.js
-- Bootstrap
-- Sequelize
+  - Sequelize
 - API's:
   - Yelp
   - Auth0
