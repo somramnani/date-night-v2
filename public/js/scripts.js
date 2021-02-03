@@ -156,13 +156,17 @@ const saveItinerary = () => {
   .then(response => response.json())
   .then(data => data)
   .catch(error => console.error(error))
- 
 };
 
 function deleteIt(id){
-  fetch(`http://localhost:8080/delete-full-itinerary/${id}`, { method: 'DELETE'})
+
+  fetch(`http://localhost:8080/delete-full-itinerary/${id}`, 
+  { 
+    method: 'DELETE'
+  })
     .then(res => res.json())
     .then(data => console.log(data))
+
 };
 
 const signInAlert = () =>{

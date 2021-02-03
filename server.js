@@ -132,7 +132,7 @@ if (app.get("env") === "development") {
   });
 }
 
-db.sequelize.sync({force:false}).then(function () {
+db.sequelize.sync().then(function () {
   app.listen(PORT, function () {
     console.log(
       "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
