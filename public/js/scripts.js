@@ -158,21 +158,23 @@ const saveItinerary = () => {
   .catch(error => console.error(error))
 };
 
-function deleteIt(id){
+function deleteIt (id) {
+  setTimeout(() => { location.reload() }, 1000)
 
-  fetch(`http://localhost:8080/delete-full-itinerary/${id}`, 
-  { 
+  fetch(`http://localhost:8080/delete-full-itinerary/${id}`, { 
     method: 'DELETE'
   })
-    .then(res => res.json())
-    .then(data => console.log(data))
-
+  .then(res => res.json())
+  .then(data => 
+    console.log(data));
 };
 
 const signInAlert = () =>{
   document.getElementById("ModalLabel").innerHTML = "You are not signed in. ";
   document.getElementById("modal-body").innerHTML = "Please sign in to save items to your Itinerary.";
 }
+
+
 
 
 
