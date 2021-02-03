@@ -626,6 +626,12 @@ img {
   height: 40%;
 }
 
+.itinerary-panel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
 .user-image {
   height: auto;
 }

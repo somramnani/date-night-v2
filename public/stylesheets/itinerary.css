@@ -1,0 +1,116 @@
+.itinerary-container {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: auto;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+  max-width: 870px;
+  border-radius: 5pt;
+  min-width: 400px;
+  padding: 1rem;
+}
+
+.summary {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: .25rem;
+}
+
+.summary-item {
+  margin: 0rem .5rem;
+  font-weight: bolder;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+}
+
+.itinerary-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem 0rem;
+  justify-content: flex-start;
+}
+
+.tag-row {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  justify-content: space-evenly;
+}
+
+.tag {
+  /* justify-self: self-start; */
+}
+
+.shadow {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0);
+}
+
+.itinerary-img {
+  width: 125px;
+  height: auto;
+  image-rendering: optimizeSpeed;
+  margin-right: 1rem;
+  align-self: flex-start;
+}
+
+.itinerary-header {
+  font-weight: bolder;
+}
+
+.itinerary-body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.button-panel {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 1rem;
+  /* padding: 1rem; */
+}
+
+.delete {
+  cursor: pointer;
+  border-radius: 5pt;
+  border: none;
+  background-color: rgb(204, 57, 57);
+  color: white;
+  padding: .15rem .45rem;
+}
+
+.delete:hover {
+  background-color: rgb(116, 34, 34);
+}
+
+.reschedule {
+  cursor: pointer;
+  border-radius: 5pt;
+  border: none;
+  background-color: rgb(57, 204, 86);
+  color: white;
+  padding: .15rem .45rem;
+}
+
+.reschedule:hover {
+  background-color: rgb(27, 101, 41);
+}
+
+.shadow-5 {
+  box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+              0 2px 2px rgba(0,0,0,0.12), 
+              0 4px 4px rgba(0,0,0,0.12), 
+              0 8px 8px rgba(0,0,0,0.12),
+              0 16px 16px rgba(0,0,0,0.12);
+}
+
+p {
+  margin: 0;
+}
