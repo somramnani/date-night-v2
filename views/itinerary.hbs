@@ -14,7 +14,7 @@
 <section data-aos="fade-in">
   {{#each data}}
   {{#with dataValues}}
-  <div class="itinerary-container">
+  <div class="itinerary-container shadow-5">
   <div class="summary">
     <p class="summary-item">
       <i class="fas fa-glass-cheers summary-item"></i>
@@ -23,11 +23,11 @@
     
     <p class="summary-item">
       <i class="far fa-calendar-alt summary-item"></i>
-      Date: 12/30/2021
+      12/30/2021
     </p>
     <p class="summary-item">
       <i class="far fa-clock summary-item"></i>
-      Time: 5:30pm
+      5:30pm
     </p>
   </div>
   <div class="itinerary-row">
@@ -69,6 +69,10 @@
         timeEnd = event.timeEnd
         ticketsUrl = event.ticketsUrl
       }}
+      </div>
+      <div class="button-panel">
+        <button onclick="deleteIt()" class="delete">Delete</button>
+        <button class="reschedule">Reschedule</button>
       </div>
 </div>
   {{/with}}

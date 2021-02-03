@@ -1,31 +1,38 @@
 .itinerary-container {
   display: grid;
-  max-width: 100%;
-  grid-template-rows: repeat(auto-fit, minmax(1fr, 2fr));
+  grid-template-rows: 1fr;
+  grid-template-columns: auto;
   height: auto;
-  grid-gap: 1rem;
-  padding: 5rem;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+  max-width: 870px;
+  border-radius: 5pt;
+  min-width: 400px;
+  padding: 1rem;
 }
 
 .summary {
+  background-color: black;
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
   justify-content: space-between;
+  padding: .25rem;
 }
 
 .summary-item {
   margin: 0rem .5rem;
   font-weight: bolder;
-  font-size: 24px;
-  color: rgb(71, 71, 71);
+  font-size: 18px;
+  color: rgb(255, 255, 255);
 }
 
 .itinerary-row {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 1rem;
-  flex-wrap: nowrap;
+  padding: 1rem 0rem;
   justify-content: flex-start;
 }
 
@@ -60,15 +67,48 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  width: 75%;
 }
 
-.past {
-
+.button-panel {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 1rem;
+  /* padding: 1rem; */
 }
 
-.upcoming {
+.delete {
+  cursor: pointer;
+  border-radius: 5pt;
+  border: none;
+  background-color: rgb(204, 57, 57);
+  color: white;
+  padding: .15rem .45rem;
+}
 
+.delete:hover {
+  background-color: rgb(116, 34, 34);
+}
+
+.reschedule {
+  cursor: pointer;
+  border-radius: 5pt;
+  border: none;
+  background-color: rgb(57, 204, 86);
+  color: white;
+  padding: .15rem .45rem;
+}
+
+.reschedule:hover {
+  background-color: rgb(27, 101, 41);
+}
+
+.shadow-5 {
+  box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+              0 2px 2px rgba(0,0,0,0.12), 
+              0 4px 4px rgba(0,0,0,0.12), 
+              0 8px 8px rgba(0,0,0,0.12),
+              0 16px 16px rgba(0,0,0,0.12);
 }
 
 p {
