@@ -1,4 +1,5 @@
 {{!-- Date = {{date}} --}}
+
 <div class="card mx-auto result-cards">
   <img class="card-img-top" src={{img}} />
 
@@ -10,7 +11,7 @@
 
     {{!-- Price • Stars • Reviews --}}
     <p class="card-text rating">
-      {{#ifEqual activityType "restaurant" }}
+      {{#ifEqual activityType "restaurant"}}
       {{price}} •
       {{>stars}}
       {{reviews}} reviews
@@ -23,13 +24,14 @@
     {{#ifEqual activityType "event"}}
     <p class="card-text">
       <i class="far fa-calendar-alt date-icon-cards"></i>
-      {{moment timeStart "MM/DD/YYYY"}} {{moment timeStart " hh:mm a"}} - {{moment timeEnd " hh:mm a"}}
+      {{moment timeStart "MM/DD/YYYY"}} 
+      {{moment timeStart " hh:mm a"}} - {{moment timeEnd " hh:mm a"}}
     </p>
     {{/ifEqual}}
 
     {{!-- Location --}}
     <p class="card-text ">
-      <i class="fas fa-map-marker-alt  location-icon-cards"></i>
+      <i class="fas fa-map-marker-alt location-icon-cards"></i>
       {{#if address}}
       {{address}},
       {{/if}}
@@ -47,15 +49,14 @@
     {{!-- Phone Number --}}
     {{#ifEqual activityType "restaurant" }}
     {{#if phone}}
-    <p class="card-text">
-      <i class="fas fa-phone icon-cards"> </i>
-      {{phone}}
-    </p>
+      <p class="card-text">
+        <i class="fas fa-phone icon-cards"> </i>
+        {{phone}}
+      </p>
     {{/if}}
     {{/ifEqual}}
 
     <div class="row">
-
       {{!-- Takeout or Delivery --}}
       {{#ifEqual activityType "restaurant" }}
 
@@ -68,33 +69,40 @@
       </div>
 
       {{else}}
+
       <div class="col">
         <i class="fas fa-ticket-alt"></i>
 
         {{#ifDoesNotEqual ticketsUrl "null"}}
-        <a href="{{ticketsUrl}}" target="_blank">
-          </i></i> Get Tickets
-        </a>
+          <a href="{{ticketsUrl}}" target="_blank">
+            </i></i> Get Tickets
+          </a>
         {{else}}
-        <a href="{{ticketsUrl}}" class="disabled" target="_blank">
-          </i></i> Get Tickets
-        </a>
+          <a href="{{ticketsUrl}}" class="disabled" target="_blank">
+            </i></i> Get Tickets
+          </a>
         {{/ifDoesNotEqual}}
         {{/ifEqual}}
 
         {{!-- Minus Button --}}
-        <div class="col minus-buttoncol">
-          {{#ifEqual activityType "restaurant" }}
+        {{#ifEqual activityType "restaurant" }}
+        <div>
           <div class="itinerary-restaurant-button ml-auto">
-            {{else}}
-            <div class="itinerary-event-button ml-auto">
-              {{/ifEqual}}
-              <button class="minus" onclick="window.location.href='/delete-itinerary'">
-                <i class=" fas fa-minus"></i>
+             <button class="minus" onclick="deleteIt({{id}})">
+                <i class="fas fa-minus"></i>
               </button>
-            </div>
+          </div>
+            {{else}}
+          <div class="itinerary-event-button ml-auto">
+              <button class="minus" onclick="deleteIt({{id}})">
+              <i class="fas fa-minus"></i>
+            </button>
           </div>
         </div>
-
+        {{/ifEqual}}
+        
       </div>
+     
+      </div>
+         
     </div>

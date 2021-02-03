@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const handlebars = require("express-handlebars");
 const cors = require("cors");
+const path = require('path');
 const flash = require("connect-flash");
 const PORT = process.env.PORT || 8080;
 const db = require("./models");
@@ -23,7 +24,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors());
-app.use(express.static("/public"));
+app.use(express.static(path.join(__dirname, "public")));
 app.set("view engine", "hbs");
 app.engine(
   "hbs",
@@ -131,7 +132,7 @@ if (app.get("env") === "development") {
   });
 }
 
-db.sequelize.sync({force:true}).then(function () {
+db.sequelize.sync({force:false}).then(function () {
   app.listen(PORT, function () {
     console.log(
       "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",

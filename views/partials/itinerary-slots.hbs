@@ -1,0 +1,89 @@
+
+    <img class="itinerary-img" src="{{img}}" />
+    <div class="itinerary-body">
+    <header>
+      <a href={{url}} class="href" target="_blank">
+        <h5 class="itinerary-header">{{name}}</h5>
+      </a>
+    </header>
+    <p class="card-text rating">
+      {{#ifEqual activityType "restaurant"}}
+      {{price}} •
+      {{>stars}}
+      {{reviews}} reviews
+      {{else}}
+      {{description}}
+      {{/ifEqual}}
+    </p>
+
+    {{!-- Date --}}
+    {{#ifEqual activityType "event"}}
+    <p class="card-text">
+      <i class="far fa-calendar-alt date-icon-cards"></i>
+      {{moment timeStart "MM/DD/YYYY"}} 
+      {{moment timeStart " hh:mm a"}} - {{moment timeEnd " hh:mm a"}}
+    </p>
+    {{/ifEqual}}
+
+    {{!-- Location --}}
+    <p class="card-text ">
+      <i class="fas fa-map-marker-alt location-icon-cards"></i>
+      {{#if address}}
+      {{address}},
+      {{/if}}
+      {{#if city}}
+      {{city}},
+      {{/if}}
+      {{#if state}}
+      {{state}}
+      {{/if}}
+      {{#if zipcode}}
+      {{zipcode}}
+      {{/if}}
+    </p>
+
+    {{!-- Phone Number --}}
+      {{#ifEqual activityType "restaurant" }}
+      {{#if phone}}
+        <p class="card-text">
+          <i class="fas fa-phone icon-cards"> </i>
+          {{phone}}
+        </p>
+      {{/if}}
+      {{/ifEqual}}
+    
+      {{!-- Takeout or Delivery --}}
+     
+        {{!-- Minus Button --}}
+          
+</div>
+
+{{!-- <div class="tag-row">
+    {{#ifEqual activityType "restaurant" }}
+    
+      <div class="tag-row">
+        <i class="fas fa-check transaction-icon"></i> 
+        Takeout
+        <i class="fas fa-check transaction-icon"></i>
+        Delivery
+        <button class="minus" onclick="deleteIt({{id}})">
+            <i class="fas fa-minus"></i>
+        </button>
+      </div>
+          
+      {{else}}
+        <div class="tag-row">
+        <i class="fas fa-ticket-alt tag"></i>
+        {{#ifDoesNotEqual ticketsUrl "null"}}
+          <a href="{{ticketsUrl}}" target="_blank">
+            </i></i> Get Tickets
+          </a>
+        {{else}}
+          <a href="{{ticketsUrl}}" class="disabled" target="_blank">
+            </i></i> Get Tickets
+          </a>
+        </div>
+      
+      {{/ifDoesNotEqual}}
+      {{/ifEqual}}
+      </div> --}}

@@ -1,7 +1,7 @@
 {{> navbar }}
 
 <div class="jumbotron itinerarypage-jumbtron jumbotron-fluid" data-aos="fade-in">
-  <div class="container ">
+  <div class="container">
     <h1 class="text-center" id="itinerary-header-text">
       Plan your date night
     </h1>
@@ -11,57 +11,67 @@
   </div>
 </div>
 
-<section class="itinerary-section" data-aos="fade-in">
-  <div class="container">
-    <h3 id="itinerary-section-header">Your Itinerary</h3>
-
-    {{#each data}}
-    {{#with dataValues}}
-
-    <div class="row itinerary-div">
-      {{!-- the dataValues object returns a restaurant object and an event object --}}
-      <div class="col m-2 result-col ">
-        {{>  itinerary-cards
-              activityType=restaurant.type
-              name=restaurant.name
-              url=restaurant.url
-              price=restaurant.price
-              address=restaurant.address
-              city=restaurant.city
-              state =restaurant.state
-              zipcode = restaurant.zipcode
-              rating=restaurant.rating
-              id=restaurant.id
-              phone=restaurant.phone
-              img=restaurant.img
-              reviews=restaurant.reviews
-              date=restaurant.date
-              transactions = restaurant.transactions
-            }}
-      </div>
-      <div class="col m-2 result-col">
-        {{> itinerary-cards
-              activityType=event.type
-              name=event.name
-              url=event.url
-              price=event.price
-              location=event.location
-              address=event.address
-              city=event.city
-              state=event.state
-              zipcode = event.zipcode
-              rating=event.rating
-              id=event.id
-              phone=event.phone
-              img=event.img
-              description= event.description
-              timeStart = event.timeStart
-              timeEnd = event.timeEnd
-              ticketsUrl = event.ticketsUrl
-            }}
-      </div>
-    </div>
+<section data-aos="fade-in">
+  {{#each data}}
+  {{#with dataValues}}
+  <div class="itinerary-container">
+  <div class="summary">
+    <p class="summary-item">
+      <i class="fas fa-glass-cheers summary-item"></i>
+      Our 25th Anniversary!
+    </p>
+    
+    <p class="summary-item">
+      <i class="far fa-calendar-alt summary-item"></i>
+      Date: 12/30/2021
+    </p>
+    <p class="summary-item">
+      <i class="far fa-clock summary-item"></i>
+      Time: 5:30pm
+    </p>
   </div>
+  <div class="itinerary-row">
+      {{> itinerary-slots
+        activityType = restaurant.type
+        name = restaurant.name
+        url = restaurant.url
+        price = restaurant.price
+        address = restaurant.address
+        city = restaurant.city
+        state = restaurant.state
+        zipcode = restaurant.zipcode
+        rating = restaurant.rating
+        id = restaurant.id
+        phone = restaurant.phone
+        img = restaurant.img
+        reviews = restaurant.reviews
+        date = restaurant.date
+        transactions = restaurant.transactions
+      }}
+    </div>
+    <div class="itinerary-row">
+      {{> itinerary-slots
+        activityType = event.type
+        name = event.name
+        url = event.url
+        price = event.price
+        location = event.location
+        address = event.address
+        city = event.city
+        state = event.state
+        zipcode = event.zipcode
+        rating = event.rating
+        id = event.id
+        phone = event.phone
+        img = event.img
+        description = event.description
+        timeStart = event.timeStart
+        timeEnd = event.timeEnd
+        ticketsUrl = event.ticketsUrl
+      }}
+      </div>
+</div>
   {{/with}}
   {{/each}}
+
 </section>
