@@ -35,5 +35,11 @@ module.exports = {
       str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1); 
     }
     return str.join(' ');
+  },
+  math: function(value1, value2){
+    value1 = parseFloat(value1);
+    value2= parseFloat(value2);
+
+    return value1+value2;
   }
 };
