@@ -4,7 +4,7 @@
   grid-template-columns: auto;
   height: auto;
   margin: 0 auto;
-  margin-bottom: 5rem;
+  margin-bottom: 2.5rem;
   max-width: 870px;
   border-radius: 5pt;
   min-width: 400px;
@@ -18,11 +18,11 @@
   align-items: flex-start;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: .25rem;
+  padding: 0.25rem;
 }
 
 .summary-item {
-  margin: 0rem .5rem;
+  margin: 0rem 0.5rem;
   font-weight: bolder;
   font-size: 18px;
   color: rgb(255, 255, 255);
@@ -83,7 +83,7 @@
   border: none;
   background-color: rgb(204, 57, 57);
   color: white;
-  padding: .15rem .45rem;
+  padding: 0.15rem 0.45rem;
 }
 
 .delete:hover {
@@ -96,7 +96,7 @@
   border: none;
   background-color: rgb(57, 204, 86);
   color: white;
-  padding: .15rem .45rem;
+  padding: 0.15rem 0.45rem;
 }
 
 .reschedule:hover {
@@ -104,11 +104,9 @@
 }
 
 .shadow-5 {
-  box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
-              0 2px 2px rgba(0,0,0,0.12), 
-              0 4px 4px rgba(0,0,0,0.12), 
-              0 8px 8px rgba(0,0,0,0.12),
-              0 16px 16px rgba(0,0,0,0.12);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
 }
 
 p {

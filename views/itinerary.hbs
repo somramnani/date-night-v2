@@ -15,27 +15,27 @@
   <div class="container">
     <h3 id="itinerary-section-header" class="text-center">Your Itinerary</h3>
     <hr>
-  </div>
-  {{#each data}}
-  {{#with dataValues}}
-  <div class="itinerary-container shadow-5">
-    <div class="summary">
-      <p class="summary-item">
-        <i class="fas fa-glass-cheers summary-item"></i>
-        Date Night #{{math @index 1}}
-      </p>
 
-      <p class="summary-item">
-        <i class="far fa-calendar-alt summary-item"></i>
-        12/30/2021
-      </p>
-      <p class="summary-item">
-        <i class="far fa-clock summary-item"></i>
-        5:30pm
-      </p>
-    </div>
-    <div class="itinerary-row">
-      {{> itinerary-slots
+    {{#each data}}
+    {{#with dataValues}}
+    <div class="itinerary-container shadow-5">
+      <div class="summary">
+        <p class="summary-item">
+          <i class="fas fa-glass-cheers summary-item"></i>
+          Date Night #{{math @index 1}}
+        </p>
+
+        <p class="summary-item">
+          <i class="far fa-calendar-alt summary-item"></i>
+          12/30/2021
+        </p>
+        <p class="summary-item">
+          <i class="far fa-clock summary-item"></i>
+          5:30pm
+        </p>
+      </div>
+      <div class="itinerary-row">
+        {{> itinerary-slots
         activityType = restaurant.type
         name = restaurant.name
         url = restaurant.url
@@ -52,9 +52,9 @@
         date = restaurant.date
         transactions = restaurant.transactions
       }}
-    </div>
-    <div class="itinerary-row">
-      {{> itinerary-slots
+      </div>
+      <div class="itinerary-row">
+        {{> itinerary-slots
         activityType = event.type
         name = event.name
         url = event.url
@@ -73,13 +73,13 @@
         timeEnd = event.timeEnd
         ticketsUrl = event.ticketsUrl
       }}
+      </div>
+      <div class="button-panel">
+        <button onclick="deleteIt({{id}})" class="delete" value="button">Delete</button>
+        <button class="reschedule">Reschedule</button>
+      </div>
     </div>
-    <div class="button-panel">
-      <button onclick="deleteIt({{id}})" class="delete" value="button">Delete</button>
-      <button class="reschedule">Reschedule</button>
-    </div>
+    {{/with}}
+    {{/each}}
   </div>
-  {{/with}}
-  {{/each}}
-
 </section>
