@@ -160,6 +160,11 @@ const saveItinerary = () => {
 
 function deleteIt (id) {
   setTimeout(() => { location.reload() }, 2000)
+// For Heroku
+// /delete-full-itinerary/${id}
+
+//For localhost
+// http://localhost:8080/delete-full-itinerary/${id}
 
   fetch(`http://localhost:8080/delete-full-itinerary/${id}`, { 
     method: 'DELETE'
