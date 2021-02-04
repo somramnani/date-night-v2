@@ -163,7 +163,10 @@ function deleteIt (id) {
 // For Heroku
 // /delete-full-itinerary/${id}
 
-  fetch(`/delete-full-itinerary/${id}`, { 
+//For localhost
+// http://localhost:8080/delete-full-itinerary/${id}
+
+  fetch(`http://localhost:8080/delete-full-itinerary/${id}`, { 
     method: 'DELETE'
   })
   .then(res => res.json())
