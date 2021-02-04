@@ -103,6 +103,9 @@ body {
   height: auto;
   font-size: 11px;
 }
+.card-text {
+  padding-bottom: 0.75rem;
+}
 .result-col {
   padding-bottom: 20px;
 }
