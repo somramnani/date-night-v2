@@ -15,7 +15,7 @@
   <div class="container">
     <h3 id="itinerary-section-header" class="text-center">Your Itinerary</h3>
     <hr>
-    
+
     {{#if data}}
     {{#each data}}
     {{#with dataValues}}
@@ -26,14 +26,14 @@
           Date Night #{{math @index 1}}
         </p>
 
-        <p class="summary-item">
+        {{!-- <p class="summary-item">
           <i class="far fa-calendar-alt summary-item"></i>
           12/30/2021
         </p>
         <p class="summary-item">
           <i class="far fa-clock summary-item"></i>
           5:30pm
-        </p>
+        </p> --}}
       </div>
       <div class="itinerary-row">
         {{> itinerary-slots
@@ -77,7 +77,7 @@
       </div>
       <div class="button-panel">
         <button onclick="deleteIt({{id}})" class="delete" value="button">Delete</button>
-        <button class="reschedule">Reschedule</button>
+        {{!-- <button class="reschedule">Reschedule</button> --}}
       </div>
     </div>
     {{/with}}
