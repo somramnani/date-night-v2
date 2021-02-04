@@ -159,7 +159,7 @@ const saveItinerary = () => {
 };
 
 function deleteIt (id) {
-  setTimeout(() => { location.reload() }, 1000)
+  setTimeout(() => { location.reload() }, 2000)
 
   fetch(`http://localhost:8080/delete-full-itinerary/${id}`, { 
     method: 'DELETE'

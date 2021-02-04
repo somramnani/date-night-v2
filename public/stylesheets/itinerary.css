@@ -112,3 +112,7 @@
 p {
   margin: 0;
 }
+
+#empty-itineraries {
+  height: 100vh;
+}

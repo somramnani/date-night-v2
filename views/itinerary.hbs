@@ -15,7 +15,8 @@
   <div class="container">
     <h3 id="itinerary-section-header" class="text-center">Your Itinerary</h3>
     <hr>
-
+    
+    {{#if data}}
     {{#each data}}
     {{#with dataValues}}
     <div class="itinerary-container shadow-5">
@@ -81,5 +82,14 @@
     </div>
     {{/with}}
     {{/each}}
+
+    {{else}}
+    <div id="empty-itineraries">
+      <h4 class="text-center">
+        You don't have any saved itineraries.
+      </h4>
+    </div>
+    {{/if}}
+
   </div>
 </section>
