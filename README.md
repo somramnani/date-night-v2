@@ -47,4 +47,7 @@ To assist the average person in searching multiple activity options that are ava
 
 ![](public/images/event-results.jpg)
 
+![](public/images/itinerary.jpg)
+
+
 
