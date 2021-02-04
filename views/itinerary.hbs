@@ -78,7 +78,9 @@
       }}
       </div>
       <div class="button-panel">
-        <button onclick="deleteIt({{id}})" class="delete" value="button">Delete</button>
+
+        <button onclick="" class="delete" data-toggle="modal" data-target="#deleteItModal">Delete</button>
+        {{>deleteItModal}}
         {{!-- <button class="reschedule">Reschedule</button> --}}
       </div>
     </div>
