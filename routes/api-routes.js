@@ -13,14 +13,14 @@ router.post(`/get-activities/`, (req, res) => {
 
   const instance = axios.create({
     baseURL,
-    headers: { Authorization: `Bearer ${yelpKey}` }
+    headers: { Authorization: `Bearer ${yelpKey}` },
   });
 
   const getRestaurants = () => instance.get(restaurantURL);
   const getEvents = () => instance.get(eventURL);
 
   Promise.all([getRestaurants(), getEvents()])
-    .then(results => {
+    .then((results) => {
       let restaurants =
         results[0].data.length === 0
           ? res.send("Sorry, no restaurants were found in your search!")
@@ -37,12 +37,20 @@ router.post(`/get-activities/`, (req, res) => {
         restaurants,
         events,
         layout: "index",
-        title: "Date Night | Search Results"
+        title: "Date Night | Search Results",
       });
       // console.log( restaurants);
       // console.log( events);
     })
-    .catch(error => console.log(error));
+    .catch((error) => console.log(error));
+});
+
+router.post("/search-query", async (req, res) => {
+  let response = await axios.get(
+    `https://maps.googleapis.com/maps/api/place/queryautocomplete/json?key=AIzaSyDbnIg8wB7mATLm6NCPqXiYEiCR1ucyEmI&input=${req.body.key}`
+  );
+
+  res.json(response.data);
 });
 
 module.exports = router;
