@@ -179,6 +179,16 @@ const signInAlert = () =>{
   document.getElementById("modal-body").innerHTML = "Please sign in to save items to your Itinerary.";
 }
 
+function queryAutocomplete(ev) {
+  fetch('/api/search-query', {
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    method: 'POST',
+    body: JSON.stringify({key: ev})
+  }).then(resp => resp.json())
+  .then(predictions => console.log(predictions));
+}
 
 
 
