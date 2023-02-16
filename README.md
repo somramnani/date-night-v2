@@ -1,4 +1,4 @@
-# Date-Night &#128197;
+# Date-Night 
 
 A full stack web application that finds events and restauraunts in your given location.
 
