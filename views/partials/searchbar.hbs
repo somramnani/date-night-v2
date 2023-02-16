@@ -1,16 +1,39 @@
-<form class=" border-rounded-pill p-1" action="/api/get-activities" method="POST">
+<form
+  class="border-rounded-pill p-1"
+  action="/api/get-activities"
+  method="POST"
+>
   <div class="text-center input-group">
-    {{#if location }}
-    <input id="location" name="location" type="search" value="sss" placeholder="&#xf124; {{toUpperCase location}}"
-      aria-describedby="button-addon3" class=" location-placeholder form-control bg-none border-0 divider-vertical" />
+    {{#if location}}
+      <input
+        id="location"
+        name="location"
+        type="search"
+        value="sss"
+        placeholder="&#xf124; {{toUpperCase location}}"
+        aria-describedby="button-addon3"
+        class="location-placeholder form-control bg-none border-0 divider-vertical"
+      />
     {{else}}
-    <input id="location" oninput="queryAutocomplete(event.currentTarget.value)" name="location" type="search" value="" placeholder=" &#xf124; Enter Zip Code or City"
-      aria-describedby="button-addon3" class=" location-placeholder form-control bg-none border-0 " />
+      <input
+        id="location"
+        oninput="queryAutocomplete(event.currentTarget.value)"
+        name="location"
+        type="search"
+        value=""
+        placeholder=" &#xf124; Enter Zip Code or City"
+        aria-describedby="button-addon3"
+        class="location-placeholder form-control bg-none border-0"
+      />
     {{/if}}
-    <input id="calendar" type="date" name="startDate" value="" min="" max="2021-09-29" />
+    <input id="calendar" type="date" name="startDate" value="" min="" max="" />
     <div class="input-group-append">
       <div class="input-group-addon">
-        <button id="search" type="submit" class="btn btn-link searchbutton input-group-addon">
+        <button
+          id="search"
+          type="submit"
+          class="btn btn-link searchbutton input-group-addon"
+        >
           <i class="fa fa-search"></i>
         </button>
       </div>
