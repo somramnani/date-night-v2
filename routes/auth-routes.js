@@ -31,7 +31,7 @@ router.get("/callback", (req, res, next) => {
       if (err) {
         return next(err);
       }
-      console.log(user)
+      console.log(user);
       const returnTo = req.session.returnTo;
       delete req.session.returnTo;
       res.redirect(returnTo || "/itinerary");
@@ -46,11 +46,11 @@ router.get("/logout", (req, res) => {
   var returnTo = req.protocol + "://" + req.hostname;
   var port = req.connection.localPort;
   if (port !== undefined && port !== 80 && port !== 443) {
-    returnTo += ':' + port;
-    
+    // returnTo += ':' + port;
+
     // // For Heroku logout:
-    // returnTo = process.env.NODE_ENV === 'production' ? `${returnTo}/` : `${returnTo}`;
-    
+    returnTo =
+      process.env.NODE_ENV === "production" ? `${returnTo}/` : `${returnTo}`;
   }
   var logoutURL = new url.URL(
     util.format("https://%s/v2/logout", process.env.AUTH0_DOMAIN)
