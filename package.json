@@ -2,7 +2,7 @@
   "name": "date-night-v2",
   "version": "1.0.0",
   "description": "A full stack web application that finds events and restauraunts in your given location.",
-  "main": "server.js",
+  "main": "index.js",
   "directories": {
     "lib": "lib"
   },
