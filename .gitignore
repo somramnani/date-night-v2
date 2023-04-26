@@ -1,6 +1,5 @@
 node_modules/
 .env
 env
-public/old-html-files/
 date-night-v2
-.vercel
+
