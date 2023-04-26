@@ -5,36 +5,40 @@ window.onload = function () {
   document.getElementById("loading").style.display = "none";
 };
 
-let restaurantSlot = document.getElementById('restaurant');
-let eventSlot = document.getElementById('event');
-let eventWrapper = document.getElementById('event-wrapper');
-let restaurantWrapper = document.getElementById('rest-wrapper')
+let restaurantSlot = document.getElementById("restaurant");
+let eventSlot = document.getElementById("event");
+let eventWrapper = document.getElementById("event-wrapper");
+let restaurantWrapper = document.getElementById("rest-wrapper");
 
-const truncateSlotText = text => {
-  let letters = text.split('');
-  if(letters.length > 20) {
-    letters.splice(30, letters.length - 30, '...');
+const truncateSlotText = (text) => {
+  let letters = text.split("");
+  if (letters.length > 20) {
+    letters.splice(30, letters.length - 30, "...");
   }
-  return letters.join('');
-}
-// This conditional block runs everytime the page loads - it first checks the sessionStorage for keys...
-if(sessionStorage.length !== 0) {
-//If there are events, it sets the event slot DOM el inner HTML to the name. Otherwise, it hides the el.
-  if(sessionStorage.getItem('event')) {
-    eventSlot.innerHTML = truncateSlotText(JSON.parse(sessionStorage.getItem('event')).name);
-  } else {
-    eventWrapper.style.display = 'none';
-  }
-//Same logic as above, but for the restaurant. Good candidate for a refactor at some point.
-  if(sessionStorage.getItem('restaurant')) {
-    restaurantSlot.innerHTML = truncateSlotText(JSON.parse(sessionStorage.getItem('restaurant')).name);
-  } else {
-    restaurantWrapper.style.display = 'none';
-  } 
-} else {
-  restaurantWrapper.style.display = 'none';
-  eventWrapper.style.display = 'none';
+  return letters.join("");
 };
+// This conditional block runs everytime the page loads - it first checks the sessionStorage for keys...
+if (sessionStorage.length !== 0) {
+  //If there are events, it sets the event slot DOM el inner HTML to the name. Otherwise, it hides the el.
+  if (sessionStorage.getItem("event")) {
+    eventSlot.innerHTML = truncateSlotText(
+      JSON.parse(sessionStorage.getItem("event")).name
+    );
+  } else {
+    eventWrapper.style.display = "none";
+  }
+  //Same logic as above, but for the restaurant. Good candidate for a refactor at some point.
+  if (sessionStorage.getItem("restaurant")) {
+    restaurantSlot.innerHTML = truncateSlotText(
+      JSON.parse(sessionStorage.getItem("restaurant")).name
+    );
+  } else {
+    restaurantWrapper.style.display = "none";
+  }
+} else {
+  restaurantWrapper.style.display = "none";
+  eventWrapper.style.display = "none";
+}
 
 //Shows dropdown content
 function displayDropDown() {
@@ -68,9 +72,9 @@ const addActivity = (
   address,
   city,
   state,
-  zipcode, 
+  zipcode,
   price,
-  rating, 
+  rating,
   reviews,
   phone,
   description,
@@ -78,8 +82,7 @@ const addActivity = (
   timeEnd,
   ticketsUrl,
   transactions
-  ) => {
-
+) => {
   const activityObj = {
     date,
     type,
@@ -90,106 +93,112 @@ const addActivity = (
     address,
     city,
     state,
-    zipcode, 
+    zipcode,
     price,
-    rating, 
+    rating,
     reviews,
-    phone, 
-    description, 
+    phone,
+    description,
     timeStart,
     timeEnd,
     ticketsUrl,
-    transactions
+    transactions,
   };
- 
-  if(sessionStorage.length === 2) {
-   alert(
+
+  if (sessionStorage.length === 2) {
+    alert(
       `Cannot store another activity. Please remove an activity from your itinerary first.`
-    )
+    );
   } else {
-    let activitySlot = 
-      type === 'event' ? 
-      document.getElementById('event-wrapper') : 
-      document.getElementById('rest-wrapper');
+    let activitySlot =
+      type === "event"
+        ? document.getElementById("event-wrapper")
+        : document.getElementById("rest-wrapper");
 
     sessionStorage.setItem(type, JSON.stringify(activityObj));
-    document.getElementById(type).innerHTML = truncateSlotText(JSON.parse(sessionStorage.getItem(type)).name);
-    activitySlot.style.display = 'flex';
-  };
+    document.getElementById(type).innerHTML = truncateSlotText(
+      JSON.parse(sessionStorage.getItem(type)).name
+    );
+    activitySlot.style.display = "flex";
+  }
 };
 
-const removeActivity = type => {
-  if(sessionStorage.length === 0) {
-    return console.error('cannot remove any activities - try adding one first!')
+const removeActivity = (type) => {
+  if (sessionStorage.length === 0) {
+    return console.error(
+      "cannot remove any activities - try adding one first!"
+    );
   }
 
-  let activitySlot = 
-    type === 'event' ? 
-    document.getElementById('event-wrapper') : 
-    document.getElementById('rest-wrapper');
+  let activitySlot =
+    type === "event"
+      ? document.getElementById("event-wrapper")
+      : document.getElementById("rest-wrapper");
 
-  activitySlot.style.display = 'none';
-  sessionStorage.removeItem(type)
+  activitySlot.style.display = "none";
+  sessionStorage.removeItem(type);
 };
 var modalBody = document.getElementsByClassName("modal-body");
 
 const saveItinerary = () => {
-
-  if(sessionStorage.length <= 1) {
-    document.getElementById("ModalLabel").innerHTML = "Cannot save an incomplete itinerary ";
-    document.getElementById("modal-body").innerHTML = "Please add some activities!";
-  }
-  else{
-    document.getElementById("ModalLabel").innerHTML = "Saved to your itinerary! ";
-    document.getElementById("modal-body").innerHTML = `Your itinerary has been updated.`;
+  if (sessionStorage.length <= 1) {
+    document.getElementById("ModalLabel").innerHTML =
+      "Cannot save an incomplete itinerary ";
+    document.getElementById("modal-body").innerHTML =
+      "Please add some activities!";
+  } else {
+    document.getElementById("ModalLabel").innerHTML =
+      "Saved to your itinerary! ";
+    document.getElementById(
+      "modal-body"
+    ).innerHTML = `Your itinerary has been updated.`;
   }
 
   let activityArray = Object.entries(sessionStorage);
 
-  fetch(`/save-itinerary`, { 
-    method: 'post',
+  fetch(`/save-itinerary`, {
+    method: "post",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(activityArray)
+    body: JSON.stringify(activityArray),
   })
-  .then(response => response.json())
-  .then(data => data)
-  .catch(error => console.error(error))
+    .then((response) => response.json())
+    .then((data) => data)
+    .catch((error) => console.error(error));
 };
 
-function deleteIt (id) {
-  setTimeout(() => { location.reload() }, 2000)
-// For Heroku
-// /delete-full-itinerary/${id}
+function deleteIt(id) {
+  setTimeout(() => {
+    location.reload();
+  }, 2000);
+  // For Heroku
+  // /delete-full-itinerary/${id}
 
-//For localhost
-// http://localhost:8080/delete-full-itinerary/${id}
+  //For localhost
+  // http://localhost:8080/delete-full-itinerary/${id}
 
-  fetch(`http://localhost:8080/delete-full-itinerary/${id}`, { 
-    method: 'DELETE'
+  fetch(`/delete-full-itinerary/${id}`, {
+    method: "DELETE",
   })
-  .then(res => res.json())
-  .then(data => 
-    console.log(data));
-};
-
-const signInAlert = () =>{
-  document.getElementById("ModalLabel").innerHTML = "You are not signed in. ";
-  document.getElementById("modal-body").innerHTML = "Please sign in to save items to your Itinerary.";
+    .then((res) => res.json())
+    .then((data) => console.log(data));
 }
+
+const signInAlert = () => {
+  document.getElementById("ModalLabel").innerHTML = "You are not signed in. ";
+  document.getElementById("modal-body").innerHTML =
+    "Please sign in to save items to your Itinerary.";
+};
 
 function queryAutocomplete(ev) {
-  fetch('/api/search-query', {
+  fetch("/api/search-query", {
     headers: {
-      'Content-Type': 'application/json'
+      "Content-Type": "application/json",
     },
-    method: 'POST',
-    body: JSON.stringify({key: ev})
-  }).then(resp => resp.json())
-  .then(predictions => console.log(predictions));
+    method: "POST",
+    body: JSON.stringify({ key: ev }),
+  })
+    .then((resp) => resp.json())
+    .then((predictions) => console.log(predictions));
 }
-
-
-
-
