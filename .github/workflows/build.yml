@@ -1,12 +1,6 @@
 name: CI/CD Pipeline
 
-<<<<<<< HEAD
-on:
-  push: [push]
-
-=======
 on: [push]
->>>>>>> 3cc0c28e8d418d08676a5d9e5efb3b3077863da3
 jobs:
   build:
     runs-on: ubuntu-latest
