@@ -34,11 +34,13 @@
     "sequelize": "5.22.3"
   },
   "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.21",
     "cypress": "^9.5.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node index.js",
+    "playwright": "npx playwright test"
   },
   "repository": {
     "type": "git",
