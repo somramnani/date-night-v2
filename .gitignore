@@ -3,3 +3,8 @@ node_modules/
 env
 date-night-v2
 
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
