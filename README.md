@@ -1,4 +1,4 @@
-# Date-Night 
+# Date-Night [![codecov](https://codecov.io/gh/somramnani/date-night-v2/graph/badge.svg?token=U1RGJ8VJMB)](https://codecov.io/gh/somramnani/date-night-v2)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
